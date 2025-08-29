@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Sprint 01 Report"
+title: "Sprint 02 Report"
 ---
 
 # Sprint 02 Report

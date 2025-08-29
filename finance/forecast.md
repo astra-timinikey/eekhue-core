@@ -1,3 +1,8 @@
+---
+layout: default
+title: "Forecast"
+---
+
 # Forecast Report 2024
 
 ## Executive Summary

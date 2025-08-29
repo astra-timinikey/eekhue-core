@@ -1,3 +1,8 @@
+---
+layout: default
+title: "Budget"
+---
+
 # Budget Report 2024
 
 ## Overview

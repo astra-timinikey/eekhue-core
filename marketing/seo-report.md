@@ -1,3 +1,8 @@
+---
+layout: default
+title: "SEO Report"
+---
+
 # SEO Report
 
 ## Key Metrics
