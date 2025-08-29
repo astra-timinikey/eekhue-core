@@ -10,3 +10,6 @@ Click a report below to view details:
 
 - [Sprint 01](sprint-01.md)
 - [Sprint 02](sprint-02.md)
+
+# Others
+[Finance Reports](../finance/)
