@@ -21,3 +21,4 @@ title: "Sprint 01 Report"
 function isLoggedIn(user) {
   return user && user.token && user.token.length > 0;
 }
+```

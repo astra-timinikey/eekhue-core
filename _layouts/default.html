@@ -3,11 +3,32 @@
 <head>
   <meta charset="utf-8">
   <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  {{ content }}
 
-  <script src="/script.js"></script>
+  <header>
+    <div class="wrap nav">
+      <div class="brand-logo">
+        <div class="brand">MySite</div>
+        <img src="/images/sample.png" alt="Logo" class="logo" />
+      </div>
+      <nav class="menu">
+        <a href="/">Home</a>
+        <a href="/projects/">Projects</a>
+        <a href="/contact/" class="cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <p>© 2025 Your Name — Hosted on GitHub Pages</p>
+  </footer>
+
 </body>
 </html>

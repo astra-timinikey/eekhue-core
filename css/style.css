@@ -39,6 +39,64 @@
     background: var(--card);
     border-bottom: 1px solid var(--border);
   }
+
+
+  /* Header flex layout */
+  header .wrap.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    padding: 0 20px;
+    border-bottom: 1px solid var(--border);
+    background: var(--card);
+  }
+
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px; /* spacing between text and logo */
+  }
+
+  header .logo {
+    height: 48px;  /* fixed height for logo */
+    width: auto;
+  }
+
+  /* Menu links */
+  .menu a {
+    margin-left: 16px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    text-decoration: none;
+  }
+
+  .menu a.cta {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: var(--shadow);
+  }
+
+  /* Responsive for small screens */
+  @media (max-width: 600px) {
+    header .wrap.nav {
+      flex-direction: column;
+      align-items: flex-start;
+      height: auto;
+      padding: 12px 20px;
+    }
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 8px;
+    }
+    header .logo {
+      height: 36px;
+    }
+  }
+
+    
   
   .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
   .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
