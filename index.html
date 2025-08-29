@@ -8,7 +8,11 @@
 
   <!-- Link to external CSS and Javascript-->
   <link rel="stylesheet" href="css/style.css" />
-  <script src="js/script.js" defer></script>
+  <script>
+    const BASEURL = "{{ site.baseurl }}"; // "/eekhue-core"
+  </script>
+  <script src="/{{ site.baseurl }}/js/script.js"></script>
+  
 
 </head>
 <body>
@@ -64,10 +68,15 @@
   
     <p>Take a short personality quiz:</p>
     <div id="quiz">
-      <p>Do you prefer gadgets or ideas?</p>
-      <button data-answer="gadget">Gadgets</button>
-      <button data-answer="idea">Ideas</button>
+        <p>Q1: Which best describes you?</p>
+        <button data-question="q1" data-answer="gadget">🔧 I like tinkering with gadgets</button>
+        <button data-question="q1" data-answer="idea">💡 I like coming up with ideas</button>
     </div>
+    
+    <p id="quiz-output"></p>
+    
+    <!-- Hidden field to hold JSON answers -->
+    <input type="hidden" id="quizData" value="{}">
   </main>
   
   

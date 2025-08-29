@@ -1,57 +1,92 @@
+// assets/js/script.js
 document.addEventListener("DOMContentLoaded", () => {
+  /* -------------------------
+     Helpers
+     ------------------------- */
+  function computeBase() {
+    // Use injected Jekyll baseurl if available
+    if (typeof window !== "undefined" && window.BASEURL) {
+      const b = window.BASEURL.toString().trim();
+      return b === "/" ? "" : b.replace(/\/$/, "");
+    }
+    // Fallback: guess the repo root as the first path segment
+    const parts = location.pathname.split("/").filter(Boolean);
+    return parts.length ? "/" + parts[0] : "";
+  }
+
+  const BASE = computeBase(); // e.g. "/eekhue-core"
+  function joinPath(relPath) {
+    // normalize: ensure no double slashes and return absolute-ish path with BASE
+    const base = BASE.replace(/\/$/, "");
+    const p = relPath.replace(/^\/+/, "");
+    return (base ? base + "/" + p : "/" + p);
+  }
+
+  /* -------------------------
+     Click counter
+     ------------------------- */
   const btn = document.getElementById("helloBtn");
   const resetBtn = document.getElementById("resetBtn");
   const output = document.getElementById("output");
   let clickCount = 0;
+  const emojis = ["🎉", "🚀", "✨", "🔥", "🌟", "💡", "🎈"];
 
-  const emojis = ["🎉","🚀","✨","🔥","🌟","💡","🎈"];
+  if (btn) {
+    btn.addEventListener("click", () => {
+      clickCount++;
+      const emoji = emojis[Math.floor(Math.random() * emojis.length)];
+      console.log("Button clicked. Count:", clickCount);
 
-  // Click counter
-  btn.addEventListener("click", () => {
-    clickCount++;
-    const emoji = emojis[Math.floor(Math.random() * emojis.length)];
-    console.log("Button clicked. Count:", clickCount);
+      if (clickCount % 10 === 0) {
+        output.textContent = `${emoji} Wow! You reached ${clickCount} clicks! ${emoji}`;
+      } else if (clickCount % 5 === 0) {
+        output.textContent = `${emoji} Nice! ${clickCount} clicks already! ${emoji}`;
+      } else {
+        output.textContent = `${emoji} JavaScript works! Clicked ${clickCount} times. ${emoji}`;
+      }
 
-    if (clickCount % 10 === 0) {
-      output.textContent = `${emoji} Wow! You reached ${clickCount} clicks! ${emoji}`;
-    } else if (clickCount % 5 === 0) {
-      output.textContent = `${emoji} Nice! ${clickCount} clicks already! ${emoji}`;
-    } else {
-      output.textContent = `${emoji} JavaScript works! Clicked ${clickCount} times. ${emoji}`;
-    }
+      const r = Math.floor(Math.random() * 256);
+      const g = Math.floor(Math.random() * 256);
+      const b = Math.floor(Math.random() * 256);
+      output.style.color = `rgb(${r}, ${g}, ${b})`;
 
-    const r = Math.floor(Math.random()*256);
-    const g = Math.floor(Math.random()*256);
-    const b = Math.floor(Math.random()*256);
-    output.style.color = `rgb(${r}, ${g}, ${b})`;
-
-    output.style.transform = "scale(1.1)";
-    setTimeout(() => { output.style.transform = "scale(1)"; }, 150);
-  });
-
-  resetBtn.addEventListener("click", () => {
-    clickCount = 0;
-    console.log("Counter reset");
-    output.textContent = "Counter reset!";
-    output.style.color = varAccent();
-    output.style.transform = "scale(1)";
-  });
-
-  function varAccent() {
-    const styles = getComputedStyle(document.documentElement);
-    return styles.getPropertyValue('--accent') || '#7aa2f7';
+      output.style.transform = "scale(1.1)";
+      setTimeout(() => {
+        output.style.transform = "scale(1)";
+      }, 150);
+    });
   }
 
-  // HTTP request demo
+  if (resetBtn) {
+    resetBtn.addEventListener("click", () => {
+      clickCount = 0;
+      console.log("Counter reset");
+      if (output) {
+        output.textContent = "Counter reset!";
+        output.style.color = getAccent();
+        output.style.transform = "scale(1)";
+      }
+    });
+  }
+
+  function getAccent() {
+    const styles = getComputedStyle(document.documentElement);
+    return styles.getPropertyValue("--accent") || "#7aa2f7";
+  }
+
+  /* -------------------------
+     HTTP fetch demo
+     ------------------------- */
   const fetchBtn = document.getElementById("fetchBtn");
   const fetchOutput = document.getElementById("fetchOutput");
-  if (fetchBtn) {
+
+  if (fetchBtn && fetchOutput) {
     fetchBtn.addEventListener("click", async () => {
       fetchOutput.textContent = "Fetching...";
       console.log("Fetching data...");
       try {
-        const response = await fetch("https://jsonplaceholder.typicode.com/todos/1");
-        const data = await response.json();
+        const resp = await fetch("https://jsonplaceholder.typicode.com/todos/1");
+        const data = await resp.json();
         console.log("Data received:", data);
         fetchOutput.textContent = JSON.stringify(data, null, 2);
       } catch (err) {
@@ -61,24 +96,57 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Personality quiz
+  /* -------------------------
+     Multi-step Personality Quiz
+     ------------------------- */
   const quiz = document.getElementById("quiz");
-  if (quiz) {
-    quiz.addEventListener("click", (e) => {
-      if (!e.target.dataset.answer) return;
-      const answer = e.target.dataset.answer;
-      console.log("Quiz answer clicked:", answer);
+  const quizOutput = document.getElementById("quiz-output");
+  const quizDataEl = document.getElementById("quizData");
 
-      // Use **relative paths from current page**
-      let targetPath = "";
-      if (answer === "gadget") {
-        targetPath = "persona/gadget-tinker.html";  // relative to the page hosting this JS
-      } else {
-        targetPath = "persona/idea-thinker.html";
+  if (quiz && quizOutput && quizDataEl) {
+    let answers = {};
+
+    // helper to render next set of buttons
+    function renderQ2() {
+      quiz.innerHTML = `
+        <p>Q2: How do you approach challenges?</p>
+        <button data-question="q2" data-answer="hands-on">🛠 Hands-on experimentation</button>
+        <button data-question="q2" data-answer="planning">📋 Careful planning</button>
+      `;
+    }
+
+    quiz.addEventListener("click", (e) => {
+      const target = e.target;
+      if (!target || !target.dataset || !target.dataset.answer) return;
+
+      const question = target.dataset.question;
+      const answer = target.dataset.answer;
+      answers[question] = answer;
+      quizDataEl.value = JSON.stringify(answers);
+      console.log("Quiz — current answers:", answers);
+
+      // show immediate feedback
+      quizOutput.textContent = `You answered ${question}: ${answer}`;
+
+      if (question === "q1") {
+        // move to Q2
+        setTimeout(renderQ2, 300);
+        return;
       }
 
-      console.log("Redirecting to:", targetPath);
-      window.location.href = targetPath;
+      if (question === "q2") {
+        // decide persona and redirect after slight delay
+        quizOutput.textContent = "Processing your personality...";
+        const isGadgetTinker = answers.q1 === "gadget" && answers.q2 === "hands-on";
+        const targetRel = isGadgetTinker ? "persona/gadget-tinker.html" : "persona/idea-thinker.html";
+        const targetUrl = joinPath(targetRel);
+        console.log("Final answers:", answers);
+        console.log("Redirecting to:", targetUrl);
+
+        setTimeout(() => {
+          window.location.href = targetUrl;
+        }, 900);
+      }
     });
   }
 });
