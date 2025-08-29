@@ -1,0 +1,85 @@
+:root {
+    --bg: #0b1020;
+    --card: #121a33;
+    --text: #e8ecf3;
+    --muted: #9fb0c7;
+    --accent: #7aa2f7;
+    --border: #24314f;
+    --shadow: 0 6px 30px rgba(0,0,0,.35);
+    --radius: 16px;
+    --maxw: 960px;
+  }
+  
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f7f9fc;
+      --card: #ffffff;
+      --text: #0e1726;
+      --muted: #586273;
+      --accent: #2563eb;
+      --border: #e6eaf2;
+      --shadow: 0 6px 30px rgba(0,0,0,.08);
+    }
+  }
+  
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif;
+  }
+  
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  
+  header {
+    position: sticky; top: 0;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+  }
+  
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .brand { font-weight: 800; }
+  .menu a { margin-left: 16px; padding: 8px 12px; border-radius: 10px; }
+  .menu a.cta { background: var(--accent); color: #fff; box-shadow: var(--shadow); }
+  
+  .hero { padding: 72px 20px 36px; text-align: center; }
+  h1 { font-size: clamp(28px, 5vw, 44px); margin: 0 0 12px; }
+  p.lead { font-size: clamp(16px, 2.6vw, 20px); color: var(--muted); margin: 0 auto 22px; max-width: 720px; }
+  
+  .grid {
+    display: grid; gap: 18px; padding: 30px 20px 60px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    max-width: var(--maxw); margin: 0 auto;
+  }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 20px;
+    box-shadow: var(--shadow);
+    transition: transform .1s ease;
+  }
+  .card:hover { transform: translateY(-2px); }
+  .card h3 { margin: 0 0 8px; font-size: 18px; }
+  .card p { margin: 0; color: var(--muted); }
+  
+  footer {
+    border-top: 1px solid var(--border);
+    color: var(--muted);
+    padding: 28px 20px;
+    text-align: center;
+  }
+  
+  .pill {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    border-radius: 999px;
+    font-size: 14px;
+  }
+  
