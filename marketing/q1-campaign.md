@@ -7,12 +7,13 @@
 
 ## Campaign Visuals
 ![Campaign Banner](https://via.placeholder.com/400x150.png?text=Q1+Campaign+Banner)
-![Campaign Logo](../images/logo.png)
+![Campaign Logo](../images/logo.png){: .small-logo }
+
 
 ## Campaign Video
 
 <video controls width="600">
-  <source src="../../media/promo.mp4" type="video/mp4">
+  <source src="../media/promo.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
