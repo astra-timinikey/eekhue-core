@@ -1,0 +1,4 @@
+title: "My Reports Site"
+description: "Organized reports by topic"
+theme: minima  # simple built-in theme
+markdown: kramdown

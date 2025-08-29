@@ -6,13 +6,16 @@
   <title>My GitHub Pages Site</title>
   <meta name="description" content="A minimal, fast GitHub Pages starter." />
 
-  <!-- Link to external CSS -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- Link to external CSS and Javascript-->
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="assets/js/script.js" defer></script>
+
 </head>
 <body>
   <header>
     <div class="wrap nav">
       <div class="brand">MySite</div>
+      <img src="assets/images/sample.png" alt="Logo" />
       <nav class="menu">
         <a href="#">Home</a>
         <a href="#">Projects</a>
@@ -29,21 +32,31 @@
 
   <section class="grid">
     <div class="card">
-      <h3>Project One</h3>
-      <p>A short description of your awesome project.</p>
+      <h3>Finance</h3>
+      <p><a href="reports/finance/budget-2024.html">Budget 2024</a></p>
+      <p><a href="reports/finance/forecast.html">Forecast</a></p>
     </div>
     <div class="card">
-      <h3>Project Two</h3>
-      <p>Another great project worth showcasing.</p>
+      <h3>Engineering</h3>
+      <p><a href="reports/engineering/sprint-01.html">Sprint 01</a></p>
+      <p><a href="reports/engineering/sprint-02.html">Sprint 02</a></p>
     </div>
     <div class="card">
-      <h3>About Me</h3>
-      <p>Tell visitors something about yourself.</p>
+      <h3>Marketing</h3>
+      <p><a href="reports/marketing/q1-campaign.html">Q1 Campaign</a></p>
+      <p><a href="reports/marketing/seo-report.html">SEO Report</a></p>
     </div>
   </section>
+  
+  <main>
+    <p>Click the button below to test JavaScript:</p>
+    <button id="helloBtn">Click Me</button>
+    <p id="output"></p>
+  </main>
 
   <footer>
     <p>© 2025 Your Name — Hosted on GitHub Pages</p>
   </footer>
 </body>
 </html>
+
