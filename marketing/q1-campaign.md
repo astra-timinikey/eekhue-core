@@ -1,3 +1,8 @@
+---
+layout: default
+title: "Marketing Campaign Report"
+---
+
 # Q1 Campaign Report
 
 ## Highlights

@@ -4,10 +4,6 @@ title: "Sprint 01 Report"
 ---
 
 # Sprint 01 Report
-...
-
-
-# Sprint 01 Report
 
 ## Completed Tasks
 - [x] Implement authentication system

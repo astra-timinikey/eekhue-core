@@ -117,7 +117,7 @@
     padding: 40px 20px;
   }
 
-  #helloBtn {
+  #helloBtn, #resetBtn {
     padding: 12px 20px;
     font-size: 18px;
     border-radius: 12px;
@@ -125,21 +125,24 @@
     background: var(--accent);
     color: #fff;
     cursor: pointer;
+    margin: 8px;
     transition: transform 0.1s ease, background 0.2s ease;
     box-shadow: var(--shadow);
   }
-
-  #helloBtn:hover {
+  
+  #helloBtn:hover, #resetBtn:hover {
     background: #5e87e0; /* slightly darker accent */
     transform: translateY(-2px);
   }
-
+  
   #output {
     margin-top: 20px;
     font-weight: bold;
     font-size: 20px;
     transition: transform 0.15s ease, color 0.2s ease;
+    text-align: center;
   }
+  
 
   /* ==============================
      Footer
@@ -164,17 +167,48 @@
   th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
   th { background-color: var(--card); }
   tr:nth-child(even) { background-color: color-mix(in hsl, var(--card) 90%, transparent); }
-  code {
-    background: rgba(122, 162, 247, 0.1);
-    padding: 2px 4px;
-    border-radius: 4px;
+  /* Lists */
+  ul, ol {
+    padding-left: 20px;
+    margin: 12px 0;
+    list-style-position: inside;
+    line-height: 1.6;
+    color: var(--text);
   }
+
+  /* Nested lists fix */
+  ul ul, ol ol {
+    margin-left: 20px;
+  }
+
+  /* Code blocks */
+  pre {
+    background-color: #0a0f1e;
+    color: #e6edf3;
+    padding: 16px;
+    border-radius: 12px;
+    overflow-x: auto;
+    border: 1px solid #1d2946;
+    margin: 16px 0;
+    font-family: "Fira Code", monospace;
+    font-size: 0.95rem;
+  }
+
+  /* Inline code */
+  code {
+    background-color: rgba(122, 162, 247, 0.1);
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-family: "Fira Code", monospace;
+    font-size: 0.95rem;
+  }
+
+  /* Make sure code inside pre uses the same background */
   pre code {
-    background: none; /* use pre's background */
+    background: none;
     padding: 0;
-  }  
+  }
   img { max-width: 100%; border-radius: 8px; margin: 12px 0; }
-  ul, ol { padding-left: 20px; }
   blockquote { border-left: 3px solid var(--accent); padding-left: 12px; color: var(--muted); margin: 12px 0; }
   .small-logo {
     max-width: 120px;
