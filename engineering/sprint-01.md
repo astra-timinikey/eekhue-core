@@ -1,3 +1,12 @@
+---
+layout: default
+title: "Sprint 01 Report"
+---
+
+# Sprint 01 Report
+...
+
+
 # Sprint 01 Report
 
 ## Completed Tasks
