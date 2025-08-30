@@ -1,4 +1,6 @@
-title: "My Reports Site"
-description: "Organized reports by topic"
+title: "EekQue"
+description: "Organized cognitive functions"
 theme: minima  # simple built-in theme
 markdown: kramdown
+
+baseurl: "/eekhue-core"

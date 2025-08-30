@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ page.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}" />
+
+  <!-- External CSS and JavaScript -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/css/style.css" />
+  <script>
+    const BASEURL = "{{ site.baseurl }}"; // e.g. "/eekhue-core"
+  </script>
+  <script src="{{ site.baseurl }}/js/script.js"></script>
+</head>
+<body>
+
+  <!-- Header / Top Navigation -->
+  <header>
+    <div class="wrap nav">
+      <div class="brand-logo">
+        <a href="{{ "/" | relative_url }}" class="brand-logo">
+          <div class="brand">{{ site.title }}</div>
+          <img src="{{ site.baseurl }}/images/sample.png" alt="Logo" class="logo" />
+        </a>
+      </div>
+    
+      <nav class="menu">
+        <a href="{{ site.baseurl }}/pages/test.html">What Are You?</a>
+
+        <!-- Dropdown for Reports -->
+        <div class="dropdown">
+          <button class="dropbtn">Darkness–Light ▼
+            <span class="tooltip">Explore personality insights</span>
+          </button>
+          <div class="dropdown-content">
+            <a href="{{ site.baseurl }}/pages/persona.html">Persona</a>
+            <a href="{{ site.baseurl }}/pages/self.html">Self</a>
+            <a href="{{ site.baseurl }}/pages/shadow.html">Shadow</a>
+            <a href="{{ site.baseurl }}/pages/growth.html">Growth</a>
+            <a href="{{ site.baseurl }}/pages/relationships.html">Relationships</a>
+          </div>
+        </div>
+
+        <a href="{{ site.baseurl }}/pages/about.html">About</a>
+        <a href="{{ site.baseurl }}/pages/contact.html">Contact</a>
+        <a href="#" class="cta shop-link">Merch (Coming Soon)</a>
+      </nav>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>{{ page.hero_title }}</h1>
+    <p class="lead">{{ page.hero_subtitle }}</p>
+    <div class="pill">✨ Powered by GitHub Pages</div>
+  </section>
+
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <p>© 2025 {{ site.author | default: "Your Name" }} — Hosted on GitHub Pages</p>
+  </footer>
+</body>
+</html>

@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", () => {
         // decide persona and redirect after slight delay
         quizOutput.textContent = "Processing your personality...";
         const isGadgetTinker = answers.q1 === "gadget" && answers.q2 === "hands-on";
-        const targetRel = isGadgetTinker ? "persona/gadget-tinker.html" : "persona/idea-thinker.html";
+        const targetRel = isGadgetTinker ? "persona/gadget-tinker.html" : "persona/creative-performer.html";
         const targetUrl = joinPath(targetRel);
         console.log("Final answers:", answers);
         console.log("Redirecting to:", targetUrl);

@@ -8,33 +8,55 @@
   <script>
     const BASEURL = "{{ site.baseurl }}"; // "/eekhue-core"
   </script>
-  <script src="/{{ site.baseurl }}/js/script.js"></script>
+  <script src="{{ site.baseurl }}/js/script.js"></script>
   
 
 </head>
-<body>
+<body class="{{ page.page_class }}">
 
+  <!-- Header / Top Navigation -->
   <header>
     <div class="wrap nav">
       <div class="brand-logo">
-        <div class="brand">MySite</div>
-        <img src="../images/sample.png" alt="Logo" class="logo" />
+        <a href="{{ "/" | relative_url }}" class="brand-logo">
+          <div class="brand">{{ site.title }}</div>
+          <img src="{{ site.baseurl }}/images/sample.png" alt="Logo" class="logo" />
+        </a>
       </div>
+    
       <nav class="menu">
-        <a href="{{ site.baseurl }}">Home</a>
-        <a href="{{ site.baseurl }}/engineering/">Engineering</a>
-        <a href="{{ site.baseurl }}/finance/" class="cta">Finance</a>
-      </nav>      
+        <a href="{{ site.baseurl }}/pages/test.html">What Are You?</a>
+
+        <!-- Dropdown for Reports -->
+        <div class="dropdown">
+          <button class="dropbtn">Darkness–Light ▼
+            <span class="tooltip">Explore personality insights</span>
+          </button>
+          <div class="dropdown-content">
+            <a href="{{ site.baseurl }}/pages/persona.html">Persona</a>
+            <a href="{{ site.baseurl }}/pages/self.html">Self</a>
+            <a href="{{ site.baseurl }}/pages/shadow.html">Shadow</a>
+            <a href="{{ site.baseurl }}/pages/growth.html">Growth</a>
+            <a href="{{ site.baseurl }}/pages/relationships.html">Relationships</a>
+          </div>
+        </div>
+
+        <a href="{{ site.baseurl }}/pages/about.html">About</a>
+        <a href="{{ site.baseurl }}/pages/contact.html">Contact</a>
+        <a href="#" class="cta shop-link">Merch (Coming Soon)</a>
+      </nav>
     </div>
   </header>
 
+  <!-- Main content -->
   <main>
     {{ content }}
   </main>
 
   <footer>
-    <p>© 2025 Your Name — Hosted on GitHub Pages</p>
+    <p>© 2025 Astra Time — Hosted on GitHub Pages</p>
   </footer>
+
 
 </body>
 </html>

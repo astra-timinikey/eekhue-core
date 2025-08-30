@@ -1,3 +1,8 @@
+---
+layout: default
+title: "Gadget Tinker"
+---
+
 # Gadget Tinker  
 🛠️  
 
