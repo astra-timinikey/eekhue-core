@@ -16,7 +16,7 @@ This website is dedicated to storing and exploring **personality reports** acros
 - **7 Persona Profiles** – Each persona comes with detailed insights and traits.
 - **16 MBTI Personalities** – Full MBTI reports including strengths, weaknesses, and tendencies.
 - **3 States of Shadow** – For each MBTI type, explore shadow states and growth potential.
-- **Growth & Maturity Reports** – Personalized recommendations for each MBTI × shadow state combination.
+- **Growth & Motivation** – Personalized recommendations for each MBTI × shadow state combination.
 - **Relationship Insights** – Analysis for every possible combination of personality types.
 - **Interactive Tests** – Take a personality quiz to discover your type and suggested persona.
 

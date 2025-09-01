@@ -1,0 +1,223 @@
+INFJ:
+  archetype: Visionary
+  image: infj.png
+  energy: 2
+  intuition: 9
+  sensing: 2
+  thinking: 4
+  feeling: 7
+  battle_gift: Pierces hearts with insight
+  armor_reflex: Self-erases to protect harmony
+  tagline: "A lantern in the storm."
+  header_color: "#3c1361"   # deep purple
+  body_color: "#ede9fe"     # soft lavender
+
+ENFJ:
+  archetype: Guide
+  image: enfj.png
+  energy: 3
+  intuition: 7
+  sensing: 2
+  thinking: 4
+  feeling: 9
+  battle_gift: Inspires armies with empathy
+  armor_reflex: Overextends for the tribe
+  tagline: "Your hope is my mission."
+  header_color: "#6d28d9"   # royal violet
+  body_color: "#f3e8ff"
+
+INTJ:
+  archetype: Strategist
+  image: intj.png
+  energy: 2
+  intuition: 9
+  sensing: 2
+  thinking: 7
+  feeling: 4
+  battle_gift: Master of unseen plans
+  armor_reflex: Rejects feelings as weakness
+  tagline: "I already saw this ending."
+  header_color: "#1e293b"   # navy steel
+  body_color: "#e2e8f0"
+
+ENTJ:
+  archetype: Commander
+  image: entj.png
+  energy: 3
+  intuition: 7
+  sensing: 2
+  thinking: 9
+  feeling: 4
+  battle_gift: Tactical domination
+  armor_reflex: Commands even when unneeded
+  tagline: "Lead, or be led."
+  header_color: "#111827"   # dark slate
+  body_color: "#f1f5f9"
+
+INTP:
+  archetype: Architect
+  image: intp.png
+  energy: 2
+  intuition: 7
+  sensing: 2
+  thinking: 9
+  feeling: 4
+  battle_gift: Infinite mental blueprints
+  armor_reflex: Retreats into analysis
+  tagline: "The world is a puzzle worth solving."
+  header_color: "#0f172a"   # midnight
+  body_color: "#e0f2fe"     # pale sky
+
+ENTP:
+  archetype: Inventor
+  image: entp.png
+  energy: 3
+  intuition: 9
+  sensing: 2
+  thinking: 7
+  feeling: 4
+  battle_gift: Chaos sparks creation
+  armor_reflex: Argues for the thrill
+  tagline: "Every lock begs for a key."
+  header_color: "#0369a1"   # ocean blue
+  body_color: "#e0f2fe"
+
+ISTP:
+  archetype: Operator
+  image: istp.png
+  energy: 2
+  intuition: 2
+  sensing: 9
+  thinking: 7
+  feeling: 4
+  battle_gift: Precision in the moment
+  armor_reflex: Cuts off emotion to act
+  tagline: "Silence speaks through skill."
+  header_color: "#1c1917"   # rugged black
+  body_color: "#f5f5f4"     # stone gray
+
+ESTP:
+  archetype: Performer
+  image: estp.png
+  energy: 3
+  intuition: 2
+  sensing: 9
+  thinking: 7
+  feeling: 4
+  battle_gift: Thrives in high-stakes chaos
+  armor_reflex: Rushes before reflecting
+  tagline: "Life is best played at full speed."
+  header_color: "#ca8a04"   # bold gold
+  body_color: "#fef9c3"
+
+ISFP:
+  archetype: Artisan
+  image: isfp.png
+  energy: 2
+  intuition: 2
+  sensing: 7
+  thinking: 4
+  feeling: 9
+  battle_gift: Soul expressed in color
+  armor_reflex: Withdraws under pressure
+  tagline: "Beauty is my quiet weapon."
+  header_color: "#14532d"   # forest green
+  body_color: "#dcfce7"
+
+ESFP:
+  archetype: Entertainer
+  image: esfp.png
+  energy: 3
+  intuition: 2
+  sensing: 7
+  thinking: 4
+  feeling: 9
+  battle_gift: Lights up any arena
+  armor_reflex: Spends energy too fast
+  tagline: "Joy is my battlefield."
+  header_color: "#16a34a"   # vivid green
+  body_color: "#d1fae5"
+
+ISTJ:
+  archetype: Inspector
+  image: istj.png
+  energy: 2
+  intuition: 2
+  sensing: 9
+  thinking: 7
+  feeling: 4
+  battle_gift: Steadfast defender
+  armor_reflex: Resists needed change
+  tagline: "The rules protect us all."
+  header_color: "#4b5563"   # iron gray
+  body_color: "#f9fafb"
+
+ESTJ:
+  archetype: Organizer
+  image: estj.png
+  energy: 3
+  intuition: 2
+  sensing: 7
+  thinking: 9
+  feeling: 4
+  battle_gift: Commands structure into being
+  armor_reflex: Over-controls the moment
+  tagline: "Order is victory."
+  header_color: "#374151"   # granite
+  body_color: "#f3f4f6"
+
+ISFJ:
+  archetype: Caretaker
+  image: isfj.png
+  energy: 2
+  intuition: 2
+  sensing: 7
+  thinking: 4
+  feeling: 9
+  battle_gift: Quiet, unwavering nurture
+  armor_reflex: Overgives until empty
+  tagline: "I guard what I love."
+  header_color: "#92400e"   # earthy brown
+  body_color: "#fef3c7"
+
+ESFJ:
+  archetype: Ambassador
+  image: esfj.png
+  energy: 3
+  intuition: 2
+  sensing: 7
+  thinking: 4
+  feeling: 9
+  battle_gift: Heartfelt shield of community
+  armor_reflex: Pleases until broken
+  tagline: "Together, we thrive."
+  header_color: "#b91c1c"   # crimson red
+  body_color: "#fee2e2"
+
+INFP:
+  archetype: Dreamweaver
+  image: infp.png
+  energy: 2
+  intuition: 9
+  sensing: 2
+  thinking: 4
+  feeling: 7
+  battle_gift: Weaves worlds of meaning
+  armor_reflex: Retreats into fantasy
+  tagline: "A fragile hope, fiercely kept."
+  header_color: "#701a75"   # magenta
+  body_color: "#fce7f3"
+
+ENFP:
+  archetype: Pathfinder
+  image: enfp.png
+  energy: 3
+  intuition: 9
+  sensing: 2
+  thinking: 4
+  feeling: 7
+  battle_gift: Sparks endless adventures
+  armor_reflex: Scatters energy too wide
+  tagline: "The map is alive in my heart."
+  header_color: "#be123c"   # rose red
+  body_color: "#ffe4e6"

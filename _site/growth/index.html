@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Growth</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/style.css">
+  <script>
+    const BASEURL = "/eekhue-core"; // "/eekhue-core"
+  </script>
+  <script src="/eekhue-core/js/script.js"></script>
+  
+
+</head>
+<body class="growth-page">
+
+  <!-- Header / Top Navigation -->
+  <header>
+    <div class="wrap nav">
+      <div class="brand-logo">
+        <a href="/eekhue-core/" class="brand-logo">
+          <div class="brand">EekQue</div>
+          <img src="/eekhue-core/images/sample.png" alt="Logo" class="logo" />
+        </a>
+      </div>
+    
+      <nav class="menu">
+        <a href="/eekhue-core/pages/test.html">What Are You?</a>
+
+        <!-- Dropdown for Reports -->
+        <div class="dropdown">
+          <button class="dropbtn">Darkness–Light ▼
+            <span class="tooltip">Explore personality insights</span>
+          </button>
+          <div class="dropdown-content">
+            <a href="/eekhue-core/persona/">Persona</a>
+            <a href="/eekhue-core/self/">Self</a>
+            <a href="/eekhue-core/shadow/">Shadow</a>
+            <a href="/eekhue-core/growth/">Growth</a>
+            <a href="/eekhue-core/relationships/">Relationships</a>
+          </div>
+        </div>
+
+        <a href="/eekhue-core/pages/about.html">About</a>
+        <a href="/eekhue-core/pages/contact.html">Contact</a>
+        <a href="#" class="cta shop-link">Merch (Coming Soon)</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main content -->
+  <main>
+    <h1 id="-growth--becoming-whole">🌱 Growth – Becoming Whole</h1>
+
+<p>Growth is rarely explosive.<br />
+It is the quiet push of a root through stone.<br />
+The slow unfurling of a leaf toward the light.<br />
+The patience of becoming — unseen, but unstoppable.</p>
+
+<p>Carl Jung described growth as a lifelong process of <em>individuation</em>:</p>
+<ul>
+  <li><strong>Integrating the Persona</strong> → Loosening the mask, allowing authenticity.</li>
+  <li><strong>Assimilating the Shadow</strong> → Befriending what we once denied.</li>
+  <li><strong>Encountering the Anima/Animus</strong> → Reconciling the inner Other, finding balance.</li>
+</ul>
+
+<p>Growth is not a single leap but a rhythm:<br />
+plant, tend, harvest, compost, repeat.</p>
+
+<hr />
+
+<h2 id="-growth-garden-game">🎮 Growth Garden Game</h2>
+
+<p>A small seed represents the start of your journey.<br />
+Every time you return, reflect, or “water” the plant, it grows.</p>
+
+<div class="growth-garden">
+  <h2>🌱 Your Growth Plant</h2>
+  <div class="plant-stage" id="plant-stage">
+    <p>Stage 1: Seed</p>
+    <img src="/assets/img/plant-seed.png" alt="Seed stage" />
+  </div>
+
+  <button id="water-btn">💧 Water Plant</button>
+</div>
+
+<script>
+  let stage = 0;
+  const stages = [
+    { text: "Stage 1: Seed", img: "/assets/img/plant-seed.png" },
+    { text: "Stage 2: Sprout", img: "/assets/img/plant-sprout.png" },
+    { text: "Stage 3: Budding", img: "/assets/img/plant-bud.png" },
+    { text: "Stage 4: Bloom", img: "/assets/img/plant-flower.png" },
+    { text: "Stage 5: Tree", img: "/assets/img/plant-tree.png" }
+  ];
+
+  document.getElementById('water-btn').addEventListener('click', () => {
+    if (stage < stages.length - 1) {
+      stage++;
+      const ps = document.getElementById('plant-stage');
+      ps.innerHTML = `<p>${stages[stage].text}</p><img src="${stages[stage].img}" alt="${stages[stage].text}">`;
+    }
+  });
+</script>
+
+<hr />
+
+<h2 id="-three-paths-of-growth">🌿 Three Paths of Growth</h2>
+
+<h3 id="-integrating-the-persona">🌞 Integrating the Persona</h3>
+<p>Loosen the armor. Let others see who you are beneath the role.</p>
+
+<h3 id="-assimilating-the-shadow">🌑 Assimilating the Shadow</h3>
+<p>Bring the hidden into the light. What you reject holds keys to your growth.</p>
+
+<h3 id="-reconciling-the-animaanimus">💫 Reconciling the Anima/Animus</h3>
+<p>Balance the inner Other — the qualities you long for yet resist.</p>
+
+<hr />
+
+<h2 id="disclaimer">Disclaimer</h2>
+<p>Growth work takes patience and courage.<br />
+This framework draws inspiration from Jung’s writings and archetypal models, refined into a personal synthesis.</p>
+
+<p>It is offered here as a reflective tool — not a clinical system.</p>
+
+<hr />
+
+<h2 id="ready-to-grow">Ready to Grow?</h2>
+<p>🌱 If this page resonates, join the journey.<br />
+Get early access to new tools, deeper reflections, and interactive growth challenges.</p>
+
+<p>👉 <a href="#"><strong>Sign up here</strong></a> to plant your seed.</p>
+
+  </main>
+
+  <footer>
+    <p>© 2025 Astra Time — Hosted on GitHub Pages</p>
+  </footer>
+
+
+</body>
+</html>
