@@ -48,8 +48,9 @@ Each card links to a deeper dive into the functions, shadow expressions, and gro
 
   {% for type in mbti_types %}
     {% assign info = site.data.mbti[type] %}
+    {% assign desc = site.data.self[type] %}
     <a href="{{ site.baseurl }}/self/{{ type | downcase }}.html" class="card-link">
-    <div class="card" style="--header-color: {{ info.header_color }}; --body-color: {{ info.body_color }}">
+    <div class="card" style="--header-color: {{ desc.header_color }}; --body-color: {{ desc.body_color }}">
   
       
       <!-- Header (like TCG) -->

@@ -1,7 +1,7 @@
 INFJ:
   archetype: Visionary
   image: infj.png
-  energy: 2
+  energy: 1-3 pax
   intuition: 9
   sensing: 2
   thinking: 4
@@ -15,7 +15,7 @@ INFJ:
 ENFJ:
   archetype: Guide
   image: enfj.png
-  energy: 3
+  energy: ≥4 pax
   intuition: 7
   sensing: 2
   thinking: 4
