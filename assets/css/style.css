@@ -336,6 +336,48 @@
 #streetwise-rogue    { --header-color: #5a189a; --body-color: #f3e8ff; } /* Indigo */
 #stargazing-dreamer  { --header-color: #7209b7; --body-color: #f8e5ff; } /* Violet */
 
+/* Pretty rainbow arc */
+.rainbow-bar {
+  width: 400px;
+  height: 200px;
+  border-radius: 200px 200px 0 0;
+  background: conic-gradient(
+    red 0deg 51deg,
+    orange 51deg 102deg,
+    yellow 102deg 153deg,
+    green 153deg 204deg,
+    blue 204deg 255deg,
+    indigo 255deg 306deg,
+    violet 306deg 360deg
+  );
+  margin: 2rem auto;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Transparent click zones aligned to arc */
+.rainbow-zone {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 80px;
+  height: 180px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transform-origin: bottom center;
+}
+
+/* Rotate each zone to match rainbow slices */
+.rainbow-zone:nth-child(1) { transform: rotate(-60deg) translateX(-50%); }
+.rainbow-zone:nth-child(2) { transform: rotate(-40deg) translateX(-50%); }
+.rainbow-zone:nth-child(3) { transform: rotate(-20deg) translateX(-50%); }
+.rainbow-zone:nth-child(4) { transform: rotate(0deg)   translateX(-50%); }
+.rainbow-zone:nth-child(5) { transform: rotate(20deg)  translateX(-50%); }
+.rainbow-zone:nth-child(6) { transform: rotate(40deg)  translateX(-50%); }
+.rainbow-zone:nth-child(7) { transform: rotate(60deg)  translateX(-50%); }
+
+
 
 
 /* ==============================

@@ -36,16 +36,18 @@ Each Persona role is represented by a color of the rainbow.
   <span class="mobile-only">Tap a color to reveal its card.</span>
 </p>
 
-<!-- Rainbow trigger bar -->
+<!-- Rainbow arc -->
 <div class="rainbow-bar">
-  <div class="rainbow-color" data-target="creative-performer" style="--rainbow-color: #e63946;"></div>
-  <div class="rainbow-color" data-target="social-butterfly" style="--rainbow-color: #ff9f1c;"></div>
-  <div class="rainbow-color" data-target="gadget-tinker" style="--rainbow-color: #ffd60a;"></div>
-  <div class="rainbow-color" data-target="charming-naturalist" style="--rainbow-color: #2ec4b6;"></div>
-  <div class="rainbow-color" data-target="corporate-climber" style="--rainbow-color: #4361ee;"></div>
-  <div class="rainbow-color" data-target="streetwise-rogue" style="--rainbow-color: #5a189a;"></div>
-  <div class="rainbow-color" data-target="stargazing-dreamer" style="--rainbow-color: #7209b7;"></div>
+  <!-- Clickable zones -->
+  <button class="rainbow-zone" data-target="creative-performer"></button>
+  <button class="rainbow-zone" data-target="social-butterfly"></button>
+  <button class="rainbow-zone" data-target="gadget-tinker"></button>
+  <button class="rainbow-zone" data-target="charming-naturalist"></button>
+  <button class="rainbow-zone" data-target="corporate-climber"></button>
+  <button class="rainbow-zone" data-target="streetwise-rogue"></button>
+  <button class="rainbow-zone" data-target="stargazing-dreamer"></button>
 </div>
+
 
 <!-- Persona cards (overlay, initially hidden) -->
 <div class="persona-cards">
