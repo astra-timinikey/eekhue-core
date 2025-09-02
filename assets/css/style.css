@@ -423,7 +423,7 @@
 @media (max-width: 600px) {
   .card {
     width: 100%;   /* take full column width */
-    max-width: 320px; /* optional: limit so it's not too wide */
+    max-width: 420px; /* optional: limit so it's not too wide */
     margin: 0 auto;   /* center the card */
   }
 }

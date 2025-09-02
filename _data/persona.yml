@@ -1,0 +1,90 @@
+creative-performer:
+  type: Outfit/Armor/Creature
+  image: cp-01.png
+  image_alt_text: "A flamboyant mask with phoenix feathers"
+  energy: 3
+  intuition: 4
+  sensing: 8
+  thinking: 2
+  feeling: 7
+  action: Perform an artistic act
+  benefits: Increase fame and emotional resonance
+  tagline: "Ignite the stage, rise like fire!"
+
+social-butterfly:
+  type: Outfit/Armor/Creature
+  image: sb-01.png
+  image_alt_text: "A light silk robe with wing motifs"
+  energy: 5
+  intuition: 3
+  sensing: 6
+  thinking: 2
+  feeling: 8
+  action: Spark a lively conversation
+  benefits: Expand network and charm allies
+  tagline: "Every room is your sky to soar!"
+
+gadget-tinker:
+  type: Outfit/Armor/Creature
+  image: gt-01.png
+  image_alt_text: "Mechanical gear plating with glowing circuits"
+  energy: 2
+  intuition: 7
+  sensing: 5
+  thinking: 8
+  feeling: 3
+  action: Invent or repair a device
+  benefits: Unlock innovative solutions
+  tagline: "Turn sparks into wonders!"
+
+charming-naturalist:
+  type: Outfit/Armor/Creature
+  image: cn-01.png
+  image_alt_text: "Leaf-woven armor infused with earthy patterns"
+  energy: 4
+  intuition: 5
+  sensing: 9
+  thinking: 3
+  feeling: 6
+  action: Nurture plants or wildlife
+  benefits: Restore vitality and harmony
+  tagline: "Rooted in growth, flowing with life."
+
+corporate-climber:
+  type: Outfit/Armor/Creature
+  image: cc-01.png
+  image_alt_text: "Formal armor with polished metallic finish"
+  energy: 7
+  intuition: 4
+  sensing: 6
+  thinking: 9
+  feeling: 2
+  action: Execute a tactical move
+  benefits: Gain influence and stability
+  tagline: "Step by step, the tower is yours."
+
+streetwise-rogue:
+  type: Outfit/Armor/Creature
+  image: sr-01.png
+  image_alt_text: "Shadowy cloak with claw-mark insignia"
+  energy: 2
+  intuition: 7
+  sensing: 6
+  thinking: 5
+  feeling: 4
+  action: Slip through or deceive an opponent
+  benefits: Gain survival edge and adaptability
+  tagline: "Trick the night, survive the game."
+
+stargazing-dreamer:
+  type: Outfit/Armor/Creature
+  image: sd-01.png
+  image_alt_text: "Flowing robes shimmering with starry light"
+  energy: 1
+  intuition: 9
+  sensing: 2
+  thinking: 7
+  feeling: 5
+  action: Contemplate or channel a vision
+  benefits: Gain foresight and clarity
+  tagline: "Eyes on the stars, feet on the path."
