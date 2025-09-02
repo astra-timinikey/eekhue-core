@@ -31,9 +31,24 @@ Why seven?
 
 ## 🌈 The Rainbow Map
 Each Persona role is represented by a color of the rainbow.  
-Hover a color to reveal its card:  
+<p class="rainbow-instructions">
+  <span class="desktop-only">Hover a color to reveal its card.</span>
+  <span class="mobile-only">Tap a color to reveal its card.</span>
+</p>
 
-<div class="persona-rainbow">
+<!-- Rainbow trigger bar -->
+<div class="rainbow-bar">
+  <div class="rainbow-color" data-target="creative-performer" style="--rainbow-color: #e63946;"></div>
+  <div class="rainbow-color" data-target="social-butterfly" style="--rainbow-color: #ff9f1c;"></div>
+  <div class="rainbow-color" data-target="gadget-tinker" style="--rainbow-color: #ffd60a;"></div>
+  <div class="rainbow-color" data-target="charming-naturalist" style="--rainbow-color: #2ec4b6;"></div>
+  <div class="rainbow-color" data-target="corporate-climber" style="--rainbow-color: #4361ee;"></div>
+  <div class="rainbow-color" data-target="streetwise-rogue" style="--rainbow-color: #5a189a;"></div>
+  <div class="rainbow-color" data-target="stargazing-dreamer" style="--rainbow-color: #7209b7;"></div>
+</div>
+
+<!-- Persona cards (overlay, initially hidden) -->
+<div class="persona-cards">
   <!-- Card placeholders – will be revealed with JS later -->
   <div class="persona-card" id="creative-performer">
     <h3>🎨 Creative Performer</h3>
@@ -72,3 +87,11 @@ This Persona framework is a **personal synthesis**, not an established psycholog
 It draws inspiration from Jung’s concept of Persona but reframes it as **armor** — protective, adaptable, and chosen.  
 
 Use it playfully, reflectively, and tactically — not as a cage, but as gear for exploration.
+
+---
+
+## Citations
+- Jung, C.G. *The Archetypes and the Collective Unconscious*. Princeton University Press, 1981.  
+- Jung, C.G. *Two Essays on Analytical Psychology*. Princeton University Press, 1966.  
+- Hillman, J. *The Soul’s Code: In Search of Character and Calling*. Random House, 1996.  
+- Campbell, J. *The Hero with a Thousand Faces*. Princeton University Press, 1949.  

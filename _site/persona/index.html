@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <title>Persona</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
   <script>
     const BASEURL = "/eekhue-core"; // "/eekhue-core"
   </script>
-  <script src="/eekhue-core/js/script.js"></script>
+  <script src="/eekhue-core/assets/js/script.js"></script>
   
 
 </head>
@@ -20,7 +20,7 @@
       <div class="brand-logo">
         <a href="/eekhue-core/" class="brand-logo">
           <div class="brand">EekQue</div>
-          <img src="/eekhue-core/images/sample.png" alt="Logo" class="logo" />
+          <img src="/eekhue-core/assets/images/sample.png" alt="Logo" class="logo" />
         </a>
       </div>
     
@@ -75,10 +75,25 @@ It’s the first choice-point in the Hunt: <em>which armor do you equip?</em></p
 <hr />
 
 <h2 id="-the-rainbow-map">🌈 The Rainbow Map</h2>
-<p>Each Persona role is represented by a color of the rainbow.<br />
-Hover a color to reveal its card:</p>
+<p>Each Persona role is represented by a color of the rainbow.</p>
+<p class="rainbow-instructions">
+  <span class="desktop-only">Hover a color to reveal its card.</span>
+  <span class="mobile-only">Tap a color to reveal its card.</span>
+</p>
 
-<div class="persona-rainbow">
+<!-- Rainbow trigger bar -->
+<div class="rainbow-bar">
+  <div class="rainbow-color" data-target="creative-performer" style="--rainbow-color: #e63946;"></div>
+  <div class="rainbow-color" data-target="social-butterfly" style="--rainbow-color: #ff9f1c;"></div>
+  <div class="rainbow-color" data-target="gadget-tinker" style="--rainbow-color: #ffd60a;"></div>
+  <div class="rainbow-color" data-target="charming-naturalist" style="--rainbow-color: #2ec4b6;"></div>
+  <div class="rainbow-color" data-target="corporate-climber" style="--rainbow-color: #4361ee;"></div>
+  <div class="rainbow-color" data-target="streetwise-rogue" style="--rainbow-color: #5a189a;"></div>
+  <div class="rainbow-color" data-target="stargazing-dreamer" style="--rainbow-color: #7209b7;"></div>
+</div>
+
+<!-- Persona cards (overlay, initially hidden) -->
+<div class="persona-cards">
   <!-- Card placeholders – will be revealed with JS later -->
   <div class="persona-card" id="creative-performer">
     <h3>🎨 Creative Performer</h3>
@@ -117,6 +132,16 @@ Hover a color to reveal its card:</p>
 It draws inspiration from Jung’s concept of Persona but reframes it as <strong>armor</strong> — protective, adaptable, and chosen.</p>
 
 <p>Use it playfully, reflectively, and tactically — not as a cage, but as gear for exploration.</p>
+
+<hr />
+
+<h2 id="citations">Citations</h2>
+<ul>
+  <li>Jung, C.G. <em>The Archetypes and the Collective Unconscious</em>. Princeton University Press, 1981.</li>
+  <li>Jung, C.G. <em>Two Essays on Analytical Psychology</em>. Princeton University Press, 1966.</li>
+  <li>Hillman, J. <em>The Soul’s Code: In Search of Character and Calling</em>. Random House, 1996.</li>
+  <li>Campbell, J. <em>The Hero with a Thousand Faces</em>. Princeton University Press, 1949.</li>
+</ul>
 
   </main>
 

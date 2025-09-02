@@ -167,6 +167,7 @@
     width: 30px;
     height: 22px;
     cursor: pointer;
+    margin-left: auto;
   }
   
   .hamburger div {
@@ -179,6 +180,20 @@
     .menu { display: none; } /* hide normal menu */
     .hamburger { display: flex; } /* show hamburger */
   }
+
+  /* Show menu when hamburger is clicked */
+  .menu.open {
+    display: flex !important; /* force menu visible */
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 12px;
+    background: var(--card);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+  }
+
   
 
   
@@ -239,8 +254,92 @@
   p.lead { font-size: clamp(16px, 2.6vw, 20px); color: var(--muted); margin: 0 auto 22px; max-width: 720px; }
   .pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid var(--border); background: var(--card); border-radius: 999px; font-size: 14px; }
   
+
 /* ==============================
-   Grid
+   Persona Cards (floating overlays)
+============================== */
+
+.desktop-only { display: inline; }
+.mobile-only { display: none; }
+
+@media (hover: none) and (pointer: coarse) {
+  .desktop-only { display: none; }
+  .mobile-only { display: inline; }
+}
+
+/* Card wrapper - hidden until triggered */
+.persona-card {
+  position: absolute;         /* overlay style, not grid */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  width: 220px;
+  height: 340px;
+  background: #fdfdfb;
+  border: 3px solid #000;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 15px rgba(0,0,0,.25);
+  overflow: hidden;
+  opacity: 0;                 /* start hidden */
+  pointer-events: none;       /* no interaction until shown */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 20;
+}
+
+/* When JS adds an "active" class */
+.persona-card.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Persona Header */
+.persona-card h3 {
+  margin: 0;
+  padding: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background: var(--header-color, #666);
+  border-bottom: 2px solid #000;
+}
+
+/* Persona Body */
+.persona-card p {
+  flex-grow: 1;
+  padding: 10px;
+  margin: 0;
+  font-size: 0.8rem;
+  color: #222;
+  background: var(--body-color, #f8f8f8);
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* Hover glow (future when whole card clickable) */
+.persona-card:hover {
+  box-shadow: 
+    0 0 10px 3px rgba(0,0,0,0.25),
+    0 0 20px 6px var(--header-color, rgba(255,255,0,0.5));
+  transform: translate(-50%, -50%) scale(1.03);
+}
+
+/* Rainbow Color Themes */
+#creative-performer   { --header-color: #e63946; --body-color: #ffe5e5; } /* Red */
+#social-butterfly    { --header-color: #ff9f1c; --body-color: #fff2e0; } /* Orange */
+#gadget-tinker       { --header-color: #ffd60a; --body-color: #fffbe5; } /* Yellow */
+#charming-naturalist { --header-color: #2ec4b6; --body-color: #e5fafa; } /* Green */
+#corporate-climber   { --header-color: #4361ee; --body-color: #e8f0ff; } /* Blue */
+#streetwise-rogue    { --header-color: #5a189a; --body-color: #f3e8ff; } /* Indigo */
+#stargazing-dreamer  { --header-color: #7209b7; --body-color: #f8e5ff; } /* Violet */
+
+
+
+/* ==============================
+   Grid for Self
 ============================== */
 .grid {
   display: grid;
@@ -256,11 +355,11 @@
   .grid { grid-template-columns: repeat(2, 1fr); max-width: calc(2 * 200px + 1 * 18px); }
 }
 @media (max-width: 600px) {
-  .grid { grid-template-columns: 1fr; max-width: 100%; }
+  .grid { grid-template-columns: 1fr; max-width: 100%; justify-items: center;}
 }
 
 /* ==============================
-   Card
+   Self Card
 ============================== */
 .card-link { text-decoration: none; color: inherit; display: block; }
 .card-link:hover { text-decoration: none; }
@@ -277,6 +376,14 @@
   box-shadow: 0 6px 10px rgba(0,0,0,.25);
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (max-width: 600px) {
+  .card {
+    width: 100%;   /* take full column width */
+    max-width: 320px; /* optional: limit so it's not too wide */
+    margin: 0 auto;   /* center the card */
+  }
 }
 
 /* Hover glow and lift */
@@ -313,7 +420,7 @@
 ============================== */
 .card img {
   width: 100%;
-  height: 140px;      /* fixed height */
+  height: 144px;      /* fixed height */
   object-fit: cover;
   border-top: 2px solid #000;
   border-bottom: 2px solid #000;

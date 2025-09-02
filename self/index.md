@@ -50,34 +50,7 @@ Each card links to a deeper dive into the functions, shadow expressions, and gro
     {% assign info = site.data.mbti[type] %}
     {% assign desc = site.data.self[type] %}
     <a href="{{ site.baseurl }}/self/{{ type | downcase }}.html" class="card-link">
-    <div class="card" style="--header-color: {{ desc.header_color }}; --body-color: {{ desc.body_color }}">
-  
-      
-      <!-- Header (like TCG) -->
-      <div class="card-header" style="background: var(--header-color)">
-        <h3>{{ info.archetype }} ({{ type }}) ⚡{{ info.energy }}</h3>
-      </div>
-      
-      <!-- Artwork zone -->
-      <img src="{{ site.baseurl }}/images/{{ info.image }}" alt="{{ type }} image" />
-      
-      <div class="card-stats">
-        <p> 🔮 {{ info.intuition }} 👣 {{ info.sensing }} 🧠 {{ info.thinking }} 💖 {{ info.feeling }} </p>
-      </div>
-
-      <!-- Text zone -->
-      <div class="card-body" style="background: var(--body-color)">
-
-        <ul class="card-hooks">
-          <li><strong>Battle Gift:</strong> {{ info.battle_gift }}</li>
-          <li><strong>Armor Reflex:</strong> {{ info.armor_reflex }}</li>
-        </ul>
-
-        <div class="card-flavor">
-          <p>“{{ info.tagline }}”</p>
-        </div>
-      </div>
-    </div>
+    {% include card.html %}
     </a>
   {% endfor %}
 </div>
