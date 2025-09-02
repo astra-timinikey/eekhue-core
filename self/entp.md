@@ -1,7 +1,11 @@
+---
+layout: report
+title: "ENTP – Inventor"
+---
+
 # Ego Layer Report
 
-##
-ENTP – Inventor  
+## ENTP – Inventor  
 
 ## Overview  
 ENTPs are energetic innovators who thrive on exploring new ideas, debating possibilities, and sparking change. They bring mental agility and enthusiasm, seeing potential where others see limits.  

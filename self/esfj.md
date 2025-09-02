@@ -1,7 +1,11 @@
+---
+layout: report
+title: "ESFJ – Ambassador"
+---
+
 # Ego Layer Report
 
-##
-ESFJ – Ambassador  
+## ESFJ – Ambassador  
 
 ## Overview  
 ESFJs are warm-hearted community builders who thrive on creating harmony and making others feel cared for. They are socially attuned, responsible, and practical in ensuring everyone is included.  
