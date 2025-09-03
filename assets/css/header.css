@@ -1,0 +1,64 @@
+/* Header styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #333;
+  color: white;
+  padding: 0.5em 1em;
+}
+
+.brand-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.brand-logo img.logo {
+  height: 40px;
+}
+
+/* Menu */
+.menu {
+  display: flex;
+  gap: 1em;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Hamburger hidden on desktop */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background: white;
+  margin: 4px 0;
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  .menu {
+    display: none;
+  }
+  .menu.open {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0.5em;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #444;
+    width: 200px;
+    padding: 1em;
+  }
+  .hamburger {
+    display: flex;
+  }
+}

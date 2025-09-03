@@ -1,0 +1,304 @@
+/* ==============================
+   :root variables
+   ============================== */
+   :root {
+    --bg: #0b1020;
+    --card: #121a33;
+    --text: #e8ecf3;
+    --muted: #9fb0c7;
+    --accent: #7aa2f7;
+    --border: #24314f;
+    --shadow: 0 6px 30px rgba(0,0,0,.35);
+    --radius: 16px;
+    --maxw: 960px;
+  }
+  
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f7f9fc;
+      --card: #ffffff;
+      --text: #0e1726;
+      --muted: #586273;
+      --accent: #2563eb;
+      --border: #e6eaf2;
+      --shadow: 0 6px 30px rgba(0,0,0,.08);
+    }
+  }
+  
+  /* ==============================
+     Reset & Body
+     ============================== */
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; font: 16px/1.6 system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, sans-serif; }
+  body { background: var(--bg); color: var(--text); }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  
+  /* ==============================
+     Header + nav + dropdown
+     ============================== */
+  header {
+    position: sticky;
+    top: 0;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+  }
+  header .wrap.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    padding: 0 20px;
+  }
+  .brand-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none; /* remove underline from <a> */
+    color: inherit;        /* keep text color */
+  }  
+  header .logo { height: 48px; width: auto; }
+  .menu a { margin-left: 16px; padding: 8px 12px; border-radius: 10px; }
+  .menu a.cta { background: var(--accent); color: #fff; box-shadow: var(--shadow); }
+
+  .nav .shop-link {
+    display: none; /* hide initially */
+  }  
+  
+  /* Responsive header */
+  @media (max-width: 600px) {
+    header .wrap.nav {
+      flex-direction: column;
+      align-items: flex-start;
+      height: auto;
+      padding: 12px 20px;
+    }
+    header .logo { height: 36px; }
+    .sidebar {
+      position: static;
+      width: 100%;
+      height: auto;
+      border-right: none;
+      margin-bottom: 20px;
+    }
+    
+    main {
+      margin-left: 0;
+      padding: 20px;
+    }
+    
+  }
+
+   .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropbtn {
+    padding: 8px 12px;
+    font-size: 16px;
+    border: none;
+    background: var(--card);
+    color: var(--text);
+    cursor: pointer;
+    border-radius: 8px;
+    margin-left: 16px;
+  }
+  
+  .dropbtn:hover {
+    background: var(--accent);
+    color: #fff;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: var(--card);
+    min-width: 180px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    border-radius: 8px;
+    z-index: 10;
+    margin-top: 4px;
+  }
+  
+  .dropdown-content a {
+    color: var(--text);
+    padding: 10px 16px;
+    display: block;
+    text-decoration: none;
+  }
+  
+  .dropdown-content a:hover {
+    background-color: var(--accent);
+    color: #fff;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block; /* shows the dropdown on hover */
+  }
+
+  /* Tooltip styling */
+  .tooltip {
+    visibility: hidden;
+    background-color: var(--card);
+    color: var(--text);
+    text-align: center;
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-size: 12px;
+    position: absolute;
+    z-index: 20;
+    top: 50%;       /* vertically centered */
+    right: 110%;    /* place it to the left of the button */
+    transform: translateY(-50%);
+    white-space: nowrap;
+    box-shadow: var(--shadow);
+  }
+  
+  .dropbtn:hover .tooltip {
+    visibility: visible;
+  }
+  
+  
+  
+
+  
+
+  
+  /* ==============================
+     Layout Wrappers
+     ============================== */
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
+  .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  
+  /* ==============================
+     Hero Section
+     ============================== */
+  .hero { padding: 72px 20px 36px; text-align: center; }
+  h1 { font-size: clamp(28px, 5vw, 44px); margin: 0 0 12px; }
+  p.lead { font-size: clamp(16px, 2.6vw, 20px); color: var(--muted); margin: 0 auto 22px; max-width: 720px; }
+  .pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid var(--border); background: var(--card); border-radius: 999px; font-size: 14px; }
+  
+
+  /* ====================================
+     Main content + buttons + outputs
+     ==================================== */
+  main {
+    margin-left: 240px; /* leave space for sidebar */
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .self-page main {
+    margin-left: 0; /* no offset needed */
+  }
+
+
+  
+  /* ==============================
+     Markdown Elements
+     ============================== */
+  table { border-collapse: collapse; width: 100%; margin: 16px 0; }
+  th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
+  th { background-color: var(--card); }
+  tr:nth-child(even) { background-color: color-mix(in hsl, var(--card) 90%, transparent); }
+  /* Lists */
+  ul, ol {
+    padding-left: 20px;
+    margin: 12px 0;
+    list-style-position: inside;
+    line-height: 1.6;
+    color: var(--text);
+  }
+
+  /* Nested lists fix */
+  ul ul, ol ol {
+    margin-left: 20px;
+  }
+
+  /* Code blocks */
+  pre {
+    background-color: #0a0f1e;
+    color: #e6edf3;
+    padding: 16px;
+    border-radius: 12px;
+    overflow-x: auto;
+    border: 1px solid #1d2946;
+    margin: 16px 0;
+    font-family: "Fira Code", monospace;
+    font-size: 0.95rem;
+  }
+
+  /* Inline code */
+  code {
+    background-color: rgba(122, 162, 247, 0.1);
+    padding: 2px 6px;
+    border-radius: 6px;
+    font-family: "Fira Code", monospace;
+    font-size: 0.95rem;
+  }
+
+  /* Make sure code inside pre uses the same background */
+  pre code {
+    background: none;
+    padding: 0;
+  }
+  img { max-width: 100%; border-radius: 8px; margin: 12px 0; }
+  blockquote { border-left: 3px solid var(--accent); padding-left: 12px; color: var(--muted); margin: 12px 0; }
+  .small-logo {
+    max-width: 120px;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+
+  video, audio {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  
+/* ==============================
+ Footer
+============================== */   
+ footer {
+  background: var(--card);
+  border-top: 4px solid var(--accent);
+  text-align: center;
+  padding: 16px;
+  padding: 20px;
+  font-size: 14px;
+  color: var(--text-muted, #666);
+}
+ 
+ footer p {
+  margin: 0;
+}
+ 
+ .footer-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-nav a {
+  margin: 0 8px;
+  color: var(--text-muted, #666);
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  color: var(--accent);
+}
+
+.socials a {
+  margin: 0 6px;
+  font-size: 18px;
+  color: var(--text-muted, #666);
+}
+
+.socials a:hover {
+  color: var(--accent);
+}

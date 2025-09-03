@@ -4,14 +4,19 @@
   <meta charset="utf-8">
   <title>{{ page.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <script>
-    const BASEURL = "{{ site.baseurl }}"; // "/eekhue-core"
-  </script>
-  <script src="{{ site.baseurl }}/assets/js/script.js"></script>
-  
 
+  <!-- Base styles (global) -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/base.css">
+  <!-- Header styles only -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/header.css">
+
+  <script>
+    const BASEURL = "{{ site.baseurl }}"; // e.g. "/eekhue-core"
+  </script>
+  <!-- Header JS only -->
+  <script src="{{ site.baseurl }}/assets/js/header.js" defer></script>
 </head>
+
 <body class="{{ page.page_class }}">
 
   <!-- Header / Top Navigation -->
