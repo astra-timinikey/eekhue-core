@@ -4,7 +4,6 @@ title: "About This Project"
 description: "Learn more about the purpose and structure of this personality reports site."
 hero_title: "About This Site 🧩"
 hero_subtitle: "Organizing personality insights, reports, and interactive tests."
-page_class: "self-page"
 ---
 
 # About This Project
@@ -40,6 +39,7 @@ The goal of this project is to create a centralized, interactive hub for persona
 
 ## Visuals / Media
 
-![Personality Mindmap](https://via.placeholder.com/400x200.png?text=Personality+Mindmap)
-![Team Logo](../images/logo.png){: .small-logo }
+![Personality Mindmap]({{ site.baseurl }}/assets/images/personality-mindmap.png)
+
+![Team Logo](../assets/images/logo.png){: .small-logo }
 

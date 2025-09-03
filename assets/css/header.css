@@ -81,12 +81,15 @@ header .logo {
     display: none;
     flex-direction: column;
     gap: 10px;
-    width: 100%;
-    margin-top: 12px;
+    position: absolute;
+    top: 64px;       /* same as header height */
+    right: 0;
     background: var(--card);
+    width: 200px;
     padding: 10px;
     border-radius: 8px;
     box-shadow: var(--shadow);
+    z-index: 999;
   }
 
   .menu.open {
