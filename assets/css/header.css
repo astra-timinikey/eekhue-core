@@ -1,64 +1,170 @@
-/* Header styles */
+/* ==============================
+   Header + nav + dropdown + hamburger
+   ============================== */
 header {
+  position: sticky;
+  top: 0;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  z-index: 1000;
+}
+
+header .wrap.nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #333;
-  color: white;
-  padding: 0.5em 1em;
+  height: 64px;
+  padding: 0 20px;
 }
 
 .brand-logo {
   display: flex;
   align-items: center;
-  gap: 0.5em;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
 }
 
-.brand-logo img.logo {
-  height: 40px;
+header .logo {
+  height: 48px;
+  width: auto;
 }
 
-/* Menu */
 .menu {
   display: flex;
-  gap: 1em;
+  align-items: center;
 }
 
 .menu a {
-  color: white;
-  text-decoration: none;
+  margin-left: 16px;
+  padding: 8px 12px;
+  border-radius: 10px;
 }
 
-/* Hamburger hidden on desktop */
+.menu a.cta {
+  background: var(--accent);
+  color: #fff;
+  box-shadow: var(--shadow);
+}
+
+/* Hamburger button (hidden on desktop) */
 .hamburger {
   display: none;
   flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
   cursor: pointer;
-}
-.hamburger .bar {
-  width: 25px;
-  height: 3px;
-  background: white;
-  margin: 4px 0;
+  margin-left: auto;
 }
 
-/* Mobile styles */
+.hamburger div {
+  height: 4px;
+  background-color: var(--text);
+  border-radius: 2px;
+}
+
+/* Responsive header */
 @media (max-width: 600px) {
+  header .wrap.nav {
+    flex-direction: row;   /* keep logo left, hamburger right */
+    align-items: center;
+    height: auto;
+    padding: 12px 20px;
+  }
+
+  header .logo {
+    height: 36px;
+  }
+
   .menu {
     display: none;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    margin-top: 12px;
+    background: var(--card);
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
   }
+
   .menu.open {
     display: flex !important;
-    flex-direction: column;
-    gap: 0.5em;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #444;
-    width: 200px;
-    padding: 1em;
   }
+
   .hamburger {
     display: flex;
   }
+}
+
+/* Dropdowns stay as-is */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropbtn {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: none;
+  background: var(--card);
+  color: var(--text);
+  cursor: pointer;
+  border-radius: 8px;
+  margin-left: 16px;
+}
+
+.dropbtn:hover {
+  background: var(--accent);
+  color: #fff;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--card);
+  min-width: 180px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  border-radius: 8px;
+  z-index: 10;
+  margin-top: 4px;
+}
+
+.dropdown-content a {
+  color: var(--text);
+  padding: 10px 16px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: var(--accent);
+  color: #fff;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Tooltip styling */
+.tooltip {
+  visibility: hidden;
+  background-color: var(--card);
+  color: var(--text);
+  text-align: center;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  position: absolute;
+  z-index: 20;
+  top: 50%;
+  right: 110%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  box-shadow: var(--shadow);
+}
+
+.dropbtn:hover .tooltip {
+  visibility: visible;
 }

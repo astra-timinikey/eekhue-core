@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: about
 title: "About This Project"
 description: "Learn more about the purpose and structure of this personality reports site."
 hero_title: "About This Site 🧩"

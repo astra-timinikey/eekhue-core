@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Base styles (global) -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/base.css">
+  <!-- Header & Footer styles only -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/header.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/footer.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/self-cards.css">
+
+  <script>
+    const BASEURL = "{{ site.baseurl }}"; // e.g. "/eekhue-core"
+  </script>
+  <!-- Header JS only -->
+  <script src="{{ site.baseurl }}/assets/js/header.js" defer></script>
+</head>
+
+<body>
+
+  {% include header.html %}
+  
+  <div id="debug"></div>
+
+
+  <main>
+    {{ content }}
+  </main>
+
+  <footer>
+    <p>© 2025 {{ site.author | default: "Your Name" }} — Hosted on GitHub Pages</p>
+  </footer>
+</body>
+</html>
