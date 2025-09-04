@@ -1,72 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
+ <meta charset="utf-8">
   <title>{{ page.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <!-- Base styles (global) -->
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/base.css">
-  <!-- Header styles only -->
+  <!-- Header & Footer styles only -->
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/header.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/footer.css">
 
   <script>
     const BASEURL = "{{ site.baseurl }}"; // e.g. "/eekhue-core"
   </script>
   <!-- Header JS only -->
   <script src="{{ site.baseurl }}/assets/js/header.js" defer></script>
+
 </head>
+<body>
 
-<body class="{{ page.page_class }}">
-
-  <!-- Header / Top Navigation -->
-  <header>
-    <div class="wrap nav">
-      <div class="brand-logo">
-        <a href="{{ "/" | relative_url }}" class="brand-logo">
-          <div class="brand">{{ site.title }}</div>
-          <img src="{{ site.baseurl }}/assets/images/sample.png" alt="Logo" class="logo" />
-        </a>
-      </div>
-    
-      <nav class="menu">
-        <a href="{{ site.baseurl }}/pages/test.html">What Are You?</a>
-
-        <!-- Dropdown for Reports -->
-        <div class="dropdown">
-          <button class="dropbtn">Darkness–Light ▼
-            <span class="tooltip">Explore personality insights</span>
-          </button>
-          <div class="dropdown-content">
-            <a href="{{ site.baseurl }}/persona/">Persona</a>
-            <a href="{{ site.baseurl }}/self/">Self</a>
-            <a href="{{ site.baseurl }}/shadow/">Shadow</a>
-            <a href="{{ site.baseurl }}/growth/">Growth</a>
-            <a href="{{ site.baseurl }}/relationships/">Relationships</a>
-          </div>
-        </div>
-
-        <a href="{{ site.baseurl }}/pages/about.html">About</a>
-        <a href="{{ site.baseurl }}/pages/contact.html">Contact</a>
-        <a href="#" class="cta shop-link">Merch (Coming Soon)</a>
-      </nav>
-
-      <div class="hamburger" onclick="toggleMenu()">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-    </div>
-  </header>
-
+  {% include header.html %}
+  
   <!-- Main content -->
   <main>
     {{ content }}
   </main>
 
-  <footer>
-    <p>© 2025 Astra Time — Hosted on GitHub Pages</p>
-  </footer>
+  {% include footer.html %}
 
 
 </body>

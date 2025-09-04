@@ -44,7 +44,7 @@
   @media (max-width: 600px) {
       .sidebar {
         position: static;
-        width: 100%;      /* full width */
+        width: 30%;      /* full width */
         height: auto;     /* shrink naturally */
         border-right: none;
         margin-bottom: 20px;
