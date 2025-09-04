@@ -1,10 +1,9 @@
 ---
-layout: default
+layout: quiz
 title: "Test Page"
 description: "A page to experiment with JavaScript interactions."
 hero_title: "JavaScript Test Playground ⚡"
 hero_subtitle: "Try out the click counters, HTTP fetch, and personality quiz below."
-page_class: "self-page"
 ---
 
 # JavaScript Test Page
