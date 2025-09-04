@@ -1,33 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
- <meta charset="utf-8">
+  <meta charset="utf-8">
   <title>{{ page.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <!-- Base styles (global) -->
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/base.css">
   <!-- Header & Footer styles only -->
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/header.css">
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/footer.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/quiz.css">
 
   <script>
     const BASEURL = "{{ site.baseurl }}"; // e.g. "/eekhue-core"
   </script>
-  <!-- Header JS only -->
+  <!-- Header & Quiz JS only -->
   <script src="{{ site.baseurl }}/assets/js/header.js" defer></script>
-
+  <script src="{{ site.baseurl }}/assets/js/quiz.js" defer></script>
 </head>
+
 <body>
 
   {% include header.html %}
   
-  <!-- Main content -->
+  <div id="debug"></div>
+
+
   <main>
     {{ content }}
   </main>
 
   {% include footer.html %}
-
-
+  
+  </footer>
 </body>
 </html>

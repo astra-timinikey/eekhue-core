@@ -73,7 +73,6 @@
       height: auto;
       padding: 12px 20px;
     }
-    .menu { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
     header .logo { height: 36px; }
     .sidebar {
       position: static;
@@ -239,6 +238,22 @@
     background: var(--accent);
     color: #fff;
   }
+  
+  @media (max-width: 600px) {
+      .sidebar {
+        position: static;
+        width: 100%;      /* full width */
+        height: auto;     /* shrink naturally */
+        border-right: none;
+        margin-bottom: 20px;
+        padding: 12px 16px; /* optional: tighter padding */
+      }
+
+      main {
+        margin-left: 0;   /* remove space for sidebar */
+        padding: 20px;
+      }
+    }
   
   /* ==============================
      Layout Wrappers
@@ -412,7 +427,7 @@
   border: 3px solid #000;
   border-radius: 14px;
   width: 200px;
-  height: 320px;
+  min-height: 320px;
   display: flex;
   flex-direction: column;
   box-shadow: 0 6px 10px rgba(0,0,0,.25);
@@ -423,7 +438,7 @@
 @media (max-width: 600px) {
   .card {
     width: 100%;   /* take full column width */
-    max-width: 420px; /* optional: limit so it's not too wide */
+    max-width: 500px; /* optional: limit so it's not too wide */
     margin: 0 auto;   /* center the card */
   }
 }
@@ -672,12 +687,46 @@
   }
   
   
-  /* ==============================
-     Footer
-     ============================== */
-     footer {
-      border-top: 1px solid var(--border);
-      color: var(--muted);
-      padding: 28px 20px;
-      text-align: center;
-    }
+/* ==============================
+ Footer
+============================== */   
+ footer {
+  background: var(--card);
+  border-top: 4px solid var(--accent);
+  text-align: center;
+  padding: 16px;
+  padding: 20px;
+  font-size: 14px;
+  color: var(--text-muted, #666);
+}
+ 
+ footer p {
+  margin: 0;
+}
+ 
+ .footer-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-nav a {
+  margin: 0 8px;
+  color: var(--text-muted, #666);
+  text-decoration: none;
+}
+
+.footer-nav a:hover {
+  color: var(--accent);
+}
+
+.socials a {
+  margin: 0 6px;
+  font-size: 18px;
+  color: var(--text-muted, #666);
+}
+
+.socials a:hover {
+  color: var(--accent);
+}

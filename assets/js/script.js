@@ -28,7 +28,16 @@ document.addEventListener("DOMContentLoaded", () => {
   function toggleMenu() {
     const nav = document.querySelector(".menu");
     nav.classList.toggle("open");
+    log("toggleMenu function called to open nav")
   }
+
+  // attach event listener
+  const hamburger = document.querySelector(".hamburger");
+  if (hamburger) {
+    hamburger.addEventListener("click", toggleMenu);
+    log("toggle menu clicked.")
+  }
+});
   
 
   /* -------------------------
@@ -201,3 +210,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
+
+function log(msg) {
+  const out = document.getElementById("debug");
+  if (out) {
+    out.innerHTML += msg + "<br>";
+  }
+}
+log("JS Loaded!");

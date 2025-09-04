@@ -1,18 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset="utf-8">
   <title>{{ page.title }}</title>
-  <meta name="description" content="{{ page.description | default: site.description }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- External CSS and JavaScript -->
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
+  <!-- Base styles (global) -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/base.css">
+  <!-- Header & Footer styles only -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/header.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/footer.css">
+
   <script>
     const BASEURL = "{{ site.baseurl }}"; // e.g. "/eekhue-core"
   </script>
-  <script src="{{ site.baseurl }}/assets/js/script.js"></script>
+  <!-- Header JS only -->
+  <script src="{{ site.baseurl }}/assets/js/header.js" defer></script>
 </head>
+
 <body>
 
   {% include header.html %}
@@ -22,14 +27,15 @@
     <p class="lead">{{ page.hero_subtitle }}</p>
     <div class="pill">✨ Powered by GitHub Pages</div>
   </section>
+  
+  <div id="debug"></div>
 
 
   <main>
     {{ content }}
   </main>
 
-  <footer>
-    <p>© 2025 {{ site.author | default: "Your Name" }} — Hosted on GitHub Pages</p>
-  </footer>
+  {% include footer.html %}
+  
 </body>
 </html>

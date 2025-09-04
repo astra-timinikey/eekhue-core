@@ -29,6 +29,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const nav = document.querySelector(".menu");
     nav.classList.toggle("open");
   }
+
+  // attach event listener
+  const hamburger = document.querySelector(".hamburger");
+  if (hamburger) {
+    hamburger.addEventListener("click", toggleMenu);
+  }
+});
   
 
   /* -------------------------

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: self
 title: "Self Analysis"
 description: "A space to explore your own personality."
 hero_title: "Self Analysis 🪞"
