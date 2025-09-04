@@ -1,0 +1,67 @@
+  /* ====================================
+     Main content + buttons + outputs
+     ==================================== */
+  main {
+    margin-left: 0px; /* no space for sidebar */
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .self-page main {
+    margin-left: 0; /* no offset needed */
+  }
+
+  button { padding: 10px 16px; font-size: 16px; cursor: pointer; }
+  #output {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    color: #2563eb;
+    transition: transform 0.15s ease, color 0.2s ease;
+    text-align: center;
+  }
+
+  #helloBtn, #resetBtn {
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 12px;
+    border: none;
+    background: var(--accent);
+    color: #fff;
+    cursor: pointer;
+    margin: 8px;
+    transition: transform 0.1s ease, background 0.2s ease;
+    box-shadow: var(--shadow);
+  }
+  
+  #helloBtn:hover, #resetBtn:hover {
+    background: #5e87e0; /* slightly darker accent */
+    transform: translateY(-2px);
+  }
+
+  #fetchBtn, #quiz button {
+    padding: 10px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    background: var(--accent);
+    color: #fff;
+    margin: 4px;
+    cursor: pointer;
+    box-shadow: var(--shadow);
+    transition: transform 0.1s ease, background 0.2s ease;
+  }
+  #fetchBtn:hover, #quiz button:hover {
+    transform: translateY(-2px);
+    background: #5e87e0;
+  }
+  
+  #fetchOutput {
+    background: var(--card);
+    color: var(--text);
+    padding: 12px;
+    border-radius: 12px;
+    margin-top: 12px;
+    overflow-x: auto;
+    font-family: monospace;
+  }
