@@ -184,7 +184,7 @@
      Main content + buttons + outputs
      ==================================== */
   main {
-    margin-left: 240px; /* leave space for sidebar */
+    margin-left: 0px; /* leave no space for sidebar */
     text-align: center;
     padding: 40px 20px;
   }
