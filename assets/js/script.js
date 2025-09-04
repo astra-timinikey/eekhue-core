@@ -167,11 +167,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
-});
 
-
-// assets/js/persona.js
-document.addEventListener("DOMContentLoaded", () => {
 
   // Grab all the rainbow triggers
   const rainbowColors = document.querySelectorAll(".rainbow-color");
@@ -209,7 +205,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!clickedInside) hideAllCards();
   });
 
-});
+
 
 
 function log(msg) {
@@ -219,3 +215,5 @@ function log(msg) {
   }
 }
 log("JS Loaded!");
+
+

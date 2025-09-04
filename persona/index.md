@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: persona
 title: "Persona"
 description: "Explore all personality personas with detailed analysis."
 hero_title: "🌈 Persona Roles 🛡️"
@@ -39,15 +39,24 @@ Each Persona role is represented by a color of the rainbow.
 <!-- Rainbow arc -->
 <div class="rainbow-bar">
   <!-- Clickable zones -->
-  <button class="rainbow-zone" data-target="creative-performer"></button>
-  <button class="rainbow-zone" data-target="social-butterfly"></button>
-  <button class="rainbow-zone" data-target="gadget-tinker"></button>
-  <button class="rainbow-zone" data-target="charming-naturalist"></button>
-  <button class="rainbow-zone" data-target="corporate-climber"></button>
-  <button class="rainbow-zone" data-target="streetwise-rogue"></button>
-  <button class="rainbow-zone" data-target="stargazing-dreamer"></button>
+  <button class="rainbow-bar red" data-target="creative-performer"></button>
+  <button class="rainbow-bar orange" data-target="social-butterfly"></button>
+  <button class="rainbow-bar yellow" data-target="gadget-tinker"></button>
+  <button class="rainbow-bar green" data-target="charming-naturalist"></button>
+  <button class="rainbow-bar blue" data-target="corporate-climber"></button>
+  <button class="rainbow-bar indigo" data-target="streetwise-rogue"></button>
+  <button class="rainbow-bar violet" data-target="stargazing-dreamer"></button>
 </div>
 
+<div class="persona-cards">
+  {% assign personas = site.data.persona %}
+  {% for key in personas %}
+    {% assign info = personas[key[0]] %}
+    <div class="persona-card" id="{{ key[0] }}">
+      {% include persona-card.html info=info %}
+    </div>
+  {% endfor %}
+</div>
 
 <!-- Persona cards (overlay, initially hidden) -->
 <div class="persona-cards">
@@ -81,6 +90,32 @@ Each Persona role is represented by a color of the rainbow.
     <p>*Placeholder: short role summary here*</p>
   </div>
 </div>
+
+---
+
+## 🎮 Persona as Equipment System
+Think of each Persona as a **set of gear** you can equip. Like in an RPG, Personas have mechanics:
+
+- **Requirements** → What inner stats or functions you need to wear this Persona effectively.  
+- **Abilities** → What skills or advantages it grants when worn.  
+- **Stat Gains** → The boosts it gives your psyche while active.  
+- **Upgrades** → How practice, awareness, and integration strengthen the Persona.  
+- **Enchantments** → Shadow-work or anima/animus integration that permanently enhance how a Persona plays out.  
+
+Sometimes a single “helmet” (one aspect of Persona) can be worn, but equipping the *full set* gives maximum benefit — though it also demands higher energy or inner alignment.
+
+---
+
+## ⚔️ Integration and Persona Mastery
+Equipping a Persona is easy. **Integrating it is the long game.**
+
+- **Surface use**: You can “fake it” by forcing the right moves, but it feels brittle.  
+- **Integrated use**: When shadow aspects are acknowledged and the inferior function has been befriended, the Persona flows more naturally.  
+
+Different Selves wearing the same Persona may produce very different outcomes.  
+For example, a person whose natural strengths are distant from the Persona’s “required stats” may struggle at first, but through awareness and practice (shadow integration + anima/animus work), the armor can be upgraded until it feels nearly indistinguishable from someone who “naturally” wears it.  
+ 
+Personas are not limited to 16 types. There’s an **infinite wardrobe**. The seven here are just the starting gear — combinable, upgradable, and expandable.
 
 ---
 

@@ -1,0 +1,110 @@
+
+/* ==============================
+   Persona Cards (floating overlays)
+============================== */
+
+.desktop-only { display: inline; }
+.mobile-only { display: none; }
+
+@media (hover: none) and (pointer: coarse) {
+  .desktop-only { display: none; }
+  .mobile-only { display: inline; }
+}
+
+/* Card wrapper - hidden until triggered */
+.persona-card {
+  position: absolute;         /* overlay style, not grid */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.95);
+  width: 220px;
+  height: 340px;
+  background: #fdfdfb;
+  border: 3px solid #000;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 15px rgba(0,0,0,.25);
+  overflow: hidden;
+  opacity: 0;                 /* start hidden */
+  pointer-events: none;       /* no interaction until shown */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  z-index: 20;
+}
+
+/* When JS adds an "active" class */
+.persona-card.active {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Persona Header */
+.persona-card h3 {
+  margin: 0;
+  padding: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  background: var(--header-color, #666);
+  border-bottom: 2px solid #000;
+}
+
+/* Persona Body */
+.persona-card p {
+  flex-grow: 1;
+  padding: 10px;
+  margin: 0;
+  font-size: 0.8rem;
+  color: #222;
+  background: var(--body-color, #f8f8f8);
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* Hover glow (future when whole card clickable) */
+.persona-card:hover {
+  box-shadow: 
+    0 0 10px 3px rgba(0,0,0,0.25),
+    0 0 20px 6px var(--header-color, rgba(255,255,0,0.5));
+  transform: translate(-50%, -50%) scale(1.03);
+}
+
+/* Rainbow Color Themes */
+#creative-performer   { --header-color: #e63946; --body-color: #ffe5e5; } /* Red */
+#social-butterfly    { --header-color: #ff9f1c; --body-color: #fff2e0; } /* Orange */
+#gadget-tinker       { --header-color: #ffd60a; --body-color: #fffbe5; } /* Yellow */
+#charming-naturalist { --header-color: #2ec4b6; --body-color: #e5fafa; } /* Green */
+#corporate-climber   { --header-color: #4361ee; --body-color: #e8f0ff; } /* Blue */
+#streetwise-rogue    { --header-color: #5a189a; --body-color: #f3e8ff; } /* Indigo */
+#stargazing-dreamer  { --header-color: #7209b7; --body-color: #f8e5ff; } /* Violet */
+
+
+/* ==============================
+   Rainbow Divider (Horizontal Bands)
+============================== */
+
+/* Wrapper fills viewport height if you want a full rainbow page */
+.rainbow-bars {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh; /* full page */
+  }
+  
+  /* Each bar gets one rainbow color */
+  .rainbow-bar {
+    flex: 1; /* equal height */
+    width: 100%;
+  }
+  
+  /* Assign colors (matching your persona mapping) */
+  .rainbow-bar.red    { background: #EA9EA9; }   /* Cherry Blossom Pink */
+  .rainbow-bar.orange { background: #FACEB4; }   /* Peach Puff */
+  .rainbow-bar.yellow { background: #FFFCCC; }   /* Lemon Chiffon */
+  .rainbow-bar.green  { background: #B5F5B0; }   /* Mint Green */
+  .rainbow-bar.blue   { background: #B5E5EF; }   /* Powder Blue */
+  .rainbow-bar.indigo { background: #AAAEEE; }   /* Periwinkle Blue */
+  .rainbow-bar.violet { background: #B5BBF5; }   /* Lavender Blue */
+  

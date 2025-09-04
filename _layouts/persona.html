@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+  <title>{{ page.title }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Base styles (global) -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/base.css">
+  <!-- Header, Footer & Rainbow styles only -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/header.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/footer.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/rainbow.css">
+
+  <script>
+    const BASEURL = "{{ site.baseurl }}"; // e.g. "/eekhue-core"
+  </script>
+  <!-- Header & Rainbow JS only -->
+  <script src="{{ site.baseurl }}/assets/js/header.js" defer></script>
+  <script src="{{ site.baseurl }}/assets/js/rainbow.js" defer></script>
+
+</head>
+<body>
+
+  {% include header.html %}
+  
+  <!-- Main content -->
+  <main>
+    {{ content }}
+  </main>
+
+  {% include footer.html %}
+
+
+</body>
+</html>
