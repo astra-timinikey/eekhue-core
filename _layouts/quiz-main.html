@@ -10,33 +10,32 @@
   <!-- Header & Footer styles only -->
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/header.css">
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/footer.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/home.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/quiz.css">
 
   <script>
     const BASEURL = "{{ site.baseurl }}"; // e.g. "/eekhue-core"
   </script>
-  <!-- Header JS only -->
+  <!-- Header & Quiz JS only -->
   <script src="{{ site.baseurl }}/assets/js/header.js" defer></script>
-  <script src="{{ site.baseurl }}/assets/js/home.js" defer></script>
+  <script src="{{ site.baseurl }}/assets/js/quiz.js" defer></script>
+  <script src="{{ site.baseurl }}/assets/js/test.js" defer></script>
+  
 </head>
 
 <body>
 
   {% include header.html %}
-
-  <section class="hero">
-    <h1>{{ page.hero_title }}</h1>
-    <p class="lead">{{ page.hero_subtitle }}</p>
-    <div class="pill">✨ Powered by GitHub Pages</div>
-  </section>
   
   <div id="debug"></div>
 
   <main>
+    
     {{ content }}
+
   </main>
 
   {% include footer.html %}
   
+  </footer>
 </body>
 </html>

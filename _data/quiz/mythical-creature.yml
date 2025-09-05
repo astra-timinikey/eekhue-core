@@ -1,0 +1,37 @@
+title: "What Mythical Creature Are You?"
+slug: "mythical-creature"
+description: "Uncover your inner dragon, phoenix, or unicorn."
+questions:
+  - id: q1
+    text: "How do you face obstacles?"
+    options:
+      - text: "With fiery determination 🔥"
+        value: "dragon"
+      - text: "With grace and rebirth 🌸"
+        value: "phoenix"
+      - text: "With calm wisdom 🦄"
+        value: "unicorn"
+
+  - id: q2
+    text: "Where do you feel most at home?"
+    options:
+      - text: "Mountains ⛰️"
+        value: "dragon"
+      - text: "Sky ☁️"
+        value: "phoenix"
+      - text: "Mystic forests 🌲"
+        value: "unicorn"
+
+results:
+  dragon:
+    title: "Dragon 🐉"
+    description: "Powerful, bold, and driven by inner fire."
+    redirect: "/persona/dragon.html"
+  phoenix:
+    title: "Phoenix 🔥"
+    description: "Resilient, transformative, always rising anew."
+    redirect: "/persona/phoenix.html"
+  unicorn:
+    title: "Unicorn 🦄"
+    description: "Gentle, mystical, and a symbol of purity."
+    redirect: "/persona/unicorn.html"

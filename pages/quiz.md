@@ -1,9 +1,27 @@
 ---
-layout: quiz
-title: "Test Page"
+layout: quiz-main
+title: "Fun Quizzes"
 description: "A page to experiment with JavaScript interactions."
 hero_title: "JavaScript Test Playground ⚡"
 hero_subtitle: "Try out the click counters, HTTP fetch, and personality quiz below."
+---
+
+# 🎲 Fun Quizzes
+
+Pick a quiz and discover your hidden side!
+
+<div class="quiz-grid">
+  {% for quiz in site.data.quiz %}
+    {% assign q = quiz[1] %}
+    <div class="quiz-card">
+      <h2>{{ q.title }}</h2>
+      <p>{{ q.description }}</p>
+      <a href="{{ site.baseurl }}/quiz/{{ q.slug }}.html" class="btn">Start Quiz</a>
+    </div>
+  {% endfor %}
+</div>
+
+
 ---
 
 # JavaScript Test Page
