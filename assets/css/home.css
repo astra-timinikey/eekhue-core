@@ -1,3 +1,47 @@
+/* ==============================
+ XP Progress Bar
+============================== */
+.xp-bar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 16px;
+  background: #1a1a1a;
+  z-index: 9999;
+}
+
+.xp-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #7f5af0, #2cb67d);
+  transition: width 0.3s ease;
+}
+
+.xp-label {
+  position: fixed;
+  top: 20px;
+  right: 1rem;
+  font-size: 14px;
+  color: #2cb67d;
+  text-shadow: 0 0 6px rgba(127, 90, 240, 0.7);
+  z-index: 10000;
+}
+
+/* XP Message Unlocks */
+.xp-message {
+  position: fixed;
+  top: 40px;
+  right: 1rem;
+  font-size: 15px;
+  color: #7f5af0;
+  text-shadow: 0 0 8px rgba(44, 182, 125, 0.7);
+  max-width: 220px;
+  line-height: 1.4;
+  z-index: 10000;
+}
+
+
 .realm-map {
     position: relative;
     width: 100%;

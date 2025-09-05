@@ -14,6 +14,14 @@ Equip armor, summon archetypes, explore functions — and track your growth alon
 
 ## 🌌 Explore the Realms
 
+<!-- XP Progress Bar -->
+<div class="xp-bar-container">
+  <div class="xp-bar-fill" id="xpFill"></div>
+</div>
+<div class="xp-label" id="xpLabel">XP: 0%</div>
+<div class="xp-message" id="xpMessage">Begin your journey...</div>
+
+
 <div class="realm-map">
   <canvas id="starfield"></canvas>
 

@@ -1,4 +1,56 @@
+/* ==============================
+ XP Progress Bar Script
+ With Milestone Messages
+ Saves progress + last message in localStorage
+============================== */
 document.addEventListener("DOMContentLoaded", () => {
+  const xpFill = document.getElementById("xpFill");
+  const xpLabel = document.getElementById("xpLabel");
+  const xpMessage = document.getElementById("xpMessage");
+
+  // Define milestones
+  const milestones = [
+    { percent: 0, text: "Begin your journey..." },
+    { percent: 25, text: "🌱 Exploring your Self..." },
+    { percent: 50, text: "🌑 Meeting your Shadow..." },
+    { percent: 75, text: "🛡️ Growing your Persona..." },
+    { percent: 100, text: "✨ Integration unlocked!" }
+  ];
+
+  function getMessage(progress) {
+    let msg = milestones[0].text;
+    for (let m of milestones) {
+      if (progress >= m.percent) msg = m.text;
+    }
+    return msg;
+  }
+
+  // Load saved XP + message
+  let savedXP = parseInt(localStorage.getItem("eekhueXP")) || 0;
+  xpFill.style.width = savedXP + "%";
+  xpLabel.textContent = "XP: " + savedXP + "%";
+  xpMessage.textContent = localStorage.getItem("eekhueXPMsg") || getMessage(savedXP);
+
+  window.addEventListener("scroll", () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    let scrolled = (scrollTop / docHeight) * 100;
+    scrolled = Math.min(100, Math.max(0, Math.round(scrolled)));
+
+    // Update bar + label
+    xpFill.style.width = scrolled + "%";
+    xpLabel.textContent = "XP: " + scrolled + "%";
+
+    // Update milestone message
+    const message = getMessage(scrolled);
+    xpMessage.textContent = message;
+
+    // Save XP + message
+    localStorage.setItem("eekhueXP", scrolled);
+    localStorage.setItem("eekhueXPMsg", message);
+  });
+
+
     // Popup card logic
     const nodes = document.querySelectorAll(".realm-node");
     const popup = document.getElementById("realm-card");

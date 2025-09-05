@@ -1,34 +1,36 @@
 <!-- Header / Top Navigation -->
 <header>
-<div class="wrap nav">
+  <div class="wrap nav">
     <div class="brand-logo">
-    <a href="{{ "/" | relative_url }}" class="brand-logo">
+      <a href="{{ "/" | relative_url }}" class="brand-logo">
         <div class="brand">{{ site.title }}</div>
         <img src="{{ site.baseurl }}/assets/images/sample.png" alt="Logo" class="logo" />
-    </a>
+      </a>
     </div>
 
     <nav class="menu" id="menu">
-    <a href="{{ site.baseurl }}/pages/quiz.html">What Are You?</a>
+      <a href="{{ site.baseurl }}/pages/quiz.html">What Are You?</a>
 
-    <!-- Dropdown for Reports -->
-    <div class="dropdown">
+      <!-- Dropdown for Reports -->
+      <div class="dropdown">
         <button class="dropbtn">Darkness–Light ▼
-        <span class="tooltip">Explore personality insights</span>
+          <span class="tooltip">Explore personality insights</span>
         </button>
         <div class="dropdown-content">
-        <a href="{{ site.baseurl }}/persona/">Persona</a>
-        <a href="{{ site.baseurl }}/self/">Self</a>
-        <a href="{{ site.baseurl }}/shadow/">Shadow</a>
-        <a href="{{ site.baseurl }}/growth/">RE:equip</a>
-        <a href="{{ site.baseurl }}/relationships/">RE:route</a>
-    </div>
-    
-    <div class="hamburger" id="hamburger">
-      <div class="bar"></div>
-      <div class="bar"></div>
-      <div class="bar"></div>
-    </div>
+          <a href="{{ site.baseurl }}/persona/">Persona</a>
+          <a href="{{ site.baseurl }}/self/">Self</a>
+          <a href="{{ site.baseurl }}/shadow/">Shadow</a>
+          <a href="{{ site.baseurl }}/growth/">RE:equip</a>
+          <a href="{{ site.baseurl }}/relationships/">RE:route</a>
+        </div>
+      </div>
+    </nav>
 
-</div>
+    <!-- Hamburger (moved OUT of dropdown) -->
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
 </header>
