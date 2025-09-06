@@ -70,7 +70,8 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- Init ---
   updateXPBar();
 
-  // --- Realm node clicks (homepage only, safe no-op on quiz page) --- document.querySelectorAll(".realm-node").forEach((node, i) => {
+  // --- Realm node clicks (homepage only, safe no-op on quiz page) ---
+   document.querySelectorAll(".realm-node").forEach((node, i) => {
     const id = node.dataset.title || `realm${i}`;
     node.addEventListener("click", () => {
       if (!visitedRealms[id]) {
