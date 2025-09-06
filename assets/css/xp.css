@@ -64,9 +64,41 @@
 
 
 /* ==============================
- XP Spam Button (motivational click)
-============================== */
-.spam-btn {
+ XP Spam Button & Container (motivational click)
+============================= */
+.quiz-spam-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;  /* center horizontally */
+  align-items: center;
+  margin: 20px 0;           /* spacing from surrounding content */
+  position: relative;
+  z-index: 10000;
+}
+
+/* Floating badge specifically for spam button messages */
+.quiz-spam-section .spam-badge {
+  position: absolute;
+  bottom: 60px; /* relative to the section */
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--accent);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 10000;
+}
+
+.quiz-spam-section .spam-badge.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.quiz-spam-section .spam-btn {
   background: var(--accent);
   color: #fff;
   border: none;
@@ -78,7 +110,7 @@
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
-.spam-btn:hover {
+.quiz-spam-section .spam-btn:hover {
   transform: scale(1.05);
   opacity: 0.95;
 }
