@@ -40,9 +40,7 @@
   transform: translateY(0);
 }
 
-/* ==============================
- XP Replay Button
-============================== */
+/* XP Replay Button */
 .xp-replay {
   position: fixed;
   bottom: 28px; /* just above XP bar */
@@ -64,3 +62,23 @@
   opacity: 0.95;
 }
 
+
+/* ==============================
+ XP Spam Button (motivational click)
+============================== */
+.spam-btn {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: var(--shadow);
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.spam-btn:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
