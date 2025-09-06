@@ -25,7 +25,7 @@ Equip armor, summon archetypes, explore functions — and track your growth alon
 
   <div class="realm-node" style="top:50%; left:75%;" data-title="⚔️ RE:equip" data-text="Upgrade your Self and Persona by leveling functions and balancing traits. A growth system for integration, awareness, and strength." data-img="{{ site.baseurl }}/assets/images/reequip.png"></div>
 
-  <div class="realm-node" style="top:30%; left:85%;" data-title="🧭 RE:route" data-text="Navigate relationships and connections through an interactive map of neural links. Explore how different archetypes interact, clash, or harmonize." data-img="{{ site.baseurl }}/assets/images/reroute.png"></div>
+  <div class="realm-node" style="top:30%; left:45%;" data-title="🧭 RE:route" data-text="Navigate relationships and connections through an interactive map of neural links. Explore how different archetypes interact, clash, or harmonize." data-img="{{ site.baseurl }}/assets/images/reroute.png"></div>
 </div>
 
 <!-- Popup card -->

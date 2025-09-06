@@ -1,6 +1,35 @@
 /* ==============================
  XP Progress Bar (Bottom HUD Style)
 ============================== */
+/* XP Label (bottom-left corner of bar) */
+.xp-label {
+  position: fixed;
+  bottom: 22px;       /* sits just above bar */
+  left: 1rem;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 4px rgba(0,0,0,0.7);
+  z-index: 10000;
+}
+
+/* XP Milestone Message (centered above bar) */
+.xp-message {
+  position: fixed;
+  bottom: 40px;       /* sits higher than label */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1rem;
+  font-weight: bold;
+  color: var(--accent);
+  text-align: center;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(0,0,0,0.4);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+  z-index: 10000;
+}
+
 .xp-bar-container {
   position: fixed;
   bottom: 0;         /* was top: 0 */

@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const REPLAY_ID = "xpReplayBtn";
 
   let currentXP   = parseInt(localStorage.getItem("eekhueXP")) || 0;
+  let visitedRealms = JSON.parse(localStorage.getItem("visitedRealms")) || {};
 
   // --- Milestones (from 5 realm nodes = 55%) ---
   const milestones = [
@@ -59,6 +60,8 @@ document.addEventListener("DOMContentLoaded", () => {
     currentXP = 0;
     localStorage.removeItem("eekhueXP");
     localStorage.removeItem("eekhueXPMsg");
+    localStorage.removeItem("visitedRealms");
+    visitedRealms = {};
     const btn = document.getElementById(REPLAY_ID);
     if (btn) btn.remove();
     updateXPBar();
@@ -67,9 +70,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- Init ---
   updateXPBar();
 
-  // --- Realm node clicks (homepage only, safe no-op on quiz page) ---
-  document.querySelectorAll(".realm-node").forEach(node => {
-    node.addEventListener("click", () => addXP(11)); // 5 realms × 11% = 55%
+  // --- Realm node clicks (homepage only, safe no-op on quiz page) --- document.querySelectorAll(".realm-node").forEach((node, i) => {
+    const id = node.dataset.title || `realm${i}`;
+    node.addEventListener("click", () => {
+      if (!visitedRealms[id]) {
+        visitedRealms[id] = true;
+        localStorage.setItem("visitedRealms", JSON.stringify(visitedRealms));
+        addXP(11); // award once
+      }
+    });
   });
   
   // --- Quiz page spam button --- 
