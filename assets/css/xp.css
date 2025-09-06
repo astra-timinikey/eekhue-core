@@ -1,0 +1,66 @@
+/* ==============================
+ XP Progress Bar (Bottom HUD Style)
+============================== */
+.xp-bar-container {
+  position: fixed;
+  bottom: 0;         /* was top: 0 */
+  left: 0;
+  width: 100%;
+  height: 16px;
+  background: #1a1a1a;
+  z-index: 9999;
+}
+
+.xp-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #7f5af0, #2cb67d);
+  transition: width 0.3s ease;
+}
+
+/* XP floating badge for rewards */
+.xp-badge {
+  position: fixed;
+  bottom: 40px;      /* sits just above the bar */
+  right: 1rem;
+  background: rgba(44, 182, 125, 0.9);
+  color: #fff;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: 0 0 8px rgba(127, 90, 240, 0.6);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 10000;
+}
+
+.xp-badge.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ==============================
+ XP Replay Button
+============================== */
+.xp-replay {
+  position: fixed;
+  bottom: 28px; /* just above XP bar */
+  right: 1rem;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  z-index: 10001;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.xp-replay:hover {
+  transform: scale(1.05);
+  opacity: 0.95;
+}
+

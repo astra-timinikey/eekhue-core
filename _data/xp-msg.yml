@@ -1,0 +1,16 @@
+xp_messages:
+  - message: "I want a better life!"
+    button: "YES!!"
+    xp: 5
+  - message: "I can grow through challenges!"
+    button: "Absolutely!"
+    xp: 5
+  - message: "My shadow doesn’t define me!"
+    button: "Shine on!"
+    xp: 5
+  - message: "Integration makes me stronger!"
+    button: "True!"
+    xp: 5
+  - message: "I choose to evolve today!"
+    button: "LET'S GO!"
+    xp: 5
