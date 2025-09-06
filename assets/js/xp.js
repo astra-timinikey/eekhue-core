@@ -85,6 +85,16 @@ document.addEventListener("DOMContentLoaded", () => {
       // Update button text and badge message
       spamBtn.textContent = msgObj.button;
       spamMessage.textContent = msgObj.message;
+      
+      const r = Math.floor(Math.random() * 256);
+      const g = Math.floor(Math.random() * 256);
+      const b = Math.floor(Math.random() * 256);
+      spamMessage.style.color = `rgb(${r}, ${g}, ${b})`;
+
+      spamMessage.style.transform = "scale(1.1)";
+      setTimeout(() => {
+        spamMessage.style.transform = "scale(1)";
+      }, 150);
     
       // Add XP
       addXP(msgObj.xp);

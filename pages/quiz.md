@@ -6,6 +6,8 @@ hero_title: "JavaScript Test Playground ⚡"
 hero_subtitle: "Try out the click counters, HTTP fetch, and personality quiz below."
 ---
 
+---
+
 # 🎲 Fun Quizzes
 
 Pick a quiz and discover your hidden side!
@@ -20,7 +22,6 @@ Pick a quiz and discover your hidden side!
     </div>
   {% endfor %}
 </div>
-
 
 ---
 
