@@ -33,14 +33,16 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function updateXPBar() {
-    xpFill.style.width = currentXP + "%";
-    xpLabel.textContent = `XP: ${currentXP}%`;
-    xpMessage.textContent = getMilestoneMessage(currentXP);
+    const messageStr = getMilestoneMessage(currentXP);
+
+    if (xpFill)  xpFill.style.width = currentXP + "%";
+    if (xpLabel) xpLabel.textContent = `XP: ${currentXP}%`;
+    if (xpMessage) xpMessage.textContent = messageStr;
 
     localStorage.setItem("eekhueXP", currentXP);
-    localStorage.setItem("eekhueXPMsg", xpMessage.textContent);
+    localStorage.setItem("eekhueXPMsg", messageStr);
 
-    // When XP hits 100, show replay button if not already there
+  // When XP hits 100, show replay button if not already there
     if (currentXP >= 100 && !document.getElementById(REPLAY_ID)) {
       const replayBtn = document.createElement("button");
       replayBtn.id = REPLAY_ID;
@@ -87,7 +89,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const spamMessage = document.getElementById("spamMessage");
   let spamIndex = 0;
 
-  if (spamBtn && spamMessage && Array.isArray(xpMessages)) {
+  if (spamBtn && spamMessage && typeof xpMessages !== "undefined" && Array.isArray(xpMessages)) {
     spamBtn.addEventListener("click", () => {
       // Pick a random message from YAML data
       const msgObj = xpMessages[Math.floor(Math.random() * xpMessages.length)];
