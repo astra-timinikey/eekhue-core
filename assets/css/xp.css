@@ -102,24 +102,28 @@
   flex-direction: column;
   justify-content: center;  /* center horizontally */
   align-items: center;
-  margin: 20px 0;           /* spacing from surrounding content */
+  margin: 20px 0;           
   position: relative;
   z-index: 10000;
+
+  min-height: 120px;        /* ✅ reserve space so scaling doesn’t push content */
+  overflow: hidden;         /* ✅ keep scaling inside */
 }
 
-/* Quiz Spam Message (full width) */
 .quiz-spam-section .spam-message {
   display: block;
   width: 100%;
   text-align: center;
-  font-size: 1.5rem;          /* bigger and noticeable */
+  font-size: 1.5rem;
   font-weight: bold;
   color: var(--accent);
-  padding: 16px 0;            /* vertical spacing */
-  margin-bottom: 12px;        /* spacing from button */
-  background: rgba(0,0,0,0.1); /* subtle highlight behind text */
+  padding: 16px 0;
+  margin-bottom: 12px;
+  background: rgba(0,0,0,0.1);
   border-radius: 8px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.2);
+
+  transition: transform 0.2s ease;  /* ✅ smooth scaling */
 }
   
 /* Button styling (unchanged, still centered) */
