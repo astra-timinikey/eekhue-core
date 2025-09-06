@@ -10,7 +10,7 @@
   background: #1a1a1a;
   border-radius: 8px 8px 0 0;
   overflow: hidden;
-  z-index: 9999;
+  z-index: 9999;              /* HUD stays above other elements */
 }
 
 /* Filled portion of bar */
@@ -19,10 +19,13 @@
   width: 0%;
   background: linear-gradient(90deg, #7f5af0, #2cb67d);
   transition: width 0.3s ease;
-  position: relative;
+  position: absolute;          /* so text layers can sit above */
+  top: 0;
+  left: 0;
+  z-index: 1;                  /* fill stays under text */
 }
 
-/* XP Label (left side inside bar) */
+/* XP Label (left inside bar) */
 .xp-label {
   position: absolute;
   top: 50%;
@@ -32,10 +35,11 @@
   font-weight: bold;
   color: #fff;
   text-shadow: 0 0 4px rgba(0,0,0,0.7);
-  pointer-events: none;        /* so clicks pass through */
+  pointer-events: none;
+  z-index: 2;                  /* text above fill */
 }
 
-/* XP Milestone Message (centered inside bar) */
+/* XP Milestone Message (center inside bar) */
 .xp-message {
   position: absolute;
   top: 50%;
@@ -45,8 +49,8 @@
   font-weight: bold;
   color: #fff;
   text-align: center;
-  padding: 0 10px;
   pointer-events: none;
+  z-index: 2;                  /* text above fill */
 }
 
 /* XP floating badge for rewards */
