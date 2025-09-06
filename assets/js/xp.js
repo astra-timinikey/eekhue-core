@@ -71,13 +71,28 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll(".realm-node").forEach(node => {
     node.addEventListener("click", () => addXP(11)); // 5 realms × 11% = 55%
   });
-
-  // --- Quiz page spam button (later hook) ---
+  
+  // --- Quiz page spam button ---
   const spamBtn = document.getElementById("spamBtn");
-  if (spamBtn) {
+  const spamMessage = document.getElementById("spamMessage");
+
+  if (spamBtn && spamMessage && Array.isArray(xpMessages)) {
     spamBtn.addEventListener("click", () => {
-      // TODO: Load a random YAML message + show above button
-      addXP(5); // placeholder amount
+      // Pick a random message from YAML data
+      const msgObj = xpMessages[Math.floor(Math.random() * xpMessages.length)];
+    
+      // Update button text and badge message
+      spamBtn.textContent = msgObj.button;
+      spamMessage.textContent = msgObj.message;
+    
+      // Animate badge
+      spamMessage.classList.add("show");
+      setTimeout(() => spamMessage.classList.remove("show"), 2000); // hide after 2s
+    
+      // Add XP
+      addXP(msgObj.xp);
     });
   }
+  
+  
 });
