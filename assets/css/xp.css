@@ -1,50 +1,52 @@
 /* ==============================
  XP Progress Bar (Bottom HUD Style)
-============================== */
-/* XP Label (bottom-left corner of bar) */
-.xp-label {
-  position: fixed;
-  bottom: 22px;       /* sits just above bar */
-  left: 1rem;
-  font-size: 14px;
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 0 0 4px rgba(0,0,0,0.7);
-  z-index: 10000;
-}
-
-/* XP Milestone Message (centered above bar) */
-.xp-message {
-  position: fixed;
-  bottom: 40px;       /* sits higher than label */
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1rem;
-  font-weight: bold;
-  color: var(--accent);
-  text-align: center;
-  padding: 4px 10px;
-  border-radius: 6px;
-  background: rgba(0,0,0,0.4);
-  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
-  z-index: 10000;
-}
-
+============================= */
 .xp-bar-container {
   position: fixed;
-  bottom: 0;         /* was top: 0 */
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 16px;
+  height: 32px;               /* taller to fit text inside */
   background: #1a1a1a;
+  border-radius: 8px 8px 0 0;
+  overflow: hidden;
   z-index: 9999;
 }
 
+/* Filled portion of bar */
 .xp-bar-fill {
   height: 100%;
   width: 0%;
   background: linear-gradient(90deg, #7f5af0, #2cb67d);
   transition: width 0.3s ease;
+  position: relative;
+}
+
+/* XP Label (left side inside bar) */
+.xp-label {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 0 0 4px rgba(0,0,0,0.7);
+  pointer-events: none;        /* so clicks pass through */
+}
+
+/* XP Milestone Message (centered inside bar) */
+.xp-message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  text-align: center;
+  padding: 0 10px;
+  pointer-events: none;
 }
 
 /* XP floating badge for rewards */
