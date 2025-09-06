@@ -72,9 +72,10 @@ document.addEventListener("DOMContentLoaded", () => {
     node.addEventListener("click", () => addXP(11)); // 5 realms × 11% = 55%
   });
   
-  // --- Quiz page spam button ---
+  // --- Quiz page spam button --- 
   const spamBtn = document.getElementById("spamBtn");
   const spamMessage = document.getElementById("spamMessage");
+  let spamIndex = 0;
 
   if (spamBtn && spamMessage && Array.isArray(xpMessages)) {
     spamBtn.addEventListener("click", () => {
@@ -84,10 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
       // Update button text and badge message
       spamBtn.textContent = msgObj.button;
       spamMessage.textContent = msgObj.message;
-    
-      // Animate badge
-      spamMessage.classList.add("show");
-      setTimeout(() => spamMessage.classList.remove("show"), 2000); // hide after 2s
     
       // Add XP
       addXP(msgObj.xp);
