@@ -5,36 +5,19 @@ description: "A page to experiment with JavaScript interactions."
 hero_title: "JavaScript Test Playground ⚡"
 hero_subtitle: "Try out the click counters, HTTP fetch, and personality quiz below."
 ---
-
 ---
 
 # 🎲 Fun Quizzes
 
-Pick a quiz and discover your hidden side!
+## Personality Quiz
 
-<div class="quiz-grid">
-  {% for quiz in site.data.quiz %}
-    {% assign q = quiz[1] %}
-    <div class="quiz-card">
-      <h2>{{ q.title }}</h2>
-      <p>{{ q.description }}</p>
-      <a href="{{ site.baseurl }}/quiz/{{ q.slug }}.html" class="btn">Start Quiz</a>
-    </div>
-  {% endfor %}
-</div>
+<div id="quiz-container" data-quiz="personality"></div>
 
 ---
 
 # JavaScript Test Page
 
 This page is designed to test interactive JavaScript features.
-
-## Click Counter
-
-<p>Click the buttons below:</p>
-<button id="helloBtn">Click Me</button>
-<button id="resetBtn">Reset Count</button>
-<p id="output"></p>
 
 ## Test HTTP Request
 

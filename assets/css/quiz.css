@@ -21,24 +21,6 @@
     text-align: center;
   }
 
-  #helloBtn, #resetBtn {
-    padding: 12px 20px;
-    font-size: 18px;
-    border-radius: 12px;
-    border: none;
-    background: var(--accent);
-    color: #fff;
-    cursor: pointer;
-    margin: 8px;
-    transition: transform 0.1s ease, background 0.2s ease;
-    box-shadow: var(--shadow);
-  }
-  
-  #helloBtn:hover, #resetBtn:hover {
-    background: #5e87e0; /* slightly darker accent */
-    transform: translateY(-2px);
-  }
-
   #fetchBtn, #quiz button {
     padding: 10px 16px;
     font-size: 16px;
@@ -65,3 +47,101 @@
     overflow-x: auto;
     font-family: monospace;
   }
+  
+  
+  /* ===============================
+   Quiz styles for card-based flow
+   =============================== */
+#quiz-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.quiz-card {
+  background: var(--card, #fff);
+  color: var(--text, #222);
+  border-radius: 12px;
+  box-shadow: var(--shadow, 0 4px 12px rgba(0,0,0,0.1));
+  padding: 20px;
+  max-width: 600px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.quiz-card:hover {
+  transform: translateY(-2px);
+}
+
+.quiz-img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.quiz-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.quiz-option {
+  padding: 10px 16px;
+  font-size: 1rem;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent, #2563eb);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.quiz-option:hover {
+  background: #5e87e0;
+  transform: translateY(-2px);
+}
+
+.quiz-nav {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.quiz-nav button {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background: var(--accent, #2563eb);
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.quiz-nav button[disabled] {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.quiz-result {
+  background: var(--card, #fff);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--shadow, 0 4px 12px rgba(0,0,0,0.1));
+}
+
+.quiz-result-img {
+  max-width: 300px;
+  margin-top: 20px;
+  border-radius: 8px;
+}

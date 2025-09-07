@@ -87,16 +87,20 @@ document.addEventListener("DOMContentLoaded", () => {
   // --- Quiz page spam button --- 
   const spamBtn = document.getElementById("spamBtn");
   const spamMessage = document.getElementById("spamMessage");
+  const emojis = ["🎉", "🚀", "✨", "🔥", "🌟", "💡", "🎈"];
+  
   let spamIndex = 0;
 
   if (spamBtn && spamMessage && typeof xpMessages !== "undefined" && Array.isArray(xpMessages)) {
     spamBtn.addEventListener("click", () => {
+      const emoji = emojis[Math.floor(Math.random() * emojis.length)];
       // Pick a random message from YAML data
       const msgObj = xpMessages[Math.floor(Math.random() * xpMessages.length)];
     
       // Update button text and badge message
       spamBtn.textContent = msgObj.button;
       spamMessage.textContent = msgObj.message;
+      spamBtn.textContent = `${msgObj.button} ${emoji}`;
       
       const r = Math.floor(Math.random() * 256);
       const g = Math.floor(Math.random() * 256);
