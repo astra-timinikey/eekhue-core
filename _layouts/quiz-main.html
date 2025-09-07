@@ -14,7 +14,13 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/xp.css">
 
   <script>
-    const BASEURL = "{{ site.baseurl }}"; // e.g. "/eekhue-core"
+    const BASEURL = "{{ site.baseurl }}";
+  
+    // Load quiz data from _data/quiz/ folder
+    window.siteQuizData = {};
+    {% for quiz_file in site.data.quiz %}
+    window.siteQuizData["{{ quiz_file[1].slug }}"] = {{ quiz_file[1] | jsonify }};
+    {% endfor %}
   </script>
   <!-- Header & Quiz JS only -->
   <script src="{{ site.baseurl }}/assets/js/header.js" defer></script>

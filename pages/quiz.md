@@ -11,7 +11,7 @@ hero_subtitle: "Try out the click counters, HTTP fetch, and personality quiz bel
 
 ## Personality Quiz
 
-<div id="quiz-container" data-quiz="personality"></div>
+<div id="quiz-container" data-quiz="mythical-creature"></div>
 
 ---
 

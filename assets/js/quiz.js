@@ -3,10 +3,15 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!quizEl) return;
 
   const quizSlug = quizEl.dataset.quiz;
-  const quizData = window.siteQuizData[quizSlug]; // Jekyll _data injection
+  const quizData = window.siteQuizData[quizSlug];
+  
+  if (!quizData) {
+    quizEl.innerHTML = `<p>Quiz "${quizSlug}" not found.</p>`;
+    return;
+  }
 
   let currentQ = 0;
-  let answers = {};
+  let answers = {}; // Store answers as { questionId: selectedValue }
 
   function renderQuestion() {
     const q = quizData.questions[currentQ];
@@ -14,10 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="quiz-card">
         ${q.image ? `<img src="${q.image}" alt="" class="quiz-img">` : ""}
         <div class="quiz-content">
+          <h3>${quizData.title}</h3>
           <p class="quiz-text">${q.text}</p>
           <div class="quiz-options">
             ${q.options.map(o =>
-              `<button class="quiz-option" data-id="${q.id}" data-value="${o.value}" data-points="${o.points}">
+              `<button class="quiz-option" data-id="${q.id}" data-value="${o.value}">
                 ${o.text}
               </button>`
             ).join("")}
@@ -26,9 +32,21 @@ document.addEventListener("DOMContentLoaded", () => {
             <button id="prevBtn" ${currentQ === 0 ? "disabled" : ""}>← Prev</button>
             <button id="nextBtn" disabled>Next →</button>
           </div>
+          <div class="quiz-progress">
+            Question ${currentQ + 1} of ${quizData.questions.length}
+          </div>
         </div>
       </div>
     `;
+    
+    // If we already answered this question, highlight the previous answer
+    if (answers[q.id]) {
+      const prevAnswerBtn = quizEl.querySelector(`[data-value="${answers[q.id]}"]`);
+      if (prevAnswerBtn) {
+        prevAnswerBtn.classList.add('selected');
+        quizEl.querySelector("#nextBtn").disabled = false;
+      }
+    }
   }
 
   quizEl.addEventListener("click", (e) => {
@@ -37,11 +55,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // option clicked
     if (btn.classList.contains("quiz-option")) {
-      answers[btn.dataset.id] = {
-        value: btn.dataset.value,
-        points: parseInt(btn.dataset.points, 10) || 0
-      };
-      // enable "Next"
+      // Remove previous selection styling
+      quizEl.querySelectorAll(".quiz-option").forEach(b => b.classList.remove('selected'));
+      
+      // Mark this option as selected
+      btn.classList.add('selected');
+      
+      // Store the answer
+      answers[btn.dataset.id] = btn.dataset.value;
+      
+      // Enable "Next" button
       quizEl.querySelector("#nextBtn").disabled = false;
     }
 
@@ -61,19 +84,38 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   function finishQuiz() {
-    // tally total points
-    let total = Object.values(answers).reduce((sum, a) => sum + a.points, 0);
-    // pick result bucket
-    const result = quizData.results.find(r => total >= r.min && total <= r.max);
+    // Count votes for each result type
+    const votes = {};
+    Object.values(answers).forEach(value => {
+      votes[value] = (votes[value] || 0) + 1;
+    });
+    
+    // Find the result with the most votes
+    const winnerValue = Object.keys(votes).reduce((a, b) => votes[a] > votes[b] ? a : b);
+    const result = quizData.results[winnerValue];
 
     quizEl.innerHTML = `
       <div class="quiz-result">
         <h2>${result.title}</h2>
         <p>${result.description}</p>
         ${result.image ? `<img src="${result.image}" alt="" class="quiz-result-img">` : ""}
+        <div class="quiz-actions">
+          <button id="restartBtn" class="quiz-restart">Take Quiz Again</button>
+          ${result.redirect ? `<a href="${result.redirect}" class="quiz-link">Learn More</a>` : ""}
+        </div>
       </div>
     `;
   }
 
+  // Handle restart
+  quizEl.addEventListener("click", (e) => {
+    if (e.target.id === "restartBtn") {
+      currentQ = 0;
+      answers = {};
+      renderQuestion();
+    }
+  });
+
+  // Start the quiz
   renderQuestion();
 });
