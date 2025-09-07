@@ -9,9 +9,15 @@ hero_subtitle: "Try out the click counters, HTTP fetch, and personality quiz bel
 
 # 🎲 Fun Quizzes
 
-## Personality Quiz
+## What Mythical Creature Are You?
 
-<div id="quiz-container" data-quiz="mythical-creature"></div>
+<div id="quiz-container-1" data-quiz="mythical-creature"></div>
+
+---
+
+## What Element Are You?
+
+<div id="quiz-container-2" data-quiz="elemental"></div>
 
 ---
 
@@ -24,20 +30,6 @@ This page is designed to test interactive JavaScript features.
 <p>Click to fetch data from a placeholder API:</p>
 <button id="fetchBtn">Fetch Data</button>
 <pre id="fetchOutput"></pre>
-
-## Personality Quiz
-
-<p>Take a short personality quiz:</p>
-<div id="quiz">
-  <p>Q1: Which best describes you?</p>
-  <button data-question="q1" data-answer="gadget">🔧 I like tinkering with gadgets</button>
-  <button data-question="q1" data-answer="idea">💡 I like coming up with ideas</button>
-</div>
-
-<p id="quiz-output"></p>
-
-<!-- Hidden field to hold JSON answers -->
-<input type="hidden" id="quizData" value="{}">
 
 ---
 

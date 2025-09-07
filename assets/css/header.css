@@ -6,7 +6,7 @@ header {
   top: 0;
   background: var(--card);
   border-bottom: 1px solid var(--border);
-  z-index: 1000;
+  z-index: 10000;
 }
 
 header .wrap.nav {
@@ -89,7 +89,7 @@ header .logo {
     padding: 10px;
     border-radius: 8px;
     box-shadow: var(--shadow);
-    z-index: 999;
+    z-index: 9999;
   }
 
   .menu.open {
@@ -160,7 +160,7 @@ header .logo {
   border-radius: 6px;
   font-size: 12px;
   position: absolute;
-  z-index: 20;
+  z-index: 6000;
   top: 50%;
   right: 110%;
   transform: translateY(-50%);
