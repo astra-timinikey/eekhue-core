@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
       // restart clicked
-      if (btn.classList.contains("restartBtn")) {
+      if (btn.classList.contains(`restartBtn-${quizEl.id}`)) {
         currentQ = 0;
         answers = {};
         renderQuestion();
@@ -127,14 +127,8 @@ document.addEventListener("DOMContentLoaded", () => {
               </div>
             </div>
           ` : ""}
-          ${result.shadow ? `
-            <div class="quiz-shadow">
-              <h4>Shadow Aspect:</h4>
-              <p class="shadow-text">${result.shadow}</p>
-            </div>
-          ` : ""}
           <div class="quiz-actions">
-            <button class="restartBtn quiz-restart">Take Quiz Again</button>
+            <button class="restartBtn-${quizEl.id} quiz-restart">Take Quiz Again</button>
             ${result.redirect ? `<a href="${result.redirect}" class="quiz-link">Learn More</a>` : ""}
           </div>
         </div>

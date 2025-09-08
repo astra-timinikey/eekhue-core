@@ -136,36 +136,32 @@ questions:
 results:
   fire:
     title: "Blazing Fire 🔥"
-    description: "You are the spark that ignites passion and drives change. Like fire, you bring energy, warmth, and transformation wherever you go. Your enthusiasm is contagious, and you have a natural ability to motivate others to action. You're not afraid to take risks or stand up for what you believe in. Your presence lights up any room, and people are drawn to your confidence and zest for life. However, remember that even fire needs fuel - don't forget to recharge and nurture your inner flame."
+    description: "You are the spark that ignites passion and drives change. Like fire, you bring energy, warmth, and transformation wherever you go. Your enthusiasm is contagious, and you have a natural ability to motivate others to action. You're not afraid to take risks or stand up for what you believe in. Your presence lights up any room, and people are drawn to your confidence and zest for life."
     image: "/assets/images/quiz/results/fire.jpg"
     traits: ["Passionate", "Energetic", "Courageous", "Inspiring", "Dynamic"]
     element_powers: ["Transformation", "Leadership", "Motivation", "Innovation", "Courage"]
-    shadow: "Can burn too hot sometimes - watch for impulsiveness and impatience"
     redirect: "/persona/fire.html"
     
   water:
     title: "Flowing Water 🌊"
-    description: "You embody the fluid nature of water - adaptable, nurturing, and deeply intuitive. Like water, you have the power to heal and cleanse, bringing emotional balance to those around you. You understand the importance of going with the flow while also knowing when to be persistent like a river carving through rock. Your empathy runs deep, and you have an innate ability to understand others' emotions. You create safe spaces where people can be vulnerable and authentic."
+    description: "You embody the fluid nature of water - adaptable, nurturing, and deeply intuitive. Like water, you have the power to heal and cleanse, bringing emotional balance to those around you. You understand the importance of going with the flow while also knowing when to be persistent like a river carving through rock. Your empathy runs deep, and you have an innate ability to understand others' emotions."
     image: "/assets/images/quiz/results/water.jpg"
     traits: ["Empathetic", "Adaptable", "Intuitive", "Nurturing", "Peaceful"]
     element_powers: ["Healing", "Emotional Intelligence", "Flexibility", "Purification", "Flow"]
-    shadow: "Can become stagnant if you don't maintain boundaries - avoid absorbing others' negative energy"
     redirect: "/persona/water.html"
     
   earth:
     title: "Grounding Earth 🌍"
-    description: "You are the foundation upon which others can build their dreams. Like the earth itself, you provide stability, nourishment, and unwavering support. Your practical wisdom and steady presence make you the rock that friends and family lean on. You understand the value of patience, persistence, and hard work. You have a deep connection to the natural world and find strength in simplicity and authenticity. Your reliability is legendary, and your word is your bond."
+    description: "You are the foundation upon which others can build their dreams. Like the earth itself, you provide stability, nourishment, and unwavering support. Your practical wisdom and steady presence make you the rock that friends and family lean on. You understand the value of patience, persistence, and hard work. You have a deep connection to the natural world and find strength in simplicity."
     image: "/assets/images/quiz/results/earth.jpg"
     traits: ["Stable", "Reliable", "Practical", "Nurturing", "Patient"]
     element_powers: ["Grounding", "Endurance", "Growth", "Manifestation", "Strength"]
-    shadow: "Can become too rigid - remember that even mountains change over time"
     redirect: "/persona/earth.html"
     
   air:
     title: "Free-Flowing Air 💨"
-    description: "You are the breath of fresh perspective that brings new ideas and innovation. Like air, you're constantly in motion, curious about everything, and able to see connections others miss. Your mind is sharp and agile, always seeking to understand and communicate complex concepts. You value freedom and intellectual stimulation above all else. Your ability to think outside the box makes you an invaluable problem-solver and visionary. You bring lightness and clarity to heavy situations."
+    description: "You are the breath of fresh perspective that brings new ideas and innovation. Like air, you're constantly in motion, curious about everything, and able to see connections others miss. Your mind is sharp and agile, always seeking to understand and communicate complex concepts. You value freedom and intellectual stimulation above all else. Your ability to think outside the box makes you an invaluable problem-solver."
     image: "/assets/images/quiz/results/air.jpg"
     traits: ["Intellectual", "Creative", "Independent", "Communicative", "Visionary"]
     element_powers: ["Clarity", "Innovation", "Communication", "Freedom", "Perspective"]
-    shadow: "Can become disconnected from emotions and practical matters - remember to stay grounded"
     redirect: "/persona/air.html"

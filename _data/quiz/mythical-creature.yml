@@ -139,6 +139,7 @@ results:
     description: "You are a force of nature - powerful, ambitious, and fiercely protective of what you hold dear. Like the ancient dragons, you command respect through strength and have an innate ability to lead. Your passionate nature burns bright, and you're not afraid to fight for what you believe in. Others may find you intimidating, but they also recognize your incredible capabilities and unwavering loyalty to those who earn your trust."
     image: "/assets/images/quiz/results/dragon.jpg"
     traits: ["Powerful", "Ambitious", "Protective", "Passionate", "Natural Leader"]
+    mythical_powers: ["Fire Breath", "Ancient Wisdom", "Treasure Guardian", "Flight", "Intimidation"]
     redirect: "/persona/dragon.html"
     
   phoenix:
@@ -146,6 +147,7 @@ results:
     description: "You embody the spirit of renewal and transformation. Like the legendary phoenix, you have an incredible ability to rise from challenges stronger than before. You inspire others through your resilience and your capacity to reinvent yourself. Change doesn't frighten you - it excites you as an opportunity for growth. Your presence brings hope to those around you, showing them that no setback is permanent."
     image: "/assets/images/quiz/results/phoenix.jpg"
     traits: ["Resilient", "Transformative", "Inspiring", "Adaptable", "Hopeful"]
+    mythical_powers: ["Rebirth", "Healing Tears", "Purifying Fire", "Eternal Life", "Inspiration"]
     redirect: "/persona/phoenix.html"
     
   unicorn:
@@ -153,6 +155,7 @@ results:
     description: "You are a rare and precious soul with a pure heart and gentle spirit. Like the mystical unicorn, you possess an innate ability to heal and bring peace to chaotic situations. Your wisdom comes not from books but from deep intuition and connection to the natural world. Others are drawn to your authentic nature and find comfort in your presence. You have a gift for seeing the best in people and helping them find their true path."
     image: "/assets/images/quiz/results/unicorn.jpg"
     traits: ["Pure-hearted", "Intuitive", "Healing", "Gentle", "Wise"]
+    mythical_powers: ["Healing Magic", "Purification", "Forest Communication", "Truth Detection", "Divine Protection"]
     redirect: "/persona/unicorn.html"
     
   griffin:
@@ -160,4 +163,5 @@ results:
     description: "You combine the best of two worlds - the strength and courage of a lion with the keen vision and freedom of an eagle. Like the majestic griffin, you are a guardian of ancient wisdom and possess both intelligence and nobility. You approach life strategically, preferring to observe and understand before acting. Your regal bearing commands respect, and others often seek your counsel when facing difficult decisions."
     image: "/assets/images/quiz/results/griffin.jpg"
     traits: ["Strategic", "Noble", "Wise", "Protective", "Visionary"]
+    mythical_powers: ["Divine Sight", "Guardian Strength", "Ancient Knowledge", "Sky Mastery", "Treasure Sensing"]
     redirect: "/persona/griffin.html"
