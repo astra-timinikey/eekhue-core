@@ -70,13 +70,12 @@ Equipping is not escape — it is integration.
 > “Before you can equip, you must know who you are equipping.”  
 
 Your first step is not here.  
-It begins in [**What Are You?**](/pages/quiz.html) —  
+It begins in [**What Are You?**]({{ site.baseurl }}/pages/quiz.html) —  
 discover your base traits before choosing your gear.  
 
 ---
 
 ## Further Reading  
-
 - Jung, C. G. (1968). *The Archetypes and the Collective Unconscious* (Collected Works, Vol. 9, Part 1). Princeton University Press.  
   → On anima and animus as archetypal figures of the inner Other.  
 

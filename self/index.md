@@ -61,3 +61,16 @@ Each card links to a deeper dive into the functions, shadow expressions, and gro
 ## Disclaimer
 This Self Analysis is a **personal synthesis** that prioritizes Jungian cognitive functions, Beebe’s archetypal framing, and Dario’s neuroscience validation.  
 It is not an official or peer-reviewed system, but a structured lens for reflection, growth, and Shadow work.
+
+## Further Reading  
+- Jung, C. G. (1968). *The Archetypes and the Collective Unconscious* (Collected Works, Vol. 9, Part 1). Princeton University Press.  
+  → Foundational work on archetypes, the Self, and the unconscious structures underlying personality.  
+
+- Jung, C. G. (1963). *Memories, Dreams, Reflections*. Vintage Books.  
+  → Autobiographical insights framing the lifelong journey of individuation and Self discovery.  
+
+- Beebe, J. (1994). *Integrity in Depth: Archetypal Explorations of the Persona, Shadow, and Complexes*. Routledge.  
+  → Expands Jungian functions into an 8-archetype model, including shadow functions, giving depth to the Self layer.  
+
+- Nardi, D. (2011). *Neuroscience of Personality: Brain-Savvy Insights for All Types of People*. Radiance House.  
+  → Provides real-time EEG evidence supporting cognitive function theory, bridging personality theory with neuroscience.

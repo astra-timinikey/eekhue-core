@@ -104,7 +104,7 @@
   align-items: center;
   margin: 20px 0;           
   position: relative;
-
+  padding: 8px 0;
   height: 125px;      
   overflow: hidden;       
 }
@@ -133,6 +133,7 @@
   padding: 12px 24px;
   border-radius: 8px;
   font-size: 1rem;
+  margin-bottom: 6px;
   cursor: pointer;
   box-shadow: var(--shadow);
   transition: transform 0.2s ease, opacity 0.2s ease;

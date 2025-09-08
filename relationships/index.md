@@ -108,7 +108,6 @@ By joining, you don’t just explore your own relationships — you help shape a
 ---
 
 ## Further Reading  
-
 - Jung, C. G. (1960). *The Structure and Dynamics of the Psyche* (Collected Works, Vol. 8). Princeton University Press.  
   → On projection, transference, and the dynamics that shape relationships.  
 

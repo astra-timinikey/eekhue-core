@@ -111,4 +111,17 @@ Take care of yourself first.
 If these glimpses stirred something in you — that’s the point.  
 The Shadow is easiest to spot in others, hardest to own in ourselves.  
 
-👉 Sign up to continue the hunt and receive deeper reports on **Persona, Self, and Shadow** — with tools for reflection, growth, and integration.
+---
+
+## Further Reading  
+- Jung, C. G. (1968). *The Archetypes and the Collective Unconscious* (Collected Works, Vol. 9, Part 1). Princeton University Press.  
+  → On the role of archetypes and the unconscious in shaping shadow material.  
+
+- Jung, C. G. (1957). *The Practice of Psychotherapy* (Collected Works, Vol. 16). Princeton University Press.  
+  → Discusses projection, disowned aspects, and the therapeutic encounter with the shadow.  
+
+- Beebe, J. (1994). *Integrity in Depth: Archetypal Explorations of the Persona, Shadow, and Complexes*. Routledge.  
+  → Provides a functional and archetypal framework for understanding shadow dynamics within personality.  
+
+- Nardi, D. (2011). *Neuroscience of Personality: Brain-Savvy Insights for All Types of People*. Radiance House.  
+  → Offers empirical evidence on cognitive patterns that correspond to shadow and persona expressions.
