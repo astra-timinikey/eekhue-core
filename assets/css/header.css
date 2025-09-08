@@ -1,6 +1,6 @@
-/* ==============================
-   Header + nav + dropdown + hamburger
-   ============================== */
+/* ====================================
+ Header + nav + dropdown + hamburger
+==================================== */
 header {
   position: sticky;
   top: 0;
@@ -53,7 +53,6 @@ header .logo {
   box-shadow: var(--shadow);
 }
 
-/* Hamburger button (hidden on desktop) */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -70,10 +69,9 @@ header .logo {
   border-radius: 2px;
 }
 
-/* Responsive header */
 @media (max-width: 600px) {
   header .wrap.nav {
-    flex-direction: row;   /* keep logo left, hamburger right */
+    flex-direction: row;
     align-items: center;
     height: auto;
     padding: 12px 20px;
@@ -88,7 +86,7 @@ header .logo {
     flex-direction: column;
     gap: 10px;
     position: absolute;
-    top: 64px;       /* same as header height */
+    top: 64px;
     right: 0;
     background: var(--card);
     width: 200px;
@@ -107,7 +105,9 @@ header .logo {
   }
 }
 
-/* Dropdowns stay as-is */
+/* ==============================
+   Dropdown & Header Menu
+============================== */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -119,9 +119,11 @@ header .logo {
   border: none;
   background: var(--card);
   color: var(--text);
-  cursor: pointer;
+  cursor: help;
   border-radius: 8px;
   margin-left: 16px;
+  transition: background 0.2s ease, color 0.2s ease;
+  position: relative;
 }
 
 .dropbtn:hover {
@@ -132,12 +134,14 @@ header .logo {
 .dropdown-content {
   display: none;
   position: absolute;
+  top: 100%; /* directly below button */
+  left: 0;
   background-color: var(--card);
   min-width: 180px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   border-radius: 8px;
   z-index: 10;
-  margin-top: 4px;
+  padding: 4px 0; /* small padding inside */
 }
 
 .dropdown-content a {
@@ -145,6 +149,7 @@ header .logo {
   padding: 10px 16px;
   display: block;
   text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 
 .dropdown-content a:hover {
@@ -166,14 +171,23 @@ header .logo {
   border-radius: 6px;
   font-size: 12px;
   position: absolute;
+  top: 100%;
+  left: 0;
+  transform: none;
+  height: 8px;
   z-index: 6000;
-  top: 50%;
-  right: 110%;
-  transform: translateY(-50%);
+  pointer-events: auto;
   white-space: nowrap;
   box-shadow: var(--shadow);
 }
 
 .dropbtn:hover .tooltip {
   visibility: visible;
+}
+
+/* Mobile: show tooltip by default since there's no hover */
+@media (hover: none) and (pointer: coarse) {
+  .tooltip {
+    visibility: visible;
+  }
 }

@@ -9,12 +9,31 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  // Dropdown hover delay
+  const dropdowns = document.querySelectorAll(".dropdown");
+  dropdowns.forEach(drop => {
+    let timeout;
+
+    const button = drop.querySelector(".dropbtn");
+    const menu = drop.querySelector(".dropdown-content");
+
+    drop.addEventListener("mouseenter", () => {
+      clearTimeout(timeout);      // cancel any hide timeout
+      menu.style.display = "block"; // show dropdown immediately
+    });
+
+    drop.addEventListener("mouseleave", () => {
+      timeout = setTimeout(() => {
+        menu.style.display = "none"; // hide after delay
+      }, 300); // delay in ms, adjust as needed
+    });
+  });
+
   // Random logo and brand name functionality
   const logoImg = document.querySelector(".logo");
   const brandText = document.querySelector(".brand");
   
   if (logoImg) {
-    // Array of your logo variants
     const logoVariants = [
       "eekhue-logo.png",
       "eekhue-logo-sunglasses.png", 
@@ -28,10 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
       // Add more logo filenames as you create them
     ];
 
-    // Pick a random logo
     const randomLogo = logoVariants[Math.floor(Math.random() * logoVariants.length)];
     
-    // Update the src attribute
     logoImg.src = `${BASEURL}/assets/images/${randomLogo}`;
     
     // Optional: Add a fade-in effect when logo loads
@@ -41,8 +58,6 @@ document.addEventListener("DOMContentLoaded", () => {
       logoImg.style.opacity = "1";
     };
     
-    // Optional: Log which logo was chosen (remove in production)
-    console.log(`🎨 Today's logo: ${randomLogo}`);
   }
 
   // Random brand name functionality
@@ -65,22 +80,22 @@ document.addEventListener("DOMContentLoaded", () => {
       "VeekHue",  // VQ (not standardized, sometimes "Values Quotient")
       "DoubleYoukHue" // WQ (rare, sometimes "Will Quotient")
     ];
+
     // Array of font families (make sure they're loaded via CSS or Google Fonts)
     const fontVariants = [
       "Arial, sans-serif",
       "'Courier New', monospace",
       "'Times New Roman', serif",
       "'Trebuchet MS', sans-serif",
-      "'Comic Sans MS', cursive", // fun example
-      "'Montserrat', sans-serif", // example if loaded from Google Fonts
-      "'Roboto Slab', serif"       // example if loaded from Google Fonts
+      "'Comic Sans MS', cursive", 
+      "'Montserrat', sans-serif", 
+      "'Roboto Slab', serif" 
     ];
 
     // Pick a random brand name & font
     const randomBrand = brandVariants[Math.floor(Math.random() * brandVariants.length)];
     const randomFont = fontVariants[Math.floor(Math.random() * fontVariants.length)];
     
-    // Update the brand text with a smooth transition
     brandText.style.transition = "opacity 0.2s ease";
     brandText.style.opacity = "0";
     
@@ -90,7 +105,5 @@ document.addEventListener("DOMContentLoaded", () => {
       brandText.style.opacity = "1";
     }, 200);
     
-    // Optional: Log which brand was chosen (remove in production)
-    console.log(`🏷️ Today's brand: ${randomBrand}`);
   }
 });
