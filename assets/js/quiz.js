@@ -34,8 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
               ).join("")}
             </div>
             <div class="quiz-nav">
-              <button class="prevBtn" ${currentQ === 0 ? "disabled" : ""}>← Prev</button>
-              <button class="nextBtn" disabled>Next →</button>
+              <button id="prevBtn-${quizEl.id}" class="prevBtn" ${currentQ === 0 ? "disabled" : ""}>← Prev</button>
+              <button id="nextBtn-${quizEl.id}" class="nextBtn" disabled>Next →</button>
             </div>
             <div class="quiz-progress">
               Question ${currentQ + 1} of ${quizData.questions.length}
@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const prevAnswerBtn = quizEl.querySelector(`[data-value="${answers[q.id]}"]`);
         if (prevAnswerBtn) {
           prevAnswerBtn.classList.add('selected');
-          quizEl.querySelector(".nextBtn").disabled = false;
+          quizEl.querySelector(`#nextBtn-${quizEl.id}`).disabled = false;
         }
       }
     }
@@ -70,11 +70,11 @@ document.addEventListener("DOMContentLoaded", () => {
         answers[btn.dataset.id] = btn.dataset.value;
         
         // Enable "Next" button
-        quizEl.querySelector(".nextBtn").disabled = false;
+        quizEl.querySelector(`#nextBtn-${quizEl.id}`).disabled = false;
       }
 
       // nav clicked
-      if (btn.classList.contains("nextBtn")) {
+      if (btn.id === `nextBtn-${quizEl.id}`) {
         currentQ++;
         if (currentQ < quizData.questions.length) {
           renderQuestion();
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", () => {
           finishQuiz();
         }
       }
-      if (btn.classList.contains("prevBtn")) {
+      if (btn.id === `prevBtn-${quizEl.id}`) {
         currentQ--;
         renderQuestion();
       }

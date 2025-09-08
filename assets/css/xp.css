@@ -104,7 +104,6 @@
   align-items: center;
   margin: 20px 0;           
   position: relative;
-  z-index: 5000;
 
   height: 125px;      
   overflow: hidden;       
