@@ -22,6 +22,10 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
   gap: 24px;
   text-align: left;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 16px;
 }
 
 .footer-col h4 {
@@ -79,10 +83,13 @@ footer {
   }
   
   .footer-columns {
-    grid-template-columns: 1fr 1fr; /* Exactly 2 equal columns */
-    gap: 16px; /* Smaller gap on mobile */
+    grid-template-columns: 1fr 1fr; 
+    gap: 15px; 
     text-align: center;
-    max-width: 100%; /* Ensure it doesn't overflow */
+    max-width: 100%; 
+    margin: 0 auto;
+    padding: 0 6px;
+    justify-items: center;
   }
 
   .footer-col nav {

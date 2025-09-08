@@ -31,24 +31,28 @@
 /* ===============================
  Quiz styles for card-based flow
 =============================== */
-#quiz-container {
+div[id^="quiz-container"] {
   display: flex;
   justify-content: center;
   align-items: flex-start;
   padding: 20px;
+  width: 100%;
 }
 
 .quiz-card {
+  display: flex;
+  flex-direction: row; /* image left, content right */
+  gap: 20px;
   background: var(--card, #fff);
   color: var(--text, #222);
   border-radius: 12px;
   box-shadow: var(--shadow, 0 4px 12px rgba(0,0,0,0.1));
   padding: 20px;
-  max-width: 600px;
   width: 100%;
-  text-align: center;
+  text-align: left;
   transition: transform 0.2s ease;
-  word-wrap: break-word; 
+  word-wrap: break-word;
+  align-items: center;
 }
 
 .quiz-card:hover {
@@ -56,9 +60,14 @@
 }
 
 .quiz-img {
-  max-width: 100%;
+  max-width: 200px;
   border-radius: 8px;
-  margin-bottom: 16px;
+  margin-bottom: 0;
+  flex-shrink: 0;
+}
+
+.quiz-content {
+  flex: 1;
 }
 
 .quiz-text {
@@ -191,4 +200,23 @@
   background: #10b981;
   color: white;
   display: inline-block;
+}
+
+/* ====================================
+ Mobile layout
+==================================== */
+@media (max-width: 799px) {
+  .quiz-card {
+    flex-direction: column; /* image above content */
+    text-align: center;
+  }
+
+  .quiz-img {
+    max-width: 100%;
+    margin-bottom: 16px;
+  }
+
+  .quiz-content {
+    width: 100%;
+  }
 }

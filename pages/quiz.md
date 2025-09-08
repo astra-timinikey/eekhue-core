@@ -9,13 +9,9 @@ hero_subtitle: "Try out the click counters, HTTP fetch, and personality quiz bel
 
 # 🎲 Fun Quizzes
 
-## What Mythical Creature Are You?
-
 <div id="quiz-container-1" data-quiz="mythical-creature"></div>
 
 ---
-
-## What Element Are You?
 
 <div id="quiz-container-2" data-quiz="elemental"></div>
 

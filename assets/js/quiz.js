@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="quiz-card">
           ${q.image ? `<img src="${q.image}" alt="" class="quiz-img">` : ""}
           <div class="quiz-content">
-            <h3>${quizData.title}</h3>
+            <h2>${quizData.title}</h2>
             <p class="quiz-text">${q.text}</p>
             <div class="quiz-options">
               ${q.options.map(o =>

@@ -160,11 +160,6 @@
   }
   
   
-  
-
-  
-
-  
   /* ==============================
      Layout Wrappers
      ============================== */
@@ -184,20 +179,33 @@
      Main content + buttons + outputs
      ==================================== */
   main {
-    margin-left: 0px; /* leave no space for sidebar */
-    text-align: center;
+    margin-left: 0;
     padding: 40px 20px;
+    display: flex;                /* ⬅️ make it flex */
+    flex-direction: column;       /* stack children vertically */
+    align-items: center;          /* horizontally center children */
+    text-align: left;             /* ⬅️ default text left-aligned */
   }
-
+  
+  main > * {
+    max-width: var(--maxw);       /* ⬅️ limit width */
+    width: 100%;                  /* take full available space */
+  }
+    
   .self-page main {
     margin-left: 0; /* no offset needed */
   }
 
-
-  
   /* ==============================
      Markdown Elements
      ============================== */
+  main h1, main h2, main h3, main h4, main h5, main h6,
+  main p, main ul, main ol, main pre, main blockquote {
+    max-width: var(--maxw);
+    margin-left: auto;
+    margin-right: auto;
+  }
+     
   table { border-collapse: collapse; width: 100%; margin: 16px 0; }
   th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
   th { background-color: var(--card); }

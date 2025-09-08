@@ -27,7 +27,13 @@ header .wrap.nav {
 
 header .logo {
   height: 48px;
-  width: auto;
+  width: 48px;
+  object-fit: contain;
+  transition: opacity 0.4s ease; 
+}
+
+.brand {
+  transition: opacity 0.3s ease; 
 }
 
 .menu {
