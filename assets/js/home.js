@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (img && overlay) {
         // Multiple background images: overlay first (on top), then base image
         node.style.backgroundImage = `url('${overlay}'), url('${img}')`;
-        node.style.backgroundSize = 'cover, cover';
+        node.style.backgroundSize = '120%, cover';
         node.style.backgroundPosition = 'center, center';
         node.style.backgroundRepeat = 'no-repeat, no-repeat';
       } else if (img) {
