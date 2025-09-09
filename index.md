@@ -21,8 +21,8 @@ Equip armor, summon archetypes, explore functions — and track your growth alon
   <div class="realm-node" style="top:65%; left:25%;" 
      data-title="🌑 Shadow" 
      data-text="Understand your shadow states — ignoring, projecting, or integrating. See how your hidden side influences growth." 
-     data-img="{{ site.baseurl }}/assets/images/planet-shadow.png"
-     data-overlay="{{ site.baseurl }}/assets/images/planet-shadow-smoke.png"></div>
+     data-img="{{ site.baseurl }}/assets/images/planet-shadow-smoke.png"
+     data-overlay="{{ site.baseurl }}/assets/images/planet-shadow.png"></div>
 
   <div class="realm-node" style="top:15%; left:15%;" data-title="🛡️ Persona" data-text="Customize your persona through outfits, armor sets, and mythical summons. Personas are your adaptive gear — protection, disguise, or performance." data-img="{{ site.baseurl }}/assets/images/persona.png"></div>
 

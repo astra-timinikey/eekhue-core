@@ -36,15 +36,13 @@
 /* Realm Nodes */
 .realm-node {
   position: absolute;
-  width: 100px;
-  height: 100px;
+  overflow: visible;
+  width: 144px;
+  height: 144px;
   border-radius: 50%;
-  border: 2px solid var(--accent);
   background-color: rgba(18, 26, 51, 0.7);
-  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 0 0 25px rgba(122, 162, 247, 0.5);
   cursor: pointer;
   display: flex;
   align-items: flex-end;
@@ -59,7 +57,56 @@
 
 .realm-node[data-overlay] {
   animation: shadowPulse 3s ease-in-out infinite alternate;
+  filter: box-shadow(0 0 25px rgba(122, 162, 247, 0.5));
   border: none;
+  opacity: 0.9; 
+}
+
+.realm-node[data-img] {
+  opacity: 0.5; 
+  filter: box-shadow(0 0 25px rgba(122, 162, 247, 0.5));
+  border: none;
+}
+
+/* Shadow node: no glow, no extra opacity override */
+.realm-node[data-title="🌑 Shadow"] {
+  background-color: transparent !important;
+  filter: none !important;
+  animation: none !important;
+  opacity: 1 !important; /* ensures smoke + mask control opacity instead */
+}
+
+.realm-node .smoke-layer,
+.realm-node .overlay-layer {
+  position: absolute;
+  inset: 0;               /* shorthand for top:0; right:0; bottom:0; left:0; */
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+/* smoke: slightly transparent + fade edges using mask */
+.realm-node .smoke-layer {
+  z-index: 1;
+  background-size: 120% /* or 'cover' depending on your art */;
+  opacity: 0.6;         /* tweak to taste */
+
+  /* soft radial fade (works in modern browsers) */
+  -webkit-mask-image: radial-gradient(circle at center, rgb(255, 255, 255) 10%, rgba(0,0,0,0) 75%);
+  -webkit-mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+
+  mask-image: radial-gradient(circle at center, rgb(255, 255, 255) 10%, rgba(0,0,0,0) 75%);
+  mask-size: 100% 100%;
+  mask-repeat: no-repeat;
+}
+
+/* planet overlay: keep crisp and centered on top */
+.realm-node .overlay-layer {
+  z-index: 2;
+  background-size: 80%; /* tweak so planet sits nicely inside the node */
+  background-position: center;
 }
 
 @keyframes shadowPulse {
