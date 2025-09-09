@@ -17,8 +17,12 @@ Equip armor, summon archetypes, explore functions — and track your growth alon
   <canvas id="starfield"></canvas>
 
   <div class="realm-node" style="top:45%; left:45%;" data-title="🌀 Self" data-text="Learn about your core cognitive functions and how they shape your unique archetype. Collect your self-card and see how your energy flows." data-img="{{ site.baseurl }}/assets/images/self.png"></div>
-
-  <div class="realm-node" style="top:65%; left:25%;" data-title="🌑 Shadow" data-text="Understand your shadow states — ignoring, projecting, or integrating. See how your hidden side influences growth." data-img="{{ site.baseurl }}/assets/images/shadow.png"></div>
+  
+  <div class="realm-node" style="top:65%; left:25%;" 
+     data-title="🌑 Shadow" 
+     data-text="Understand your shadow states — ignoring, projecting, or integrating. See how your hidden side influences growth." 
+     data-img="{{ site.baseurl }}/assets/images/planet-shadow.png"
+     data-overlay="{{ site.baseurl }}/assets/images/planet-shadow-smoke.png"></div>
 
   <div class="realm-node" style="top:15%; left:15%;" data-title="🛡️ Persona" data-text="Customize your persona through outfits, armor sets, and mythical summons. Personas are your adaptive gear — protection, disguise, or performance." data-img="{{ site.baseurl }}/assets/images/persona.png"></div>
 

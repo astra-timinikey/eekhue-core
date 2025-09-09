@@ -13,8 +13,19 @@ document.addEventListener("DOMContentLoaded", () => {
     nodes.forEach(node => {
       // Set node image background
       const img = node.dataset.img;
-      if(img) node.style.backgroundImage = `url('${img}')`;
-  
+      const overlay = node.dataset.overlay;
+      
+      if (img && overlay) {
+        // Multiple background images: overlay first (on top), then base image
+        node.style.backgroundImage = `url('${overlay}'), url('${img}')`;
+        node.style.backgroundSize = 'cover, cover';
+        node.style.backgroundPosition = 'center, center';
+        node.style.backgroundRepeat = 'no-repeat, no-repeat';
+      } else if (img) {
+        // Single background image (existing behavior)
+        node.style.backgroundImage = `url('${img}')`;
+      }
+
       node.addEventListener("click", () => {
         titleEl.textContent = node.dataset.title;
         textEl.textContent = node.dataset.text;
@@ -84,4 +95,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     animateNodes();
   });
-  

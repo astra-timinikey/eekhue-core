@@ -54,6 +54,15 @@
   padding-bottom: 6px;
 }
 
+.realm-node[data-overlay] {
+  animation: shadowPulse 3s ease-in-out infinite alternate;
+}
+
+@keyframes shadowPulse {
+  0% { filter: opacity(0.8); }
+  100% { filter: opacity(1); }
+}
+
 /* Scale down nodes + font on smaller screens */
 @media (max-width: 768px) {
   .realm-node {
