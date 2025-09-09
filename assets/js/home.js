@@ -16,11 +16,23 @@ document.addEventListener("DOMContentLoaded", () => {
       const overlay = node.dataset.overlay;
       
       if (img && overlay) {
-        // Multiple background images: overlay first (on top), then base image
-        node.style.backgroundImage = `url('${overlay}'), url('${img}')`;
-        node.style.backgroundSize = '120%, cover';
-        node.style.backgroundPosition = 'center, center';
-        node.style.backgroundRepeat = 'no-repeat, no-repeat';
+        node.style.backgroundImage = `url('${img}')`;
+        
+        // Create a pseudo-overlay with opacity
+        const overlayDiv = document.createElement('div');
+        overlayDiv.style.position = 'absolute';
+        overlayDiv.style.top = '0';
+        overlayDiv.style.left = '0';
+        overlayDiv.style.right = '0';
+        overlayDiv.style.bottom = '0';
+        overlayDiv.style.backgroundImage = `url('${overlay}')`;
+        overlayDiv.style.backgroundSize = '120%';
+        overlayDiv.style.backgroundPosition = 'center';
+        overlayDiv.style.backgroundRepeat = 'no-repeat';
+        overlayDiv.style.borderRadius = '50%';
+        overlayDiv.style.opacity = '0.7'; // Adjust this (0.1-0.9)
+        overlayDiv.style.pointerEvents = 'none';
+        node.appendChild(overlayDiv);
       } else if (img) {
         // Single background image (existing behavior)
         node.style.backgroundImage = `url('${img}')`;

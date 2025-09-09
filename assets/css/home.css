@@ -59,6 +59,7 @@
 
 .realm-node[data-overlay] {
   animation: shadowPulse 3s ease-in-out infinite alternate;
+  border: none;
 }
 
 @keyframes shadowPulse {
