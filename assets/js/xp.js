@@ -12,15 +12,16 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentXP   = parseInt(localStorage.getItem("eekhueXP")) || 0;
   let visitedRealms = JSON.parse(localStorage.getItem("visitedRealms")) || {};
 
-  // --- Milestones (from 5 realm nodes = 55%) ---
+  // --- Milestones ---
   const milestones = [
     { percent: 0,   text: "Begin your journey..." },
-    { percent: 11,  text: "🌀 Exploring your Self..." },
-    { percent: 22,  text: "🌑 Meeting your Shadow..." },
-    { percent: 33,  text: "🛡️ Growing your Persona..." },
-    { percent: 44,  text: "⚔️ Re-equipping your path..." },
-    { percent: 55,  text: "🧭 Rerouting connections..." },
-    { percent: 100, text: "✨ Integration unlocked!" }
+    { percent: 14,  text: "Path Opens Ahead" },
+    { percent: 28,  text: "Power Levels Rise" },
+    { percent: 42,  text: "Trials Grow Harder" },
+    { percent: 57,  text: "Hidden Routes Found" },
+    { percent: 71,  text: "Rare Treasures Near" },
+    { percent: 85,  text: "Final Arc Begins" },
+    { percent: 100, text: "Legend Complete 🎯" }
   ];
 
   // --- Helpers ---
@@ -71,6 +72,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // --- Init ---
   updateXPBar();
+
+// --- NEW Starfield planet clicks (homepage only, safe no-op on quiz page) ---
+  document.querySelectorAll(".starfield-planet").forEach((planet, i) => {
+    const id = planet.dataset.title || planet.id || `starfield-planet${i}`;
+    planet.addEventListener("click", () => {
+      if (!visitedRealms[id]) {
+        visitedRealms[id] = true;
+        localStorage.setItem("visitedRealms", JSON.stringify(visitedRealms));
+        addXP(11); // award once per planet
+      }
+    });
+  });
+  
 
   // --- Realm node clicks (homepage only, safe no-op on quiz page) ---
    document.querySelectorAll(".realm-node").forEach((node, i) => {
