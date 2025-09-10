@@ -2,14 +2,14 @@
   id: "self"
   emoji: "🌀"
   position: { x: 65, y: 15 }
-  size: 87
+  size: 88
   hover_scale: 1.25
   animation:
     float_speed: 3.2
     float_amplitude: 8
   layers:
     - image: "planet-auren.png"
-      size_multiplier: 1.0
+      size_multiplier: 0.9
       opacity: 1.0
       blend_mode: "normal"
       z_index: 1
@@ -48,15 +48,15 @@
 - name: "Persona"
   id: "persona"
   emoji: "🛡️"
-  position: { x: 30, y: 10 }
-  size: 80
+  position: { x: 30, y: 5 }
+  size: 100
   hover_scale: 1.35
   animation:
     float_speed: 2.8
     float_amplitude: 6
   layers:
     - image: "planet-chromora.png"
-      size_multiplier: 1.0
+      size_multiplier: 0.7
       opacity: 1.0
       blend_mode: "normal"
       z_index: 1
@@ -68,14 +68,14 @@
   id: "reequip"
   emoji: "⚔️"
   position: { x: 40, y: 40 }
-  size: 110
+  size: 120
   hover_scale: 1.2
   animation:
     float_speed: 3.5
     float_amplitude: 10
   layers:
     - image: "planet-solumbria.png"
-      size_multiplier: 1.0
+      size_multiplier: 0.9
       opacity: 1.0
       blend_mode: "normal"
       z_index: 1
@@ -86,8 +86,8 @@
 - name: "RE:route"
   id: "reroute"
   emoji: "🧭"
-  position: { x: 80, y: 55 }
-  size: 75
+  position: { x: 85, y: 60 }
+  size: 140
   hover_scale: 1.28
   animation:
     float_speed: 2.4
