@@ -97,8 +97,9 @@
   border-radius: 50%;
 }
 
-/* New Planet Label (emoji) */
+/* New Planet Label (emoji) - HIDDEN FOR NOW */
 .starfield-planet-label {
+  display: none; /* Hide labels to prevent clutter */
   position: absolute;
   bottom: -8px;
   left: 50%;
@@ -120,12 +121,12 @@
   }
 }
 
-/* Special animations for Shadow planet */
-#starfield-shadow .starfield-planet-layer[data-layer-index="1"] .starfield-layer-image {
+/* Special animations for Shadow planet (now smoke is layer 0, planet is layer 1) */
+#starfield-shadow .starfield-planet-layer[data-layer-index="0"] .starfield-layer-image {
   animation: starfieldSmokeFloat 6s ease-in-out infinite;
 }
 
-#starfield-shadow:hover .starfield-planet-layer[data-layer-index="1"] .starfield-layer-image {
+#starfield-shadow:hover .starfield-planet-layer[data-layer-index="0"] .starfield-layer-image {
   animation: starfieldSmokeFloat 3s ease-in-out infinite, starfieldShadowPulse 2s ease-in-out infinite;
 }
 
@@ -152,7 +153,7 @@
 /* Responsive sizing */
 @media (max-width: 768px) {
   .starfield-planet {
-    --base-size: calc(var(--base-size) * 0.6);
+    --base-size: calc(var(--base-size) * 0.7); /* Less aggressive shrinking */
   }
   
   .starfield-planet-label {
@@ -162,7 +163,7 @@
 
 @media (max-width: 480px) {
   .starfield-planet {
-    --base-size: calc(var(--base-size) * 0.45);
+    --base-size: calc(var(--base-size) * 0.55); /* Less aggressive shrinking */
   }
   
   .starfield-planet-label {
