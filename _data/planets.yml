@@ -1,0 +1,103 @@
+- name: "Self"
+  id: "self"
+  emoji: "🌀"
+  position: { x: 60, y: 20 }
+  size: 120
+  hover_scale: 1.25
+  animation:
+    float_speed: 3.2
+    float_amplitude: 8
+  layers:
+    - image: "self.png"
+      size_multiplier: 1.0
+      opacity: 1.0
+      blend_mode: "normal"
+      z_index: 1
+  popup:
+    title: "🌀 Self"
+    description: "Learn about your core cognitive functions and how they shape your unique archetype. Collect your self-card and see how your energy flows."
+
+- name: "Shadow"
+  id: "shadow"
+  emoji: "🌑"
+  position: { x: 15, y: 65 }
+  size: 140
+  hover_scale: 1.3
+  animation:
+    float_speed: 4.1
+    float_amplitude: 12
+  layers:
+    - image: "planet-shadow.png"
+      size_multiplier: 1.0
+      opacity: 1.0
+      blend_mode: "normal"
+      z_index: 1
+    - image: "planet-shadow-smoke.png"
+      size_multiplier: 1.2
+      opacity: 0.7
+      blend_mode: "screen"
+      z_index: 2
+      animation:
+        type: "float"
+        duration: 6
+        direction: "vertical"
+  popup:
+    title: "🌑 Shadow"
+    description: "Understand your shadow states — ignoring, projecting, or integrating. See how your hidden side influences growth."
+
+- name: "Persona"
+  id: "persona"
+  emoji: "🛡️"
+  position: { x: 25, y: 15 }
+  size: 100
+  hover_scale: 1.35
+  animation:
+    float_speed: 2.8
+    float_amplitude: 6
+  layers:
+    - image: "persona.png"
+      size_multiplier: 1.0
+      opacity: 1.0
+      blend_mode: "normal"
+      z_index: 1
+  popup:
+    title: "🛡️ Persona"
+    description: "Customize your persona through outfits, armor sets, and mythical summons. Personas are your adaptive gear — protection, disguise, or performance."
+
+- name: "RE:equip"
+  id: "reequip"
+  emoji: "⚔️"
+  position: { x: 40, y: 40 }
+  size: 160
+  hover_scale: 1.2
+  animation:
+    float_speed: 3.5
+    float_amplitude: 10
+  layers:
+    - image: "planet-solumbria.png"
+      size_multiplier: 1.0
+      opacity: 1.0
+      blend_mode: "normal"
+      z_index: 1
+  popup:
+    title: "⚔️ RE:equip"
+    description: "Upgrade your Self and Persona by leveling functions and balancing traits. A growth system for integration, awareness, and strength."
+
+- name: "RE:route"
+  id: "reroute"
+  emoji: "🧭"
+  position: { x: 75, y: 50 }
+  size: 110
+  hover_scale: 1.28
+  animation:
+    float_speed: 2.4
+    float_amplitude: 7
+  layers:
+    - image: "reroute.png"
+      size_multiplier: 1.0
+      opacity: 1.0
+      blend_mode: "normal"
+      z_index: 1
+  popup:
+    title: "🧭 RE:route"
+    description: "Navigate relationships and connections through an interactive map of neural links. Explore how different archetypes interact, clash, or harmonize."

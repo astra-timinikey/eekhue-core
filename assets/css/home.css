@@ -73,7 +73,16 @@
   background-color: transparent !important;
   filter: none !important;
   animation: none !important;
-  opacity: 1 !important; /* ensures smoke + mask control opacity instead */
+  opacity: 1 !important; 
+}
+
+/* Shadow node: no glow, no extra opacity override */
+.realm-node[data-title="⚔️ RE:equip"] {
+  background-color: transparent !important;
+  filter: none !important;
+  animation: none !important;
+  opacity: 1 !important;
+  background-size: 90%
 }
 
 .realm-node .smoke-layer,
