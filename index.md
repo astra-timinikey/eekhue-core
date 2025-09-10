@@ -12,33 +12,8 @@ EekHue is your guide to discovering your **Self**, exploring your **Shadow**, an
 
 Equip armor, summon archetypes, explore functions — and track your growth along the way.
 
-## 🌌 Explore the Realms
-<div class="realm-map">
-  <canvas id="starfield"></canvas>
-
-  <div class="realm-node" style="top:20%; left:60%;" data-title="🌀 Self" data-text="Learn about your core cognitive functions and how they shape your unique archetype. Collect your self-card and see how your energy flows." data-img="{{ site.baseurl }}/assets/images/self.png"></div>
-  
-  <div class="realm-node" style="top:65%; left:15%;" 
-     data-title="🌑 Shadow" 
-     data-text="Understand your shadow states — ignoring, projecting, or integrating. See how your hidden side influences growth." 
-     data-img="{{ site.baseurl }}/assets/images/planet-shadow-smoke.png"
-     data-overlay="{{ site.baseurl }}/assets/images/planet-shadow.png"></div>
-
-  <div class="realm-node" style="top:15%; left:25%;" data-title="🛡️ Persona" data-text="Customize your persona through outfits, armor sets, and mythical summons. Personas are your adaptive gear — protection, disguise, or performance." data-img="{{ site.baseurl }}/assets/images/persona.png"></div>
-
-  <div class="realm-node" style="top:40%; left:40%;" data-title="⚔️ RE:equip" data-text="Upgrade your Self and Persona by leveling functions and balancing traits. A growth system for integration, awareness, and strength." data-img="{{ site.baseurl }}/assets/images/planet-solumbria.png"></div>
-
-  <div class="realm-node" style="top:50%; left:75%;" data-title="🧭 RE:route" data-text="Navigate relationships and connections through an interactive map of neural links. Explore how different archetypes interact, clash, or harmonize." data-img="{{ site.baseurl }}/assets/images/reroute.png"></div>
-</div>
-
-<!-- Popup card -->
-<div id="realm-card" class="realm-card-popup">
-  <span id="realm-close">&times;</span>
-  <h3 id="realm-title"></h3>
-  <p id="realm-text"></p>
-</div>
-
-<br>
 ---
 
 > “Discover your Self. Explore your Shadow. Grow your Persona.”
+
+## 🌌 Explore the Realms
