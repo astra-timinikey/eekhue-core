@@ -37,7 +37,9 @@
   <div id="debug"></div>
 
   <main>
-    {{ content }}    
+    <div class="text-container">
+      {{ content }}
+    </div>
     <!-- STARFIELD CONTENT DIRECTLY IN LAYOUT -->
     <div class="starfield-realm-map">
       <canvas id="starfield-new"></canvas>
@@ -93,7 +95,14 @@
       <h3 id="starfield-title"></h3>
       <p id="starfield-text"></p>
     </div>
+
     
+    <div class="text-container">
+      <!-- Closing note below starfield -->
+      {% if page.closing_note %}
+        <p class="homepage-closing-note">{{ page.closing_note }}</p>
+      {% endif %}
+    </div>
   </main>
 
   {% include footer.html %}

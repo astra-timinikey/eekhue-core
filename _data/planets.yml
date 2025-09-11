@@ -1,3 +1,22 @@
+- name: "Persona"
+  id: "persona"
+  emoji: "🛡️"
+  position: { x: 25, y: 10 }
+  size: 86
+  hover_scale: 1.35
+  animation:
+    float_speed: 2.8
+    float_amplitude: 6
+  layers:
+    - image: "planet-chromora.png"
+      size_multiplier: 1.1
+      opacity: 1.0
+      blend_mode: "normal"
+      z_index: 1
+  popup:
+    title: "🛡️ Persona"
+    description: "Customize your persona through outfits, armor sets, and mythical summons. Personas are your adaptive gear — protection, disguise, or performance."
+
 - name: "Self"
   id: "self"
   emoji: "🌀"
@@ -21,7 +40,7 @@
   id: "shadow"
   emoji: "🌑"
   position: { x: 15, y: 65 }
-  size: 90
+  size: 87
   hover_scale: 1.3
   animation:
     float_speed: 4.1
@@ -45,25 +64,6 @@
     title: "🌑 Shadow"
     description: "Understand your shadow states — ignoring, projecting, or integrating. See how your hidden side influences growth."
 
-- name: "Persona"
-  id: "persona"
-  emoji: "🛡️"
-  position: { x: 28, y: 7 }
-  size: 90
-  hover_scale: 1.35
-  animation:
-    float_speed: 2.8
-    float_amplitude: 6
-  layers:
-    - image: "planet-chromora.png"
-      size_multiplier: 1.2
-      opacity: 1.0
-      blend_mode: "normal"
-      z_index: 1
-  popup:
-    title: "🛡️ Persona"
-    description: "Customize your persona through outfits, armor sets, and mythical summons. Personas are your adaptive gear — protection, disguise, or performance."
-
 - name: "RE:equip"
   id: "reequip"
   emoji: "⚔️"
@@ -86,15 +86,15 @@
 - name: "RE:route"
   id: "reroute"
   emoji: "🧭"
-  position: { x: 85, y: 60 }
-  size: 140
+  position: { x: 80, y: 60 }
+  size: 149
   hover_scale: 1.28
   animation:
     float_speed: 2.4
     float_amplitude: 7
   layers:
     - image: "planet-aquylox.png"
-      size_multiplier: 1.0
+      size_multiplier: 0.7
       opacity: 1.0
       blend_mode: "normal"
       z_index: 1

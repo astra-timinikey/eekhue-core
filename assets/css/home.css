@@ -1,4 +1,8 @@
-
+.text-container {
+  max-width: 700px;
+  margin: 0 auto;   /* horizontally center container */
+  text-align: left;
+}
  
   /* Canvas for stars */
   #starfield {
@@ -178,5 +182,16 @@
     font-size: 24px;
     cursor: pointer;
     color: var(--muted);
+  }
+  
+  .homepage-closing-note {
+    border-left: 4px solid #888;       /* the vertical line like a blockquote */
+    padding-left: 1rem;                /* space between line and text */
+    margin: 2rem 0;                     /* spacing above/below */
+    color: #555;                        /* slightly muted text color */
+    font-style: italic;                 /* optional for emphasis */
+    font-size: 1.1rem;                  /* readable size */
+    background-color: rgba(255,255,255,0.03); /* subtle background if desired */
+    border-radius: 4px;                 /* optional rounded corners */
   }
   
