@@ -4,7 +4,7 @@ title: "Inner Cosmos Explorer"
 description: "Discover your Self. Explore your Shadow. Grow your Persona. Navigate your Inner Cosmos."
 hero_title: "Inner Cosmos Theory"
 hero_subtitle: "A gamified journey through your inner universe."
-pill: "🔬 New Theory""
+pill: "🔬 New Theory"
 closing_note: "Explore, gain XP, and unlock the secrets of your cosmos."
 ---
 # ❓ The Questions We Ask
