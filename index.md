@@ -7,7 +7,7 @@ hero_subtitle: "A gamified journey through your inner universe."
 pill: "🔬 New Theory""
 closing_note: "Explore, gain XP, and unlock the secrets of your cosmos."
 ---
-## ❓ The Questions We Ask
+# ❓ The Questions We Ask
 
 - Why does our inner world feel as infinite as the universe itself?  
 - What hidden forces shape the Self, the Persona, and the Shadow?  

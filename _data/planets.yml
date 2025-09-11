@@ -16,7 +16,6 @@
   popup:
     title: "🛡️ Persona"
     description: "Equip adaptive armor sets and mythical summons for life's different stages. Personas are your strategic gear — protection, disguise, or performance."
-    
 
 - name: "Self"
   id: "self"
