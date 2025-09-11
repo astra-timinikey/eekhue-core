@@ -81,7 +81,7 @@
       z_index: 1
   popup:
     title: "⚔️ RE:equip"
-    description: "Level up by integrating personas, wielding shadow powers, and summoning your sprit entity. A growth system for strength and awareness."
+    description: "Level up by integrating personas, wielding shadow powers, and summoning your spirit entity. A growth system for strength and awareness."
 
 - name: "RE:route"
   id: "reroute"

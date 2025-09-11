@@ -185,9 +185,9 @@ header .logo {
   visibility: visible;
 }
 
-/* Mobile: show tooltip by default since there's no hover */
+/* Mobile: show tooltip when it has the 'show' class */
 @media (hover: none) and (pointer: coarse) {
-  .tooltip {
+  .tooltip.show {
     visibility: visible;
   }
 }

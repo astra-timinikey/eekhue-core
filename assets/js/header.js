@@ -28,6 +28,43 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 300); // delay in ms, adjust as needed
     });
   });
+  
+  // Mobile tooltip click functionality
+  if (window.matchMedia("(hover: none) and (pointer: coarse)").matches) {
+    const tooltipButtons = document.querySelectorAll(".dropbtn");
+    
+    tooltipButtons.forEach(button => {
+      const tooltip = button.querySelector(".tooltip");
+      
+      if (tooltip) {
+        button.addEventListener("click", (e) => {
+          e.preventDefault(); // Prevent default button behavior if needed
+          
+          // Hide all other tooltips first
+          tooltipButtons.forEach(otherButton => {
+            const otherTooltip = otherButton.querySelector(".tooltip");
+            if (otherTooltip && otherTooltip !== tooltip) {
+              otherTooltip.classList.remove("show");
+            }
+          });
+          
+          // Toggle current tooltip
+          tooltip.classList.toggle("show");
+        });
+      }
+    });
+
+    // Hide tooltip when clicking outside
+    document.addEventListener("click", (e) => {
+      if (!e.target.closest(".dropbtn")) {
+        const allTooltips = document.querySelectorAll(".tooltip");
+        allTooltips.forEach(tooltip => {
+          tooltip.classList.remove("show");
+        });
+      }
+    });
+  
+  
 
   // Random logo and brand name functionality
   const logoImg = document.querySelector(".logo");
