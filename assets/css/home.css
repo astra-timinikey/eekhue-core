@@ -1,7 +1,7 @@
 .text-container {
   max-width: 700px;
   margin: 0 auto;   /* horizontally center container */
-  text-align: left;
+  text-align: center;
 }
  
   /* Canvas for stars */

@@ -31,10 +31,8 @@
   <section class="hero">
     <h1>{{ page.hero_title }}</h1>
     <p class="lead">{{ page.hero_subtitle }}</p>
-    <div class="pill">✨ Powered by GitHub Pages</div>
+    <div class="pill">{{ page.pill }}</div>
   </section>
-  
-  <div id="debug"></div>
 
   <main>
     <div class="text-container">
@@ -89,14 +87,12 @@
       </div>
     </div>
 
-    <!-- NEW POPUP (separate from your existing one) -->
     <div id="starfield-popup" class="starfield-popup-overlay">
       <span id="starfield-close">&times;</span>
       <h3 id="starfield-title"></h3>
       <p id="starfield-text"></p>
     </div>
 
-    
     <div class="text-container">
       <!-- Closing note below starfield -->
       {% if page.closing_note %}
