@@ -50,7 +50,7 @@ Each card links to a deeper dive into the functions, shadow expressions, and gro
     {% assign info = site.data.mbti[type] %}
     {% assign desc = site.data.self[type] %}
     <a href="{{ site.baseurl }}/self/{{ type | downcase }}.html" class="card-link">
-    {% include card.html %}
+    {% include card-self.html %}
     </a>
   {% endfor %}
 </div>

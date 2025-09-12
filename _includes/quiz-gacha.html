@@ -1,0 +1,46 @@
+<!-- ==============================
+  Gacha Quiz Page Container
+=============================== -->
+<div id="quiz-gacha-container">
+
+  <!-- 1. Big top frame -->
+  <section id="gacha-top-frame">
+    <div class="gacha-big-card">
+      <div class="gacha-card">
+        <div class="gacha-card-inner">
+          <!-- Front: initial message -->
+          <div class="gacha-card-front">
+            <h2>Flip to begin 🚀</h2>
+            <p>Discover your inner self by drawing a quiz card from the deck below.</p>
+          </div>
+          <!-- Backface: optional visual flair -->
+          <div class="gacha-card-backface">
+            🎴
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Deck of face-down cards -->
+  <section id="gacha-deck">
+    {% for quiz in site.data.quiz %}
+      <div class="gacha-card-back" data-slug="{{ quiz[1].slug }}">
+        <!-- Optional: overlay emoji or icon for visual cue -->
+        🎴
+      </div>
+    {% endfor %}
+  </section>
+
+  <!-- 3. Dropdown for all quizzes -->
+  <section id="gacha-dropdown-section">
+    <label for="quiz-selector">Or pick a quiz manually:</label>
+    <select id="quiz-selector">
+      <option value="">Select a quiz...</option>
+      {% for quiz in site.data.quiz %}
+        <option value="{{ quiz[1].slug }}">{{ quiz[1].title }}</option>
+      {% endfor %}
+    </select>
+  </section>
+
+</div>

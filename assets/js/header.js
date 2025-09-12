@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
       }
     });
-  
+  };
   
 
   // Random logo and brand name functionality
