@@ -1,8 +1,8 @@
 ---
 layout: homepage
-title: "Inner Cosmos Explorer"
-description: "Discover your Self. Explore your Shadow. Grow your Persona. Navigate your Inner Cosmos."
-hero_title: "Inner Cosmos Theory"
+title: "Explore The Cosmos Within"
+description: "Discover your Self. Explore your Shadow. Grow your Persona. Navigate your the Cosmos Within."
+hero_title: "Cosmos Within Theory"
 hero_subtitle: "A gamified journey through your inner universe."
 pill: "🔬 New Theory"
 closing_note: "Explore, gain XP, and unlock the secrets of your cosmos."

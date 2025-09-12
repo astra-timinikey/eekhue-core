@@ -100,12 +100,16 @@ questions:
     options:
       - text: "Trust your gut and act quickly"
         value: "fire"
+        cf_value: "Se"  # Extraverted Sensing - immediate action on present data
       - text: "Consider how it affects everyone involved"
         value: "water"
+        cf_value: "Fe"  # Extraverted Feeling - group harmony focus
       - text: "Look at practical outcomes and long-term effects"
         value: "earth"
+        cf_value: "Te"  # Extraverted Thinking - practical results focus
       - text: "Analyze all possibilities and gather more information"
         value: "air"
+        cf_value: "Ti"  # Introverted Thinking
 
   - id: q9
     text: "Your ideal evening is:"

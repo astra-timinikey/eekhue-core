@@ -113,12 +113,16 @@ questions:
     options:
       - text: "Resist it unless it benefits me"
         value: "dragon"
+        cf_value: "Si"  # Introverted Sensing - prefers familiar patterns
       - text: "Embrace it as opportunity for growth"
         value: "phoenix"
+        cf_value: "Ne"  # Extraverted Intuition - thrives on new possibilities
       - text: "Accept it with gentle patience"
         value: "unicorn"
+        cf_value: "Ni"  # Introverted Intuition - trusts the natural flow
       - text: "Study it carefully before adapting"
         value: "griffin"
+        cf_value: "Ti"  # Introverted Thinking - needs to understand first
 
   - id: q10
     text: "What's your ultimate goal?"
