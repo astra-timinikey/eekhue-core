@@ -1,81 +1,231 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const topCardEl = document.querySelector("#gacha-top-frame .gacha-card");
-  const topCardInner = topCardEl.querySelector(".gacha-card-inner");
-  const frontEl = topCardEl.querySelector(".gacha-card-front");
-  const backfaceEl = topCardEl.querySelector(".gacha-card-backface");
-
-  const deckCards = document.querySelectorAll(".gacha-card-back");
-  const dropdown = document.querySelector("#quiz-selector");
-
-  // Utility: Load quiz info into top card front
-  function loadQuizToTop(slug) {
-    const quizData = window.siteQuizData[slug];
-    if (!quizData) return;
-
-    frontEl.innerHTML = `
-      <h2>${quizData.title}</h2>
-      <p>${quizData.description || ""}</p>
-      <button class="gacha-attempt-btn" data-slug="${slug}">Attempt Quiz</button>
-    `;
-
-    // Reset flip state to front
-    topCardEl.classList.remove("flipped");
+class QuizGacha {
+  constructor() {
+    this.drawnQuiz = null;
+    this.currentQuizInstance = null;
+    this.init();
   }
 
-  // Handle clicking "Attempt Quiz" button inside top card
-  frontEl.addEventListener("click", (e) => {
-    const btn = e.target.closest(".gacha-attempt-btn");
-    if (!btn) return;
+  init() {
+    this.setupEventListeners();
+    console.log('Quiz Gacha initialized');
+    console.log('Available quizzes:', Object.keys(window.siteQuizData || {}));
+  }
 
-    const slug = btn.dataset.slug;
+  setupEventListeners() {
+    // Draw Card button
+    const drawBtn = document.getElementById('draw-card-btn');
+    if (drawBtn) {
+      drawBtn.addEventListener('click', () => this.drawCard());
+    }
+
+    // Play Card button  
+    const playBtn = document.getElementById('play-card-btn');
+    if (playBtn) {
+      playBtn.addEventListener('click', () => this.playCard());
+    }
+
+    // Dropdown selection
+    const dropdown = document.getElementById('quiz-selector');
+    if (dropdown) {
+      dropdown.addEventListener('change', (e) => this.selectQuizFromDropdown(e.target.value));
+    }
+
+    // Deck click (alternative to draw button)
+    const deckCards = document.querySelectorAll('.card-in-deck');
+    deckCards.forEach(card => {
+      card.addEventListener('click', () => this.drawCard());
+    });
+  }
+
+  drawCard() {
+    // Get available quizzes
+    const quizSlugs = Object.keys(window.siteQuizData || {});
+    if (quizSlugs.length === 0) {
+      console.error('No quizzes available');
+      return;
+    }
+
+    // Pick random quiz
+    const randomSlug = quizSlugs[Math.floor(Math.random() * quizSlugs.length)];
+    const selectedQuiz = window.siteQuizData[randomSlug];
+    
+    this.drawnQuiz = {
+      slug: randomSlug,
+      data: selectedQuiz
+    };
+
+    console.log('Drew card:', selectedQuiz.title);
+
+    // Animate card flip
+    this.showDrawnCard();
+  }
+
+  showDrawnCard() {
+    const emptySpace = document.getElementById('empty-space');
+    const drawnCard = document.getElementById('drawn-card');
+    const playBtn = document.getElementById('play-card-btn');
+    const drawnTitle = document.getElementById('drawn-title');
+    const drawnDescription = document.getElementById('drawn-description');
+
+    if (emptySpace && drawnCard && this.drawnQuiz) {
+      // Hide empty space
+      emptySpace.style.display = 'none';
+      
+      // Show drawn card with content
+      drawnTitle.textContent = this.drawnQuiz.data.title;
+      drawnDescription.textContent = this.drawnQuiz.data.description;
+      drawnCard.style.display = 'block';
+      
+      // Show play button
+      if (playBtn) {
+        playBtn.style.display = 'block';
+      }
+
+      // Add XP for drawing card (placeholder for future)
+      // this.addXP(5, 'Card drawn!');
+    }
+  }
+
+  playCard() {
+    if (!this.drawnQuiz) {
+      console.error('No card drawn');
+      return;
+    }
+
+    console.log('Playing card:', this.drawnQuiz.data.title);
+    this.loadQuizIntoFrame(this.drawnQuiz.slug);
+  }
+
+  selectQuizFromDropdown(slug) {
     if (!slug) return;
 
-    // Update URL
-    const newUrl = `${window.location.pathname}?id=${slug}`;
-    window.history.pushState({ slug }, "", newUrl);
-
-    // Load quiz into quiz container
-    const quizContainer = document.querySelector("#quiz-container-1");
-    if (quizContainer && window.siteQuizData[slug]) {
-      quizContainer.innerHTML = "";
-      initializeQuiz(quizContainer, slug);
-    }
-  });
-
-  // Handle deck card click → load top card & flip
-  deckCards.forEach(card => {
-    card.addEventListener("click", () => {
-      const slug = card.dataset.slug;
-      if (!slug) return;
-
-      loadQuizToTop(slug);
-      // Flip top card to reveal front content
-      topCardEl.classList.add("flipped");
-    });
-  });
-
-  // Handle dropdown selection
-  if (dropdown) {
-    dropdown.addEventListener("change", (e) => {
-      const slug = e.target.value;
-      if (!slug) return;
-
-      loadQuizToTop(slug);
-      topCardEl.classList.add("flipped");
-    });
+    console.log('Selected quiz from dropdown:', slug);
+    this.loadQuizIntoFrame(slug);
   }
 
-  // On page load: check ?id= query param
-  const urlParams = new URLSearchParams(window.location.search);
-  const quizId = urlParams.get("id");
-  if (quizId && window.siteQuizData[quizId]) {
-    loadQuizToTop(quizId);
-    topCardEl.classList.add("flipped");
+  loadQuizIntoFrame(slug) {
+    const quizData = window.siteQuizData[slug];
+    if (!quizData) {
+      console.error('Quiz data not found for:', slug);
+      return;
+    }
 
-    const quizContainer = document.querySelector("#quiz-container-1");
-    if (quizContainer) {
-      quizContainer.innerHTML = "";
-      initializeQuiz(quizContainer, quizId);
+    // Hide initial video state
+    const initialState = document.getElementById('initial-state');
+    const quizState = document.getElementById('quiz-state');
+    
+    if (initialState && quizState) {
+      initialState.style.display = 'none';
+      quizState.style.display = 'block';
+      
+      // Load quiz content into the frame
+      this.renderQuizContent(quizData);
     }
   }
+
+  renderQuizContent(quizData) {
+    const quizContent = document.getElementById('quiz-content');
+    if (!quizContent) return;
+
+    // Create new quiz instance (using your existing quiz system)
+    if (window.Quiz) {
+      this.currentQuizInstance = new window.Quiz(quizData, quizContent);
+    } else {
+      // Fallback: render basic quiz structure
+      this.renderBasicQuiz(quizData, quizContent);
+    }
+  }
+
+  renderBasicQuiz(quizData, container) {
+    // Basic quiz render if Quiz class not available
+    container.innerHTML = `
+      <div class="gacha-quiz-container">
+        <div class="quiz-header">
+          <h2>${quizData.title}</h2>
+          <p>${quizData.description}</p>
+        </div>
+        <div class="quiz-content">
+          <p>Quiz loaded successfully!</p>
+          <p>Questions: ${quizData.questions?.length || 0}</p>
+          <button onclick="this.closest('.gacha-quiz-container').querySelector('.quiz-debug').style.display='block'">
+            Show Quiz Data (Debug)
+          </button>
+          <div class="quiz-debug" style="display:none;">
+            <pre>${JSON.stringify(quizData, null, 2)}</pre>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  // Reset functions
+  resetDrawnCard() {
+    const emptySpace = document.getElementById('empty-space');
+    const drawnCard = document.getElementById('drawn-card');
+    const playBtn = document.getElementById('play-card-btn');
+
+    if (emptySpace && drawnCard) {
+      emptySpace.style.display = 'flex';
+      drawnCard.style.display = 'none';
+    }
+    
+    if (playBtn) {
+      playBtn.style.display = 'none';
+    }
+
+    this.drawnQuiz = null;
+  }
+
+  resetFrame() {
+    const initialState = document.getElementById('initial-state');
+    const quizState = document.getElementById('quiz-state');
+    
+    if (initialState && quizState) {
+      initialState.style.display = 'block';
+      quizState.style.display = 'none';
+    }
+
+    if (this.currentQuizInstance && this.currentQuizInstance.destroy) {
+      this.currentQuizInstance.destroy();
+      this.currentQuizInstance = null;
+    }
+  }
+
+  // XP Integration placeholder
+  addXP(amount, message) {
+    // TODO: Integrate with your XP system
+    console.log(`XP +${amount}: ${message}`);
+    
+    // If you have global XP functions
+    if (window.addXP) {
+      window.addXP(amount, message);
+    }
+  }
+}
+
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  window.quizGacha = new QuizGacha();
 });
+
+// Debug helpers
+window.debugGacha = {
+  drawSpecific: (slug) => {
+    if (window.quizGacha && window.siteQuizData[slug]) {
+      window.quizGacha.drawnQuiz = {
+        slug: slug,
+        data: window.siteQuizData[slug]
+      };
+      window.quizGacha.showDrawnCard();
+    }
+  },
+  reset: () => {
+    if (window.quizGacha) {
+      window.quizGacha.resetDrawnCard();
+      window.quizGacha.resetFrame();
+    }
+  },
+  listQuizzes: () => {
+    console.table(Object.keys(window.siteQuizData || {}));
+  }
+};
