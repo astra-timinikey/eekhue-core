@@ -3,38 +3,75 @@
 =============================== -->
 <div id="quiz-gacha-container">
 
-  <!-- 1. Big top frame -->
+  <!-- 1. Big top frame (landscape for video) -->
   <section id="gacha-top-frame">
-    <div class="gacha-big-card">
-      <div class="gacha-card">
-        <div class="gacha-card-inner">
-          <!-- Front: initial message -->
-          <div class="gacha-card-front">
-            <h2>Flip to begin 🚀</h2>
-            <p>Discover your inner self by drawing a quiz card from the deck below.</p>
+    <div class="gacha-big-frame">
+      <div class="frame-content">
+        <!-- Initial state: looping video background -->
+        <div class="initial-state" id="initial-state">
+          <h2>Draw a Card to Begin 🎲</h2>
+          <p>Flip a card from the deck below to start your journey of self-discovery</p>
+          <!-- Video background placeholder -->
+          <div class="video-background">
+            <p>🌌 Cosmo Within Theory Video Loop</p>
           </div>
-          <!-- Backface: optional visual flair -->
-          <div class="gacha-card-backface">
-            🎴
+        </div>
+        
+        <!-- Quiz state: shows when card is drawn -->
+        <div class="quiz-state" id="quiz-state" style="display: none;">
+          <div id="quiz-content">
+            <!-- Quiz will be loaded here -->
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- 2. Deck of face-down cards -->
-  <section id="gacha-deck">
-    {% for quiz in site.data.quiz %}
-      <div class="gacha-card-back" data-slug="{{ quiz[1].slug }}">
-        <!-- Optional: overlay emoji or icon for visual cue -->
-        🎴
+  <!-- 2. Bottom section with deck (left) and drawn card area (right) -->
+  <section id="gacha-bottom-section">
+    
+    <!-- Left: Deck of face-down cards -->
+    <div id="gacha-deck">
+      <h3>Card Deck</h3>
+      <div class="deck-grid">
+        {% for quiz in site.data.quiz %}
+          <div class="gacha-card-back" data-slug="{{ quiz[1].slug }}" data-title="{{ quiz[1].title }}">
+            🎴
+          </div>
+        {% endfor %}
       </div>
-    {% endfor %}
+    </div>
+
+    <!-- Right: Drawn card display area -->
+    <div id="gacha-drawn-area">
+      <h3>Your Card</h3>
+      <div class="drawn-card-space">
+        <div class="empty-space" id="empty-space">
+          <p>Flip a card to start</p>
+          <div class="empty-card-placeholder">
+            ❓
+          </div>
+        </div>
+        
+        <!-- Flipped card will appear here -->
+        <div class="drawn-card" id="drawn-card" style="display: none;">
+          <div class="card-content">
+            <h4 id="drawn-title"></h4>
+            <p id="drawn-description"></p>
+            <button class="gacha-attempt-btn" id="attempt-btn">
+              Attempt Quiz
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </section>
 
-  <!-- 3. Dropdown for all quizzes -->
-  <section id="gacha-dropdown-section">
-    <label for="quiz-selector">Or pick a quiz manually:</label>
+  <!-- 3. Dropdown for all quizzes (initially hidden, shows after scroll or button) -->
+  <section id="gacha-dropdown-section" style="display: none;">
+    <h3>Browse All Quizzes</h3>
+    <label for="quiz-selector">Don't like randomness? Pick manually:</label>
     <select id="quiz-selector">
       <option value="">Select a quiz...</option>
       {% for quiz in site.data.quiz %}
@@ -42,5 +79,10 @@
       {% endfor %}
     </select>
   </section>
+
+  <!-- Show dropdown toggle -->
+  <div class="dropdown-toggle">
+    <button id="show-dropdown-btn">Browse All Quizzes</button>
+  </div>
 
 </div>
