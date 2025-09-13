@@ -9,11 +9,16 @@
       <div class="frame-content">
         <!-- Initial state: looping video background -->
         <div class="initial-state" id="initial-state">
-          <h2>Draw a Card to Begin 🎲</h2>
-          <p>Flip a card from the deck below to start your journey of self-discovery</p>
-          <!-- Video background placeholder -->
-          <div class="video-background">
-            <p>🌌 Cosmo Within Theory Video Loop</p>
+          <!-- Video background -->
+          <video autoplay loop muted playsinline class="background-video">
+            <source src="{{ site.baseurl }}/assets/images/quiz/universe-within.mp4" type="video/mp4">
+            <div class="video-fallback">
+              <p>🌌 Cosmo Within Theory</p>
+            </div>
+          </video>
+          <div class="video-overlay">
+            <h2>Discover Your Inner Self</h2>
+            <p>Draw a card from the deck below to begin your journey</p>
           </div>
         </div>
         
@@ -30,24 +35,27 @@
   <!-- 2. Bottom section with deck (left) and drawn card area (right) -->
   <section id="gacha-bottom-section">
     
-    <!-- Left: Deck of face-down cards -->
+    <!-- Left: Stacked deck of cards -->
     <div id="gacha-deck">
-      <h3>Card Deck</h3>
-      <div class="deck-grid">
-        {% for quiz in site.data.quiz %}
-          <div class="gacha-card-back" data-slug="{{ quiz[1].slug }}" data-title="{{ quiz[1].title }}">
-            🎴
-          </div>
-        {% endfor %}
+      <h3>What is your...</h3>
+      <div class="deck-stack">
+        <!-- Single stacked deck representing all quizzes -->
+        <div class="deck-pile">
+          {% for quiz in site.data.quiz %}
+            <div class="card-in-deck" data-slug="{{ quiz[1].slug }}" data-title="{{ quiz[1].title }}" style="z-index: {{ forloop.rindex }};">
+              <img src="{{ site.baseurl }}/assets/images/quiz/cardback.png" alt="Card back" class="cardback-image">
+            </div>
+          {% endfor %}
+        </div>
       </div>
+      <button class="attempt-btn" id="draw-card-btn">Draw Card</button>
     </div>
 
-    <!-- Right: Drawn card display area -->
+    <!-- Right: Empty space for flipped card -->
     <div id="gacha-drawn-area">
-      <h3>Your Card</h3>
       <div class="drawn-card-space">
         <div class="empty-space" id="empty-space">
-          <p>Flip a card to start</p>
+          <h3>Flip a card to begin</h3>
           <div class="empty-card-placeholder">
             ❓
           </div>
