@@ -33,10 +33,20 @@ class QuizGacha {
     // Deck click (alternative to draw button)
     const deckCards = document.querySelectorAll('.card-in-deck');
     deckCards.forEach(card => {
-      card.addEventListener('click', () => this.drawCard());
+      card.addEventListener('click', () => this.shuffleDeck());
     });
   }
 
+  shuffleDeck() {
+    const deckPile = document.querySelector('.deck-pile');
+    if (deckPile) {
+      deckPile.style.animation = 'deckShuffle 0.5s ease-in-out';
+      setTimeout(() => {
+        deckPile.style.animation = '';
+      }, 500);
+    }
+  }
+  
   drawCard() {
     // Get available quizzes
     const quizSlugs = Object.keys(window.siteQuizData || {});

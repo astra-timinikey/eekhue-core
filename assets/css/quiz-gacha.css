@@ -24,7 +24,7 @@
 .gacha-big-frame {
   width: 100%;
   max-width: 800px;
-  height: 400px;
+  height: 500px;
   border-radius: 20px;
   background: linear-gradient(135deg, #1e293b, #334155);
   box-shadow: 0 8px 30px rgba(0,0,0,0.3);
@@ -90,6 +90,13 @@
 /* ===============================
   Bottom Section Layout
 =============================== */
+.gacha-section-title {
+  text-align: center;
+  font-size: 1.4rem;
+  color: #334155;
+  margin-bottom: 30px;
+}
+
 #gacha-bottom-section {
   width: 100%;
   display: grid;
@@ -110,6 +117,7 @@
   font-size: 1.4rem;
   color: #334155;
   margin: 0;
+  display: none;
 }
 
 .deck-stack {
@@ -201,9 +209,9 @@
 }
 
 .empty-space h3 {
-  font-size: 1.1rem;
-  margin: 0 0 15px 0;
-  color: #64748b;
+  font-size: 1.3rem;
+  margin: 0 0 10px 0;
+  color: #334155;
 }
 
 .empty-card-placeholder {
@@ -234,8 +242,8 @@
 }
 
 .card-content h4 {
-  font-size: 1.3rem;
-  margin-bottom: 12px;
+  font-size: 1.4rem;
+  margin: 0;
   font-weight: 600;
 }
 
@@ -244,6 +252,7 @@
   margin-bottom: 20px;
   opacity: 0.9;
   line-height: 1.4;
+  display: none;
 }
 
 /* ===============================
