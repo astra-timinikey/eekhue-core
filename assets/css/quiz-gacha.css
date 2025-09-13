@@ -24,7 +24,7 @@
 .gacha-big-frame {
   width: 100%;
   max-width: 800px;
-  height: 500px;
+  height: 600px;
   border-radius: 20px;
   background: linear-gradient(135deg, #1e293b, #334155);
   box-shadow: 0 8px 30px rgba(0,0,0,0.3);
@@ -187,10 +187,9 @@
   align-items: center;
 }
 
-.drawn-card-space {
+.deck-stack, .drawn-card-space {
   width: 140px;
   height: 200px;
-  position: relative;
 }
 
 /* Empty space placeholder */
@@ -403,9 +402,9 @@
     font-size: 1.5rem;
   }
   
-  .drawn-card-space {
-    width: 160px;
-    height: 220px;
+  .deck-stack, .drawn-card-space {
+    width: 120px;  /* Match both sizes */
+    height: 170px;
   }
   
   .initial-state h2 {

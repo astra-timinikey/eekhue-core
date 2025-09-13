@@ -123,49 +123,22 @@ class QuizGacha {
     // Hide initial video state
     const initialState = document.getElementById('initial-state');
     const quizState = document.getElementById('quiz-state');
+    const quizContent = document.getElementById('quiz-content');
+  
     
-    if (initialState && quizState) {
+    if (initialState && quizState && quizContent) {
       initialState.style.display = 'none';
       quizState.style.display = 'block';
-      
-      // Load quiz content into the frame
-      this.renderQuizContent(quizData);
+    
+      // Simply inject the same div structure your test uses
+      quizContent.innerHTML = `<div id="quiz-container-gacha" data-quiz="${slug}"></div>`;
+    
+      // Let your existing quiz.js handle the rest
+      const newContainer = document.getElementById('quiz-container-gacha');
+      if (newContainer && window.initializeQuiz) {
+        window.initializeQuiz(newContainer);
+      }
     }
-  }
-
-  renderQuizContent(quizData) {
-    const quizContent = document.getElementById('quiz-content');
-    if (!quizContent) return;
-
-    // Create new quiz instance (using your existing quiz system)
-    if (window.Quiz) {
-      this.currentQuizInstance = new window.Quiz(quizData, quizContent);
-    } else {
-      // Fallback: render basic quiz structure
-      this.renderBasicQuiz(quizData, quizContent);
-    }
-  }
-
-  renderBasicQuiz(quizData, container) {
-    // Basic quiz render if Quiz class not available
-    container.innerHTML = `
-      <div class="gacha-quiz-container">
-        <div class="quiz-header">
-          <h2>${quizData.title}</h2>
-          <p>${quizData.description}</p>
-        </div>
-        <div class="quiz-content">
-          <p>Quiz loaded successfully!</p>
-          <p>Questions: ${quizData.questions?.length || 0}</p>
-          <button onclick="this.closest('.gacha-quiz-container').querySelector('.quiz-debug').style.display='block'">
-            Show Quiz Data (Debug)
-          </button>
-          <div class="quiz-debug" style="display:none;">
-            <pre>${JSON.stringify(quizData, null, 2)}</pre>
-          </div>
-        </div>
-      </div>
-    `;
   }
 
   // Reset functions
