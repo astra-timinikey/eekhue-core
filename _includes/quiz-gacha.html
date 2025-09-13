@@ -16,10 +16,6 @@
               <p>🌌 Cosmo Within Theory</p>
             </div>
           </video>
-          <div class="video-overlay">
-            <h2>Discover Your Inner Self</h2>
-            <p>Draw a card from the deck below to begin your journey</p>
-          </div>
         </div>
         
         <!-- Quiz state: shows when card is drawn -->
@@ -35,49 +31,51 @@
   <!-- 2. Bottom section with deck (left) and drawn card area (right) -->
   <section id="gacha-bottom-section">
     
-    <!-- Left: Stacked deck of cards -->
-    <div id="gacha-deck">
-      <h3>What is your...</h3>
-      <div class="deck-stack">
-        <!-- Single stacked deck representing all quizzes -->
-        <div class="deck-pile">
-          {% for quiz in site.data.quiz %}
-            <div class="card-in-deck" data-slug="{{ quiz[1].slug }}" data-title="{{ quiz[1].title }}" style="z-index: {{ forloop.rindex }};">
-              <img src="{{ site.baseurl }}/assets/images/quiz/cardback.png" alt="Card back" class="cardback-image">
-            </div>
-          {% endfor %}
+    <!-- Left Column: Stacked deck of cards -->
+    <div class="gacha-column">
+      <div id="gacha-deck">
+        <h3>What is your...</h3>
+        <div class="deck-stack">
+          <!-- Single stacked deck representing all quizzes -->
+          <div class="deck-pile">
+            {% for quiz in site.data.quiz %}
+              <div class="card-in-deck" data-slug="{{ quiz[1].slug }}" data-title="{{ quiz[1].title }}" style="z-index: {{ forloop.rindex }};">
+                <img src="{{ site.baseurl }}/assets/images/quiz/cardback.png" alt="Card back" class="cardback-image">
+              </div>
+            {% endfor %}
+          </div>
         </div>
+        <button class="attempt-btn" id="draw-card-btn">Draw Card</button>
       </div>
-      <button class="attempt-btn" id="draw-card-btn">Draw Card</button>
     </div>
 
-    <!-- Right: Empty space for flipped card -->
-    <div id="gacha-drawn-area">
-      <div class="drawn-card-space">
-        <div class="empty-space" id="empty-space">
-          <h3>Flip a card to begin</h3>
-          <div class="empty-card-placeholder">
-            ❓
+    <!-- Right Column: Empty space for flipped card -->
+    <div class="gacha-column">
+      <div id="gacha-drawn-area">
+        <div class="drawn-card-space">
+          <div class="empty-space" id="empty-space">
+            <h3>Flip a card to begin</h3>
+            <div class="empty-card-placeholder">
+              ❓
+            </div>
+          </div>
+          
+          <!-- Flipped card will appear here -->
+          <div class="drawn-card" id="drawn-card" style="display: none;">
+            <div class="card-content">
+              <h4 id="drawn-title"></h4>
+              <p id="drawn-description"></p>
+            </div>
           </div>
         </div>
-        
-        <!-- Flipped card will appear here -->
-        <div class="drawn-card" id="drawn-card" style="display: none;">
-          <div class="card-content">
-            <h4 id="drawn-title"></h4>
-            <p id="drawn-description"></p>
-            <button class="gacha-attempt-btn" id="attempt-btn">
-              Attempt Quiz
-            </button>
-          </div>
-        </div>
+        <button class="attempt-btn" id="play-card-btn" style="display: none;">Play Card</button>
       </div>
     </div>
 
   </section>
 
-  <!-- 3. Dropdown for all quizzes (initially hidden, shows after scroll or button) -->
-  <section id="gacha-dropdown-section" style="display: none;">
+  <!-- 3. Dropdown for all quizzes -->
+  <section id="gacha-dropdown-section">
     <h3>Browse All Quizzes</h3>
     <label for="quiz-selector">Don't like randomness? Pick manually:</label>
     <select id="quiz-selector">
@@ -87,10 +85,5 @@
       {% endfor %}
     </select>
   </section>
-
-  <!-- Show dropdown toggle -->
-  <div class="dropdown-toggle">
-    <button id="show-dropdown-btn">Browse All Quizzes</button>
-  </div>
 
 </div>
