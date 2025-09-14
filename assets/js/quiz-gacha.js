@@ -131,13 +131,13 @@ class QuizGacha {
       quizState.style.display = 'block';
     
       // Simply inject the same div structure your test uses
-      quizContent.innerHTML = `<div id="quiz-container-gacha" data-quiz="${slug}"></div>`;
+      quizContent.innerHTML = `<div id="quiz-container-gacha-99" data-quiz="${slug}"></div>`;
     
       // Let your existing quiz.js handle the rest
       const newContainer = document.getElementById('quiz-container-gacha');
       if (newContainer && window.initializeQuiz) {
         window.initializeQuiz(newContainer);
-      }
+      }       
     }
   }
 
