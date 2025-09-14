@@ -75,24 +75,25 @@ class QuizGacha {
     const drawnCard = document.getElementById('drawn-card');
     const playBtn = document.getElementById('play-card-btn');
     const drawnTitle = document.getElementById('drawn-title');
-    const drawnDescription = document.getElementById('drawn-description');
 
     if (emptySpace && drawnCard && this.drawnQuiz) {
-      // Hide empty space
+    // Hide empty space
       emptySpace.style.display = 'none';
-      
+    
+      // Extract just the quiz type from title (remove "What" and "Are You?")
+      let quizType = this.drawnQuiz.data.title;
+      quizType = quizType.replace(/^What\s+/, '').replace(/\s+Are You\?$/, '');
+    
       // Show drawn card with content
-      drawnTitle.textContent = this.drawnQuiz.data.title;
-      drawnDescription.textContent = this.drawnQuiz.data.description;
+      if (drawnTitle) {
+        drawnTitle.textContent = quizType;
+      }
       drawnCard.style.display = 'block';
-      
+    
       // Show play button
       if (playBtn) {
         playBtn.style.display = 'block';
       }
-
-      // Add XP for drawing card (placeholder for future)
-      // this.addXP(5, 'Card drawn!');
     }
   }
 
@@ -131,10 +132,10 @@ class QuizGacha {
       quizState.style.display = 'block';
     
       // Simply inject the same div structure your test uses
-      quizContent.innerHTML = `<div id="quiz-container-gacha-99" data-quiz="${slug}"></div>`;
+      quizContent.innerHTML = `<div id="quiz-container-99" data-quiz="${slug}"></div>`;
     
       // Let your existing quiz.js handle the rest
-      const newContainer = document.getElementById('quiz-container-gacha');
+      const newContainer = document.getElementById('quiz-container-99');
       if (newContainer && window.initializeQuiz) {
         window.initializeQuiz(newContainer);
       }       
