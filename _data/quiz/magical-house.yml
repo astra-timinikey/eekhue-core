@@ -1,11 +1,12 @@
 title: "Which Magical School House Do You Belong In?"
 slug: "magical-house"
 description: "Discover your true magical house - are you a Scholar, Guardian, Mystic, or Adventurer?"
+picture: "magical-houses.png"
 
 questions:
   - id: q1
     text: "You discover a mysterious locked door in the school. What do you do?"
-    image: "/assets/images/quiz/mysterious-door.jpg"
+    image: "mysterious-door.jpg"
     options:
       - text: "Research the door's history in the library first"
         value: "scholar"
@@ -18,7 +19,7 @@ questions:
 
   - id: q2
     text: "Your favorite magical subject would be:"
-    image: "/assets/images/quiz/magical-subjects.jpg"
+    image: "magical-subjects.jpg"
     options:
       - text: "Theoretical Magic & Ancient Runes"
         value: "scholar"
@@ -31,7 +32,7 @@ questions:
 
   - id: q3
     text: "When working on a group spell, you naturally:"
-    image: "/assets/images/quiz/group-magic.jpg"
+    image: "group-magic.jpg"
     options:
       - text: "Explain the theory behind why it works"
         value: "scholar"
@@ -44,7 +45,7 @@ questions:
 
   - id: q4
     text: "Your magical familiar would most likely be:"
-    image: "/assets/images/quiz/familiars.jpg"
+    image: "familiars.jpg"
     options:
       - text: "An owl - wise and observant 🦉"
         value: "scholar"
@@ -57,7 +58,7 @@ questions:
 
   - id: q5
     text: "You're assigned a challenging magical research project. Your approach:"
-    image: "/assets/images/quiz/research-project.jpg"
+    image: "research-project.jpg"
     options:
       - text: "Create a detailed plan and study systematically"
         value: "scholar"
@@ -70,7 +71,7 @@ questions:
 
   - id: q6
     text: "In a magical crisis, your first instinct is to:"
-    image: "/assets/images/quiz/magical-crisis.jpg"
+    image: "magical-crisis.jpg"
     options:
       - text: "Analyze what went wrong and find the logical solution"
         value: "scholar"
@@ -83,7 +84,7 @@ questions:
 
   - id: q7
     text: "Your ideal magical workspace has:"
-    image: "/assets/images/quiz/magical-workspace.jpg"
+    image: "magical-workspace.jpg"
     options:
       - text: "Organized books, charts, and reference materials"
         value: "scholar"
@@ -96,7 +97,7 @@ questions:
 
   - id: q8
     text: "When learning a new spell, you prefer to:"
-    image: "/assets/images/quiz/spell-learning.jpg"
+    image: "spell-learning.jpg"
     options:
       - text: "Understand every component before attempting it"
         value: "scholar"
@@ -113,7 +114,7 @@ questions:
 
   - id: q9
     text: "What motivates your magical studies most?"
-    image: "/assets/images/quiz/magical-motivation.jpg"
+    image: "magical-motivation.jpg"
     options:
       - text: "The pursuit of knowledge and understanding"
         value: "scholar"
@@ -126,7 +127,7 @@ questions:
 
   - id: q10
     text: "Your magical graduation thesis would focus on:"
-    image: "/assets/images/quiz/thesis-topic.jpg"
+    image: "thesis-topic.jpg"
     options:
       - text: "A comprehensive analysis of magical theory"
         value: "scholar"
@@ -141,7 +142,7 @@ results:
   scholar:
     title: "House of Scholars 📚"
     description: "You belong to the prestigious House of Scholars, where knowledge is power and understanding unlocks all doors. Your analytical mind and thirst for learning make you a natural researcher and teacher. You approach magic through careful study and logical analysis, believing that true mastery comes from understanding the fundamental principles. Others seek you out for your wisdom and ability to explain complex magical concepts clearly."
-    image: "/assets/images/quiz/results/scholar.jpg"
+    image: "scholar.jpg"
     traits: ["Analytical", "Curious", "Methodical", "Wise", "Articulate"]
     house_powers: ["Ancient Knowledge", "Spell Analysis", "Magical Research", "Teaching Mastery", "Theoretical Innovation"]
     redirect: "/persona/scholar.html"
@@ -149,7 +150,7 @@ results:
   guardian:
     title: "House of Guardians 🛡️"
     description: "You belong to the noble House of Guardians, protectors of the magical world and champions of those in need. Your strong sense of duty and natural caring make you a trusted ally and reliable friend. You see magic as a responsibility - a gift to be used for the greater good. Your protective instincts and practical approach to magic make you invaluable in times of crisis, and others feel safe in your presence."
-    image: "/assets/images/quiz/results/guardian.jpg"
+    image: "guardian.jpg"
     traits: ["Protective", "Loyal", "Practical", "Caring", "Reliable"]
     house_powers: ["Protective Shields", "Healing Magic", "Group Harmony", "Crisis Leadership", "Defensive Mastery"]
     redirect: "/persona/guardian.html"
@@ -157,7 +158,7 @@ results:
   mystic:
     title: "House of Mystics 🔮"
     description: "You belong to the enigmatic House of Mystics, where intuition guides and inner wisdom illuminates the path forward. Your deep connection to the spiritual aspects of magic allows you to perceive truths others miss. You understand that magic is more than technique - it's about harmony with the universe's natural flow. Your mystical insights and ability to sense hidden connections make you a bridge between the seen and unseen worlds."
-    image: "/assets/images/quiz/results/mystic.jpg"
+    image: "mystic.jpg"
     traits: ["Intuitive", "Spiritual", "Perceptive", "Harmonious", "Insightful"]
     house_powers: ["Prophetic Vision", "Energy Reading", "Spiritual Communication", "Natural Harmony", "Mystical Insight"]
     redirect: "/persona/mystic.html"
@@ -165,7 +166,7 @@ results:
   adventurer:
     title: "House of Adventurers ⚡"
     description: "You belong to the dynamic House of Adventurers, where boldness meets magic and innovation knows no bounds. Your natural courage and love of exploration drive you to push magical boundaries and discover new possibilities. You believe magic should be experienced, not just studied, and your willingness to take risks often leads to breakthrough discoveries. Others are inspired by your fearless spirit and ability to turn theory into thrilling reality."
-    image: "/assets/images/quiz/results/adventurer.jpg"
+    image: "adventurer.jpg"
     traits: ["Bold", "Innovative", "Spontaneous", "Courageous", "Experimental"]
     house_powers: ["Combat Magic", "Magical Innovation", "Risk Assessment", "Quick Adaptation", "Breakthrough Discovery"]
     redirect: "/persona/adventurer.html"

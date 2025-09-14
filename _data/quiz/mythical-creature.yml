@@ -1,11 +1,12 @@
 title: "What Mythical Creature Are You?"
 slug: "mythical-creature"
 description: "Uncover your inner dragon, phoenix, unicorn, or griffin through this mystical journey."
+picture: "mythical-creatures.png"
 
 questions:
   - id: q1
     text: "How do you face obstacles?"
-    image: "/assets/images/quiz/obstacles.jpg"
+    image: "obstacles.jpg"
     options:
       - text: "With fiery determination 🔥"
         value: "dragon"
@@ -18,7 +19,7 @@ questions:
 
   - id: q2
     text: "Where do you feel most at home?"
-    image: "/assets/images/quiz/landscapes.jpg"
+    image: "landscapes.jpg"
     options:
       - text: "Mountain caves ⛰️"
         value: "dragon"
@@ -31,7 +32,7 @@ questions:
 
   - id: q3
     text: "What is your greatest strength?"
-    image: "/assets/images/quiz/strength.jpg"
+    image: "strength.jpg"
     options:
       - text: "Raw power and dominance"
         value: "dragon"
@@ -44,7 +45,7 @@ questions:
 
   - id: q4
     text: "How do others see you?"
-    image: "/assets/images/quiz/perception.jpg"
+    image: "perception.jpg"
     options:
       - text: "Intimidating but respected"
         value: "dragon"
@@ -57,7 +58,7 @@ questions:
 
   - id: q5
     text: "What motivates you most?"
-    image: "/assets/images/quiz/motivation.jpg"
+    image: "motivation.jpg"
     options:
       - text: "Building and protecting your legacy"
         value: "dragon"
@@ -70,7 +71,7 @@ questions:
 
   - id: q6
     text: "What's your approach to conflict?"
-    image: "/assets/images/quiz/conflict.jpg"
+    image: "conflict.jpg"
     options:
       - text: "Meet it head-on with overwhelming force"
         value: "dragon"
@@ -83,7 +84,7 @@ questions:
 
   - id: q7
     text: "What element calls to you?"
-    image: "/assets/images/quiz/elements.jpg"
+    image: "elements.jpg"
     options:
       - text: "Fire - passionate and consuming 🔥"
         value: "dragon"
@@ -96,7 +97,7 @@ questions:
 
   - id: q8
     text: "What's your ideal treasure?"
-    image: "/assets/images/quiz/treasure.jpg"
+    image: "treasure.jpg"
     options:
       - text: "Gold and precious gems"
         value: "dragon"
@@ -109,7 +110,7 @@ questions:
 
   - id: q9
     text: "How do you handle change?"
-    image: "/assets/images/quiz/change.jpg"
+    image: "change.jpg"
     options:
       - text: "Resist it unless it benefits me"
         value: "dragon"
@@ -126,7 +127,7 @@ questions:
 
   - id: q10
     text: "What's your ultimate goal?"
-    image: "/assets/images/quiz/goals.jpg"
+    image: "goals.jpg"
     options:
       - text: "To rule and be remembered"
         value: "dragon"
@@ -141,7 +142,7 @@ results:
   dragon:
     title: "Mighty Dragon 🐉"
     description: "You are a force of nature - powerful, ambitious, and fiercely protective of what you hold dear. Like the ancient dragons, you command respect through strength and have an innate ability to lead. Your passionate nature burns bright, and you're not afraid to fight for what you believe in. Others may find you intimidating, but they also recognize your incredible capabilities and unwavering loyalty to those who earn your trust."
-    image: "/assets/images/quiz/results/dragon.jpg"
+    image: "dragon.jpg"
     traits: ["Powerful", "Ambitious", "Protective", "Passionate", "Natural Leader"]
     mythical_powers: ["Fire Breath", "Ancient Wisdom", "Treasure Guardian", "Flight", "Intimidation"]
     redirect: "/persona/dragon.html"
@@ -149,7 +150,7 @@ results:
   phoenix:
     title: "Rising Phoenix 🔥"
     description: "You embody the spirit of renewal and transformation. Like the legendary phoenix, you have an incredible ability to rise from challenges stronger than before. You inspire others through your resilience and your capacity to reinvent yourself. Change doesn't frighten you - it excites you as an opportunity for growth. Your presence brings hope to those around you, showing them that no setback is permanent."
-    image: "/assets/images/quiz/results/phoenix.jpg"
+    image: "phoenix.jpg"
     traits: ["Resilient", "Transformative", "Inspiring", "Adaptable", "Hopeful"]
     mythical_powers: ["Rebirth", "Healing Tears", "Purifying Fire", "Eternal Life", "Inspiration"]
     redirect: "/persona/phoenix.html"
@@ -157,7 +158,7 @@ results:
   unicorn:
     title: "Sacred Unicorn 🦄"
     description: "You are a rare and precious soul with a pure heart and gentle spirit. Like the mystical unicorn, you possess an innate ability to heal and bring peace to chaotic situations. Your wisdom comes not from books but from deep intuition and connection to the natural world. Others are drawn to your authentic nature and find comfort in your presence. You have a gift for seeing the best in people and helping them find their true path."
-    image: "/assets/images/quiz/results/unicorn.jpg"
+    image: "unicorn.jpg"
     traits: ["Pure-hearted", "Intuitive", "Healing", "Gentle", "Wise"]
     mythical_powers: ["Healing Magic", "Purification", "Forest Communication", "Truth Detection", "Divine Protection"]
     redirect: "/persona/unicorn.html"
@@ -165,7 +166,7 @@ results:
   griffin:
     title: "Noble Griffin 🦅"
     description: "You combine the best of two worlds - the strength and courage of a lion with the keen vision and freedom of an eagle. Like the majestic griffin, you are a guardian of ancient wisdom and possess both intelligence and nobility. You approach life strategically, preferring to observe and understand before acting. Your regal bearing commands respect, and others often seek your counsel when facing difficult decisions."
-    image: "/assets/images/quiz/results/griffin.jpg"
+    image: "griffin.jpg"
     traits: ["Strategic", "Noble", "Wise", "Protective", "Visionary"]
     mythical_powers: ["Divine Sight", "Guardian Strength", "Ancient Knowledge", "Sky Mastery", "Treasure Sensing"]
     redirect: "/persona/griffin.html"

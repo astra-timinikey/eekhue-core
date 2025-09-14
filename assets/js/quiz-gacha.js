@@ -71,8 +71,13 @@ class QuizGacha {
   }
 
   showDrawnCard() {
+    console.log('showDrawnCard called');
     const emptySpace = document.getElementById('empty-space');
     const drawnCard = document.getElementById('drawn-card');
+  
+    console.log('emptySpace:', emptySpace);
+    console.log('drawnCard:', drawnCard);
+  
     const playBtn = document.getElementById('play-card-btn');
     const drawnTitle = document.getElementById('drawn-title');
 
