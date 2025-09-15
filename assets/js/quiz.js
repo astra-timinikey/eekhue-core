@@ -15,9 +15,9 @@ function initializeQuiz(quizEl) {
     const q = quizData.questions[currentQ];
     quizEl.innerHTML = `
       <div class="quiz-card">
-        ${q.image ? `<img src="${q.image}" alt="" class="quiz-img">` : ""}
+        ${q.image ? `<img src="${BASEURL}/assets/images/quiz/questions/${q.image}" alt="" class="quiz-img">` : ""}
         <div class="quiz-content">
-          <h2>${quizData.title}</h2>
+          // <h2>${quizData.title}</h2>
           <p class="quiz-text">${q.text}</p>
           <div class="quiz-options">
             ${q.options.map(o =>

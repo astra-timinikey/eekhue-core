@@ -13,8 +13,7 @@ We welcome your questions, feedback, and suggestions. Use the form below to get 
 
 ## Contact Information
 
-- **Email:** <a href="mailto:hello@astra-time.com">hello@astra-time.com</a>
-- **Twitter:** [@AstraTime](https://twitter.com/AstraTime)
+- **Email:** <a href="mailto:astratime@protonmail.com">astratime@protonmail.com</a>
 - **GitHub:** [eekhue-core](https://github.com/astra-timinikey/eekhue-core)
 
 ## Feedback Form (Placeholder)
@@ -34,5 +33,5 @@ We welcome your questions, feedback, and suggestions. Use the form below to get 
 
 ## Additional Notes
 
-> We will get back to you within 1-2 business days. Please include as much detail as possible so we can assist you effectively.
+> We will get back to you within 5-10 business days. Please include as much detail as possible so we can assist you effectively.
 

@@ -15,7 +15,7 @@ What hidden forces shape the Self, the Persona, and the Shadow?
 
 How do we navigate these realms to grow and connect?  
 
-<br>
+<br><br>
 ## 💡 The Idea
 
 This platform is a framework for exploring the vast universe within each of us.
@@ -26,5 +26,5 @@ Psychology meets play: archetypes, functions, and growth become an interactive, 
 
 Inspired by the works of Carl Jung, John Beebe, and Dario Nardi, it transforms exploration of Self, Persona, Shadow, Growth, and Relationships into a journey you can experience.
 
-<br>
+<br><br>
 ## 🌌 Explore the Realms
