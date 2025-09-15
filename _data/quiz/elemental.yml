@@ -1,6 +1,8 @@
-title: "What Element Are You?"
+title: "What Elemental Are You?"
+card-title: "Elemental"
 slug: "elemental"
 description: "Discover your inner elemental nature - Fire, Water, Earth, or Air?"
+picture: "elemental.png"
 
 questions:
   - id: q1

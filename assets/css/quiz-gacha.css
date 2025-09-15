@@ -6,7 +6,7 @@
   flex-direction: column;
   align-items: center;
   padding: 20px;
-  gap: 30px;
+  gap: 10px;
   max-width: 1200px;
   margin: 0 auto;
   font-family: 'Montserrat', sans-serif;
@@ -24,7 +24,7 @@
 .gacha-big-frame {
   width: 100%;
   max-width: 800px;
-  height: 600px;
+  min-height: 250px;
   border-radius: 20px;
   background: linear-gradient(135deg, #1e293b, #334155);
   box-shadow: 0 8px 30px rgba(0,0,0,0.3);
@@ -77,7 +77,7 @@
   width: 100%;
   height: 100%;
   padding: 0; 
-  background: white;
+  /* background: white; */
   border-radius: 20px;
   overflow: hidden; 
 }
@@ -93,7 +93,7 @@
 .gacha-section-title {
   text-align: center;
   font-size: 1.4rem;
-  color: #334155;
+  color: #9ca8b8;
   margin: 0;
 }
 
@@ -153,6 +153,7 @@
   width: 100%;
   height: 100%;
   border-radius: 12px;
+  margin: 0;
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   object-fit: cover;
 }
@@ -197,21 +198,20 @@
 .empty-space {
   width: 100%;
   height: 100%;
-  border: 3px dashed #cbd5e1;
+  border: 3px dashed #88929e;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #64748b;
-  background: #f8fafc;
+  color: #c4cdda;
 }
 
 .empty-space h3 {
   font-size: 1.3rem;
   margin: 0 0 10px 0;
-  color: #334155;
+  color: #afbbcb;
 }
 
 .empty-card-placeholder {
@@ -227,12 +227,62 @@
   width: 100%;
   height: 100%;
   border-radius: 16px;
-  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
   box-shadow: 0 8px 25px rgba(0,0,0,0.2);
   display: flex;
   align-items: center;
   justify-content: center;
   animation: cardFlipIn 0.6s ease-out;
+}
+
+.card-frame {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-frame-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.7); 
+  margin: 0;
+  width: 100%;
+  height: auto;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.card-picture {
+  position: absolute;
+  top: 7%;     
+  left: 13.5%;
+  width: 73%;   
+  height: 87%;
+  margin: 0;
+  object-fit: cover;
+  border-radius: 0px;
+  z-index: 3;
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 90%;
+  z-index: 3;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.card-overlay h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .card-content {
@@ -242,9 +292,9 @@
 }
 
 .card-content h4 {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   margin: 0;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .card-content p {
@@ -288,27 +338,29 @@
   width: 100%;
   max-width: 500px;
   text-align: center;
-  padding: 30px;
+  padding: 10px;
+  margin-top: 10px;
   background: #f8fafc;
   border-radius: 16px;
   border: 1px solid #e2e8f0;
 }
 
 #gacha-dropdown-section h3 {
-  margin-bottom: 16px;
+  margin: 5px;
   color: #334155;
+  padding: 0;
 }
 
 #gacha-dropdown-section label {
   display: block;
-  margin-bottom: 12px;
+  margin-bottom: 0px;
   color: #64748b;
   font-size: 0.95rem;
 }
 
 #quiz-selector {
   width: 100%;
-  padding: 12px 16px;
+  padding: 6px 8px;
   font-size: 1rem;
   border-radius: 8px;
   border: 2px solid #e2e8f0;
@@ -383,9 +435,9 @@
   Responsive Design
 =============================== */
 @media (max-width: 800px) {
-  .gacha-big-frame {
+  /* .gacha-big-frame {
     height: 300px;
-  }
+  } */
   
   #gacha-bottom-section {
     grid-template-columns: 1fr 1fr;
@@ -422,9 +474,9 @@
     padding: 15px;
   }
   
-  .gacha-big-frame {
+  /* .gacha-big-frame {
     height: 250px;
-  }
+  } */
   
   .initial-state {
     padding: 20px;

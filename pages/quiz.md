@@ -7,15 +7,15 @@ hero_subtitle: "Try out the click counters, HTTP fetch, and personality quiz bel
 ---
 ---
 
-# 🎲 Fun Quizzes
+<!-- # 🎲 Fun Quizzes -->
 
-<div id="quiz-container-1" data-quiz="mythical-creature"></div>
-
----
-
-<div id="quiz-container-2" data-quiz="elemental"></div>
+<!-- <div id="quiz-container-1" data-quiz="mythical-creature"></div>
 
 ---
+
+<div id="quiz-container-2" data-quiz="elemental"></div> -->
+
+<!-- --- -->
 
 # JavaScript Test Page
 

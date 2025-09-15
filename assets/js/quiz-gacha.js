@@ -71,36 +71,31 @@ class QuizGacha {
   }
 
   showDrawnCard() {
-    console.log('showDrawnCard called');
     const emptySpace = document.getElementById('empty-space');
     const drawnCard = document.getElementById('drawn-card');
-  
-    console.log('emptySpace:', emptySpace);
-    console.log('drawnCard:', drawnCard);
-  
     const playBtn = document.getElementById('play-card-btn');
-    const drawnTitle = document.getElementById('drawn-title');
-
+    // const drawnTitle = document.getElementById('drawn-title');
+    const drawnPicture = document.getElementById('drawn-picture');
+  
     if (emptySpace && drawnCard && this.drawnQuiz) {
-    // Hide empty space
       emptySpace.style.display = 'none';
-    
-      // Extract just the quiz type from title (remove "What" and "Are You?")
-      let quizType = this.drawnQuiz.data.title;
-      quizType = quizType.replace(/^What\s+/, '').replace(/\s+Are You\?$/, '');
-    
-      // Show drawn card with content
-      if (drawnTitle) {
-        drawnTitle.textContent = quizType;
-      }
+  
+      // Pull from YAML
+      const quizData = this.drawnQuiz.data;
+      // const quizType = quizData["card-title"];
+      const picture = quizData.picture 
+        ? `${BASEURL}/assets/images/quiz/${quizData.picture}`
+        : "";
+  
+      // if (drawnTitle) drawnTitle.textContent = quizType;
+      if (drawnPicture && picture) drawnPicture.src = picture;
+  
       drawnCard.style.display = 'block';
-    
-      // Show play button
-      if (playBtn) {
-        playBtn.style.display = 'block';
-      }
+  
+      if (playBtn) playBtn.style.display = 'block';
     }
   }
+    
 
   playCard() {
     if (!this.drawnQuiz) {
@@ -114,10 +109,31 @@ class QuizGacha {
 
   selectQuizFromDropdown(slug) {
     if (!slug) return;
-
+  
     console.log('Selected quiz from dropdown:', slug);
+  
+    const quizData = window.siteQuizData[slug];
+    if (!quizData) return;
+  
+    // Update the big card frame
+    const drawnTitle = document.getElementById("drawn-title");
+    const drawnPicture = document.getElementById("drawn-picture");
+  
+    if (drawnTitle) {
+      drawnTitle.textContent = quizData["card-title"] || quizData.title || "Untitled Quiz";
+    }
+  
+    if (drawnPicture) {
+      drawnPicture.src = quizData.picture
+        ? `${BASEURL}/assets/images/quiz/${quizData.picture}`
+        : `${BASEURL}/assets/images/quiz/cardfront-frame.png`; // fallback
+      drawnPicture.alt = quizData.title || "Quiz cover";
+    }
+  
+    // Finally, load the actual quiz into the big frame
     this.loadQuizIntoFrame(slug);
   }
+  
 
   loadQuizIntoFrame(slug) {
     const quizData = window.siteQuizData[slug];

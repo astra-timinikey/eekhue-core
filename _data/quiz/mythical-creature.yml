@@ -1,7 +1,8 @@
 title: "What Mythical Creature Are You?"
+card-title: "Mythical Creature"
 slug: "mythical-creature"
 description: "Uncover your inner dragon, phoenix, unicorn, or griffin through this mystical journey."
-picture: "mythical-creatures.png"
+picture: "mythical-creature.png"
 
 questions:
   - id: q1

@@ -97,6 +97,16 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   });
+
+  // --- Quiz interactions (quiz page only) ---
+  const drawBtn = document.getElementById('draw-card-btn');
+    if (drawBtn) {
+      drawBtn.addEventListener('click', () => addXP(1));
+    }
+  const playBtn = document.getElementById('play-card-btn');
+    if (playBtn) {
+      playBtn.addEventListener('click', () => addXP(2));
+    }
   
   // --- Quiz page spam button --- 
   const spamBtn = document.getElementById("spamBtn");

@@ -15,7 +15,7 @@
   .grid { grid-template-columns: repeat(2, 1fr); max-width: calc(2 * 200px + 1 * 18px); }
 }
 @media (max-width: 600px) {
-  .grid { grid-template-columns: 1fr; max-width: 100%; justify-items: center;}
+  .grid { grid-template-columns: 1fr; justify-items: center;}
 }
 
 /* ==============================
@@ -40,7 +40,6 @@
 
 @media (max-width: 600px) {
   .card {
-    width: 100%;   /* take full column width */
     max-width: 500px; /* optional: limit so it's not too wide */
     margin: 0 auto;   /* center the card */
   }
@@ -73,7 +72,15 @@
   flex-shrink: 0;
 }
 
-.card-header h3 { margin: 0; font-size: inherit; font-weight: inherit; }
+.card-header h3 {
+  margin: 0;
+  font-weight: bold;
+  line-height: 1;
+  white-space: nowrap;
+  font-size: clamp(10px, 2vw, 14px); /* min 10px, scales with viewport, max 14px */
+}
+
+
 
 /* ==============================
    Artwork

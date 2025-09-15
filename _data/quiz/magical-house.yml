@@ -1,7 +1,8 @@
 title: "Which Magical School House Do You Belong In?"
+card-title: "Magical School"
 slug: "magical-house"
 description: "Discover your true magical house - are you a Scholar, Guardian, Mystic, or Adventurer?"
-picture: "magical-houses.png"
+picture: "magical-house.png"
 
 questions:
   - id: q1

@@ -64,11 +64,24 @@
           
           <!-- Flipped card will appear here -->
           <div class="drawn-card" id="drawn-card" style="display: none;">
-            <div class="card-content">
-              <h4 id="drawn-title"></h4>
-              <p id="drawn-description"></p>
+            <div class="card-frame">
+              <img src="{{ site.baseurl }}/assets/images/quiz/cardfront-frame.png" 
+                  alt="Card frame" 
+                  class="card-frame-img">
+
+              <!-- Inner slot for quiz picture -->
+              <img id="drawn-picture" 
+                  src="" 
+                  alt="Quiz cover" 
+                  class="card-picture">
+
+              <!-- Overlayed text -->
+              <!-- <div class="card-overlay">
+                <h4 id="drawn-title"></h4>
+              </div> -->
             </div>
           </div>
+
         </div>
         <button class="attempt-btn" id="play-card-btn" style="display: none;">Play Card</button>
       </div>
