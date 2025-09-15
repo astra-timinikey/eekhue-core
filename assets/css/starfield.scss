@@ -22,7 +22,7 @@
   border-radius: var(--radius);
   overflow: hidden;
   background: url('{{ site.baseurl }}/assets/images/cosmic-bg.jpg') center/cover no-repeat;
-  margin: 2rem 0;
+  margin: 0;
 }
 
 @media (max-width: 768px) {
@@ -63,7 +63,7 @@
 
 .starfield-planet:hover {
   transform: translate(-50%, -50%) scale(var(--hover-scale));
-  filter: brightness(1.3) drop-shadow(0 0 20px rgba(122, 162, 247, 0.6));
+  filter: brightness(1.2) drop-shadow(0 0 20px rgba(122, 162, 247, 0.6));
 }
 
 .starfield-planet-layer {
