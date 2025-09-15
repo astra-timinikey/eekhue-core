@@ -1,0 +1,51 @@
+/* ==============================
+   Further Reading Wiki Table
+============================== */
+.further-reading {
+  margin: 3rem 0;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background: #fdfdfd;
+  font-family: 'Roboto Slab', serif;
+  border-radius: 6px;
+}
+
+.further-reading h3 {
+  margin-top: 0;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 0.4rem;
+  color: #333;
+}
+
+.reading-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.reading-table th,
+.reading-table td {
+  border: 1px solid #ccc;
+  padding: 0.5rem 0.75rem;
+  vertical-align: top;
+}
+
+.reading-table th {
+  background: #f2f2f2;
+  text-align: left;
+  font-weight: 600;
+}
+
+.reading-table tr:nth-child(even) td {
+  background: #fafafa;
+}
+
+.reading-table a {
+  color: #0645ad; /* wiki-style blue */
+  text-decoration: none;
+}
+
+.reading-table a:hover {
+  text-decoration: underline;
+}
