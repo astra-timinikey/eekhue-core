@@ -1,5 +1,6 @@
 // Move initializeQuiz outside DOMContentLoaded so it can be reused
-const siteQuizData = JSON.parse(document.getElementById('quiz-data').textContent);
+
+window.siteQuizData = JSON.parse(document.getElementById('quiz-data').textContent);
 
 function initializeQuiz(quizEl) {
   const quizSlug = quizEl.dataset.quiz;
@@ -136,12 +137,20 @@ function initializeQuiz(quizEl) {
 
 // Initialize existing containers when page loads
 document.addEventListener("DOMContentLoaded", () => {
+  
+  // Ensure data is loaded
+  const quizDataElement = document.getElementById('quiz-data');
+  if (quizDataElement) {
+    window.siteQuizData = JSON.parse(quizDataElement.textContent);
+  }
+  
   // Find all quiz containers on the page
   const quizContainers = document.querySelectorAll('[id^="quiz-container"]');
   
   quizContainers.forEach(quizEl => {
     initializeQuiz(quizEl);
   });
+ 
 });
 
 // Expose globally for gacha use

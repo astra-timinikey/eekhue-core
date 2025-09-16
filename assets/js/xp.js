@@ -3,7 +3,8 @@
  Shared across homepage + quiz
  Uses localStorage + YAML data
 ============================== */
-const xpMessages = JSON.parse(document.getElementById('xp-messages').textContent);
+const xpMessagesElement = document.getElementById('xp-messages');
+const xpMessages = xpMessagesElement ? JSON.parse(xpMessagesElement.textContent) : [];
 
 document.addEventListener("DOMContentLoaded", () => {
   const xpFill    = document.getElementById("xpFill");
