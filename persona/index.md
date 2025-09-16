@@ -36,19 +36,21 @@ Each Persona role is represented by a color of the rainbow.
   <span class="mobile-only">Tap a color to reveal its card.</span>
 </p>
 
-<!-- Rainbow arc -->
+<<!-- Rainbow arc -->
 <div class="rainbow-bar">
   <!-- Clickable zones -->
-  <button class="rainbow-bar red" data-target="creative-performer"></button>
-  <button class="rainbow-bar orange" data-target="social-butterfly"></button>
-  <button class="rainbow-bar yellow" data-target="gadget-tinker"></button>
-  <button class="rainbow-bar green" data-target="charming-naturalist"></button>
-  <button class="rainbow-bar blue" data-target="corporate-climber"></button>
-  <button class="rainbow-bar indigo" data-target="streetwise-rogue"></button>
-  <button class="rainbow-bar violet" data-target="stargazing-dreamer"></button>
+  <button class="red" data-target="creative-performer"></button>
+  <button class="orange" data-target="social-butterfly"></button>
+  <button class="yellow" data-target="gadget-tinker"></button>
+  <button class="green" data-target="charming-naturalist"></button>
+  <button class="blue" data-target="corporate-climber"></button>
+  <button class="indigo" data-target="streetwise-rogue"></button>
+  <button class="violet" data-target="stargazing-dreamer"></button>
 </div>
 
+<!-- ONLY ONE persona-cards container -->
 <div class="persona-cards">
+  <!-- If you're using Jekyll data, use this: -->
   {% assign personas = site.data.persona %}
   {% for key in personas %}
     {% assign info = personas[key[0]] %}
@@ -56,40 +58,6 @@ Each Persona role is represented by a color of the rainbow.
       {% include persona-card.html info=info %}
     </div>
   {% endfor %}
-</div>
-
-<!-- Persona cards (overlay, initially hidden) -->
-<div class="persona-cards">
-  <!-- Card placeholders – will be revealed with JS later -->
-  <div class="persona-card" id="creative-performer">
-    <h3>🎨 Creative Performer</h3>
-    <p>*Placeholder: short role summary here*</p>
-  </div>
-  <div class="persona-card" id="social-butterfly">
-    <h3>🦋 Social Butterfly</h3>
-    <p>*Placeholder: short role summary here*</p>
-  </div>
-  <div class="persona-card" id="gadget-tinker">
-    <h3>🛠️ Gadget Tinker</h3>
-    <p>*Placeholder: short role summary here*</p>
-  </div>
-  <div class="persona-card" id="charming-naturalist">
-    <h3>🌿 Charming Naturalist</h3>
-    <p>*Placeholder: short role summary here*</p>
-  </div>
-  <div class="persona-card" id="corporate-climber">
-    <h3>🏢 Corporate Climber</h3>
-    <p>*Placeholder: short role summary here*</p>
-  </div>
-  <div class="persona-card" id="streetwise-rogue">
-    <h3>🗡️ Streetwise Rogue</h3>
-    <p>*Placeholder: short role summary here*</p>
-  </div>
-  <div class="persona-card" id="stargazing-dreamer">
-    <h3>🌌 Stargazing Dreamer</h3>
-    <p>*Placeholder: short role summary here*</p>
-  </div>
-</div>
 
 ---
 

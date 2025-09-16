@@ -1,7 +1,61 @@
+/* ==============================
+   Rainbow Bar (Individual Buttons)
+============================== */
+
+/* Container for rainbow buttons */
+.rainbow-bar {
+  display: flex;
+  width: 100%;
+  height: 60px; /* Make it taller for easier clicking */
+  margin: 20px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Individual rainbow button styling */
+.rainbow-bar button {
+  flex: 1; /* Equal width */
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  font-size: 0; /* Hide any text */
+}
+
+/* Hover effects for buttons */
+.rainbow-bar button:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+  z-index: 2;
+}
+
+/* Active state for buttons */
+.rainbow-bar button:active {
+  transform: scale(0.98);
+}
+
+/* Rainbow colors for buttons */
+.rainbow-bar button.red    { background: #EA9EA9; } /* Cherry Blossom Pink */
+.rainbow-bar button.orange { background: #FACEB4; } /* Peach Puff */
+.rainbow-bar button.yellow { background: #FFFCCC; } /* Lemon Chiffon */
+.rainbow-bar button.green  { background: #B5F5B0; } /* Mint Green */
+.rainbow-bar button.blue   { background: #B5E5EF; } /* Powder Blue */
+.rainbow-bar button.indigo { background: #AAAEEE; } /* Periwinkle Blue */
+.rainbow-bar button.violet { background: #B5BBF5; } /* Lavender Blue */
 
 /* ==============================
-   Persona Cards (floating overlays)
+   Persona Cards Container & Cards
 ============================== */
+
+/* Instructions text */
+.rainbow-instructions {
+  text-align: center;
+  font-style: italic;
+  color: #666;
+  margin: 10px 0;
+}
 
 .desktop-only { display: inline; }
 .mobile-only { display: none; }
@@ -11,14 +65,22 @@
   .mobile-only { display: inline; }
 }
 
-/* Card wrapper - hidden until triggered */
+/* Container needs relative positioning for absolute cards */
+.persona-cards {
+  position: relative;
+  width: 100%;
+  min-height: 400px; /* Give space for the floating cards */
+  margin: 30px 0;
+}
+
+/* Individual card styling */
 .persona-card {
-  position: absolute;         /* overlay style, not grid */
+  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) scale(0.95);
-  width: 220px;
-  height: 340px;
+  width: 280px; /* Made slightly wider */
+  height: 380px; /* Made slightly taller */
   background: #fdfdfb;
   border: 3px solid #000;
   border-radius: 14px;
@@ -26,24 +88,24 @@
   flex-direction: column;
   box-shadow: 0 8px 15px rgba(0,0,0,.25);
   overflow: hidden;
-  opacity: 0;                 /* start hidden */
-  pointer-events: none;       /* no interaction until shown */
+  opacity: 0;
+  pointer-events: none;
   transition: opacity 0.3s ease, transform 0.3s ease;
   z-index: 20;
 }
 
-/* When JS adds an "active" class */
+/* Active card state */
 .persona-card.active {
   opacity: 1;
   pointer-events: auto;
   transform: translate(-50%, -50%) scale(1);
 }
 
-/* Persona Header */
+/* Card header */
 .persona-card h3 {
   margin: 0;
-  padding: 6px;
-  font-size: 14px;
+  padding: 12px;
+  font-size: 16px;
   font-weight: bold;
   text-align: center;
   color: #fff;
@@ -51,27 +113,28 @@
   border-bottom: 2px solid #000;
 }
 
-/* Persona Body */
+/* Card body */
 .persona-card p {
   flex-grow: 1;
-  padding: 10px;
+  padding: 15px;
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: #222;
   background: var(--body-color, #f8f8f8);
-  line-height: 1.4;
-  text-align: center;
+  line-height: 1.5;
+  text-align: left; /* Better for reading */
+  overflow-y: auto; /* Allow scrolling if content is long */
 }
 
-/* Hover glow (future when whole card clickable) */
-.persona-card:hover {
+/* Card hover effect */
+.persona-card.active:hover {
   box-shadow: 
     0 0 10px 3px rgba(0,0,0,0.25),
     0 0 20px 6px var(--header-color, rgba(255,255,0,0.5));
   transform: translate(-50%, -50%) scale(1.03);
 }
 
-/* Rainbow Color Themes */
+/* Rainbow Color Themes for Cards */
 #creative-performer   { --header-color: #e63946; --body-color: #ffe5e5; } /* Red */
 #social-butterfly    { --header-color: #ff9f1c; --body-color: #fff2e0; } /* Orange */
 #gadget-tinker       { --header-color: #ffd60a; --body-color: #fffbe5; } /* Yellow */
@@ -80,31 +143,23 @@
 #streetwise-rogue    { --header-color: #5a189a; --body-color: #f3e8ff; } /* Indigo */
 #stargazing-dreamer  { --header-color: #7209b7; --body-color: #f8e5ff; } /* Violet */
 
-
 /* ==============================
-   Rainbow Divider (Horizontal Bands)
+   Mobile Responsive
 ============================== */
 
-/* Wrapper fills viewport height if you want a full rainbow page */
-.rainbow-bars {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    min-height: 100vh; /* full page */
+@media (max-width: 768px) {
+  .persona-card {
+    width: 90vw;
+    max-width: 320px;
+    height: 420px;
   }
   
-  /* Each bar gets one rainbow color */
   .rainbow-bar {
-    flex: 1; /* equal height */
-    width: 100%;
+    height: 50px;
+    margin: 15px 0;
   }
   
-  /* Assign colors (matching your persona mapping) */
-  .rainbow-bar.red    { background: #EA9EA9; min-height: 28px; border: 0; }   /* Cherry Blossom Pink */
-  .rainbow-bar.orange { background: #FACEB4; min-height: 28px; border: 0; }   /* Peach Puff */
-  .rainbow-bar.yellow { background: #FFFCCC; min-height: 28px; border: 0; }   /* Lemon Chiffon */
-  .rainbow-bar.green  { background: #B5F5B0; min-height: 28px; border: 0; }   /* Mint Green */
-  .rainbow-bar.blue   { background: #B5E5EF; min-height: 28px; border: 0; }   /* Powder Blue */
-  .rainbow-bar.indigo { background: #AAAEEE; min-height: 28px; border: 0; }   /* Periwinkle Blue */
-  .rainbow-bar.violet { background: #B5BBF5; min-height: 28px; border: 0; }   /* Lavender Blue */
-  
+  .persona-cards {
+    min-height: 350px;
+  }
+}
