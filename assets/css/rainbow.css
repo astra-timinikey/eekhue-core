@@ -1,13 +1,19 @@
 /* ==============================
-   Rainbow Bar (Individual Buttons)
+   Rainbow Section Container
 ============================== */
+
+.rainbow-section {
+  margin: 40px 0;
+  text-align: center;
+}
 
 /* Container for rainbow buttons */
 .rainbow-bar {
   display: flex;
   width: 100%;
+  max-width: 600px;
   height: 60px; /* Make it taller for easier clicking */
-  margin: 20px 0;
+  margin: 20px auto; /* Center the rainbow bar */
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -69,18 +75,19 @@
 .persona-cards {
   position: relative;
   width: 100%;
-  min-height: 400px; /* Give space for the floating cards */
-  margin: 30px 0;
+  min-height: 450px; /* Give more space for the floating cards */
+  margin: 30px auto;
+  max-width: 800px; /* Center and limit width */
 }
 
 /* Individual card styling */
 .persona-card {
   position: absolute;
-  top: 50%;
+  top: 20px; /* Start from top instead of center */
   left: 50%;
-  transform: translate(-50%, -50%) scale(0.95);
-  width: 280px; /* Made slightly wider */
-  height: 380px; /* Made slightly taller */
+  transform: translateX(-50%) scale(0.95);
+  width: 320px; /* Made slightly wider */
+  max-height: 400px; /* Limit height */
   background: #fdfdfb;
   border: 3px solid #000;
   border-radius: 14px;
@@ -98,7 +105,7 @@
 .persona-card.active {
   opacity: 1;
   pointer-events: auto;
-  transform: translate(-50%, -50%) scale(1);
+  transform: translateX(-50%) scale(1);
 }
 
 /* Card header */
@@ -113,8 +120,8 @@
   border-bottom: 2px solid #000;
 }
 
-/* Card body */
-.persona-card p {
+/* Card content area */
+.persona-content {
   flex-grow: 1;
   padding: 15px;
   margin: 0;
@@ -122,8 +129,37 @@
   color: #222;
   background: var(--body-color, #f8f8f8);
   line-height: 1.5;
-  text-align: left; /* Better for reading */
-  overflow-y: auto; /* Allow scrolling if content is long */
+  text-align: left;
+  overflow-y: auto;
+}
+
+/* Card body (legacy support) */
+.persona-card p {
+  padding: 15px;
+  margin: 0;
+  font-size: 0.9rem;
+  color: #222;
+  background: var(--body-color, #f8f8f8);
+  line-height: 1.5;
+  text-align: left;
+  overflow-y: auto;
+}
+
+/* Stats section */
+.persona-stats h4 {
+  margin: 10px 0 5px 0;
+  font-size: 0.85rem;
+  color: var(--header-color, #666);
+}
+
+.persona-stats ul {
+  margin: 0 0 10px 0;
+  padding-left: 15px;
+  font-size: 0.8rem;
+}
+
+.persona-stats li {
+  margin-bottom: 3px;
 }
 
 /* Card hover effect */
@@ -131,7 +167,7 @@
   box-shadow: 
     0 0 10px 3px rgba(0,0,0,0.25),
     0 0 20px 6px var(--header-color, rgba(255,255,0,0.5));
-  transform: translate(-50%, -50%) scale(1.03);
+  transform: translateX(-50%) scale(1.03);
 }
 
 /* Rainbow Color Themes for Cards */
