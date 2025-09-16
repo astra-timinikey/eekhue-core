@@ -82,13 +82,36 @@ class QuizGacha {
   
       // Pull from YAML
       const quizData = this.drawnQuiz.data;
+      const cardTitle = quizData["card-title"]
       // const quizType = quizData["card-title"];
       const picture = quizData.picture 
         ? `${BASEURL}/assets/images/quiz/${quizData.picture}`
         : "";
   
       // if (drawnTitle) drawnTitle.textContent = quizType;
-      if (drawnPicture && picture) drawnPicture.src = picture;
+      if (drawnPicture && picture) drawnPicture.src = picture;      
+      
+      if (drawnPicture) {
+        if (picture) {
+          // Show picture, hide any title
+          drawnPicture.src = picture;
+          drawnPicture.style.display = 'block';
+          drawnPicture.alt = cardTitle;
+        } else {
+          // No picture - show title as text content
+          drawnPicture.style.display = 'none';
+        
+          // Create or update a title element
+          let titleElement = drawnCard.querySelector('.card-title-fallback');
+          if (!titleElement) {
+            titleElement = document.createElement('div');
+            titleElement.className = 'card-title-fallback';
+            drawnCard.appendChild(titleElement);
+          }
+          titleElement.textContent = cardTitle;
+          titleElement.style.display = 'block';
+        }
+      }  
   
       drawnCard.style.display = 'block';
   
