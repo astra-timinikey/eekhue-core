@@ -34,131 +34,6 @@
   a { color: var(--accent); text-decoration: none; }
   a:hover { text-decoration: underline; }
   
-  /* ==============================
-     Header + nav + dropdown
-     ============================== */
-  header {
-    position: sticky;
-    top: 0;
-    background: var(--card);
-    border-bottom: 1px solid var(--border);
-  }
-  header .wrap.nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 64px;
-    padding: 0 20px;
-  }
-  .brand-logo {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    text-decoration: none; /* remove underline from <a> */
-    color: inherit;        /* keep text color */
-  }  
-  header .logo { height: 48px; width: auto; }
-  .menu a { margin-left: 16px; padding: 8px 12px; border-radius: 10px; }
-  .menu a.cta { background: var(--accent); color: #fff; box-shadow: var(--shadow); }
-
-  .nav .shop-link {
-    display: none; /* hide initially */
-  }  
-  
-  /* Responsive header */
-  @media (max-width: 600px) {
-    header .wrap.nav {
-      flex-direction: column;
-      align-items: flex-start;
-      height: auto;
-      padding: 12px 20px;
-    }
-    header .logo { height: 36px; }
-    .sidebar {
-      position: static;
-      width: 100%;
-      height: auto;
-      border-right: none;
-      margin-bottom: 20px;
-    }
-    
-    main {
-      margin-left: 0;
-      padding: 20px;
-    }
-    
-  }
-
-   .dropdown {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .dropbtn {
-    padding: 8px 12px;
-    font-size: 16px;
-    border: none;
-    background: var(--card);
-    color: var(--text);
-    cursor: pointer;
-    border-radius: 8px;
-    margin-left: 16px;
-  }
-  
-  .dropbtn:hover {
-    background: var(--accent);
-    color: #fff;
-  }
-  
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: var(--card);
-    min-width: 180px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    border-radius: 8px;
-    z-index: 10;
-    margin-top: 4px;
-  }
-  
-  .dropdown-content a {
-    color: var(--text);
-    padding: 10px 16px;
-    display: block;
-    text-decoration: none;
-  }
-  
-  .dropdown-content a:hover {
-    background-color: var(--accent);
-    color: #fff;
-  }
-  
-  .dropdown:hover .dropdown-content {
-    display: block; /* shows the dropdown on hover */
-  }
-
-  /* Tooltip styling */
-  .tooltip {
-    visibility: hidden;
-    background-color: var(--card);
-    color: var(--text);
-    text-align: center;
-    padding: 4px 8px;
-    border-radius: 6px;
-    font-size: 12px;
-    position: absolute;
-    z-index: 20;
-    top: 50%;       /* vertically centered */
-    right: 110%;    /* place it to the left of the button */
-    transform: translateY(-50%);
-    white-space: nowrap;
-    box-shadow: var(--shadow);
-  }
-  
-  .dropbtn:hover .tooltip {
-    visibility: visible;
-  }
-  
   
   /* ==============================
      Layout Wrappers
@@ -166,13 +41,115 @@
   .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; }
   .nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
   
-  /* ==============================
-     Hero Section
-     ============================== */
-  .hero { padding: 72px 20px 36px; text-align: center; }
-  h1 { font-size: clamp(28px, 5vw, 44px); margin: 0 0 12px; }
-  p.lead { font-size: clamp(16px, 2.6vw, 20px); color: var(--muted); margin: 0 auto 22px; max-width: 720px; }
-  .pill { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border: 1px solid var(--border); background: var(--card); border-radius: 999px; font-size: 14px; }
+/* ==============================
+   Hero Section
+   ============================== */
+
+/* Base hero styling */
+.hero {
+  padding: 72px 20px 36px;
+  text-align: center;
+  position: relative;
+}
+
+.hero__content {
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+
+.hero__title {
+  font-size: clamp(28px, 5vw, 44px);
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+.hero__subtitle {
+  font-size: clamp(16px, 2.6vw, 20px);
+  color: var(--muted);
+  margin: 0 auto 22px;
+  max-width: 720px;
+  line-height: 1.5;
+}
+
+/* Hero style variations */
+.hero--minimal {
+  padding: 40px 20px 24px;
+  text-align: left;
+  background: transparent;
+}
+
+.hero--minimal .hero__title {
+  font-size: clamp(24px, 4vw, 36px);
+  margin-bottom: 8px;
+}
+
+.hero--minimal .hero__subtitle {
+  font-size: clamp(14px, 2vw, 18px);
+  margin-bottom: 16px;
+  max-width: none;
+}
+
+.hero--dramatic {
+  padding: 96px 20px 72px;
+  text-align: center;
+  background: linear-gradient(135deg, var(--card) 0%, color-mix(in hsl, var(--card) 95%, var(--accent) 5%) 100%);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero--dramatic .hero__title {
+  font-size: clamp(32px, 6vw, 56px);
+  margin-bottom: 16px;
+}
+
+.hero--text-heavy {
+  padding: 48px 20px 32px;
+  text-align: left;
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+}
+
+.hero--text-heavy .hero__title {
+  font-size: clamp(26px, 4.5vw, 40px);
+  margin-bottom: 12px;
+}
+
+.hero--compact {
+  padding: 32px 20px 20px;
+  text-align: center;
+}
+
+.hero--compact .hero__title {
+  font-size: clamp(22px, 3.5vw, 32px);
+  margin-bottom: 8px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  .hero { padding: 48px 16px 24px; }
+  .hero--minimal { padding: 24px 16px 16px; }
+  .hero--dramatic { padding: 64px 16px 48px; }
+  .hero--text-heavy { padding: 32px 16px 20px; }
+  .hero--compact { padding: 20px 16px 12px; }
+}
+
+/* H1 styling for pages without heroes */
+h1:not(.hero__title) {
+  font-size: clamp(28px, 5vw, 44px);
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+
+/* Keep your existing pill styling */
+.pill { 
+  display: inline-flex; 
+  align-items: center; 
+  gap: 8px; 
+  padding: 8px 12px; 
+  border: 1px solid var(--border); 
+  background: var(--card); 
+  border-radius: 999px; 
+  font-size: 14px; 
+}
   
 
   /* ====================================

@@ -32,7 +32,8 @@
     {% unless page.social_meta == false %}
       {% assign og_title = page.hero_title | default: page.title | default: site.title %}
       {% assign og_description = page.hero_subtitle | default: page.description | default: site.description %}
-      {% assign og_image = page.hero_image | default: site.baseurl | append: "/assets/images/default-og-image.png" %}
+      {% assign hero_filename = page.hero_image | default: "default-og-image.png" %}
+      {% assign og_image = site.baseurl | append: "/assets/images/" | append: hero_filename %}
   
       <!-- Open Graph -->
       <meta property="og:type" content="website">
