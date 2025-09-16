@@ -4,9 +4,16 @@ title: "Explore The Cosmos Within"
 description: "Discover your Self. Explore your Shadow. Grow your Persona. Navigate your the Cosmos Within."
 hero_title: "Cosmos Within Theory"
 hero_subtitle: "A gamified journey through your inner universe."
+hero_image: "/assets/images/home-hero.png"
 pill: "🔬 New Theory"
-closing_note: "Explore, gain XP, and unlock the secrets of your cosmos."
+closing_note: "Choose a realm from the menu above — explore, gain XP, and unlock the secrets of your cosmos."
+custom_css:
+  - "/assets/css/home.css"
+  - "/assets/css/starfield.css"
+custom_js:
+  - "/assets/js/starfield.js"
 ---
+
 # ❓ The Questions We Ask
 
 Why does our inner world feel as infinite as the universe itself?

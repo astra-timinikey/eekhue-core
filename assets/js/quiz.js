@@ -1,4 +1,6 @@
 // Move initializeQuiz outside DOMContentLoaded so it can be reused
+const siteQuizData = JSON.parse(document.getElementById('quiz-data').textContent);
+
 function initializeQuiz(quizEl) {
   const quizSlug = quizEl.dataset.quiz;
   const quizData = window.siteQuizData[quizSlug];

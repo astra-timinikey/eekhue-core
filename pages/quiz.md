@@ -1,33 +1,16 @@
 ---
 layout: quiz-main
 title: "Fun Quizzes"
-description: "A page to experiment with JavaScript interactions."
-hero_title: "JavaScript Test Playground ⚡"
-hero_subtitle: "Try out the click counters, HTTP fetch, and personality quiz below."
----
----
-
-<!-- # 🎲 Fun Quizzes -->
-
-<!-- <div id="quiz-container-1" data-quiz="mythical-creature"></div>
-
+description: "Discover insights about your Self, Persona, and Shadow through playful quizzes."
+hero_title: "⚡Fun Quizzes Await"
+hero_subtitle: "Draw a card, take a challenge, and earn XP along the way."
 ---
 
-<div id="quiz-container-2" data-quiz="elemental"></div> -->
+## How It Works
+- 🎴 Draw a random quiz card  
+- ✨ Answer questions to reveal new insights  
+- 🏆 Gain XP and track your journey  
 
-<!-- --- -->
-
-# JavaScript Test Page
-
-This page is designed to test interactive JavaScript features.
-
-## Test HTTP Request
-
-<p>Click to fetch data from a placeholder API:</p>
-<button id="fetchBtn">Fetch Data</button>
-<pre id="fetchOutput"></pre>
+New quizzes are added regularly — keep playing and discovering!
 
 ---
-
-> This page is purely for testing JavaScript interactions. The quiz will redirect you according to your selections once completed.
-

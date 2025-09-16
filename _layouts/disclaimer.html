@@ -6,38 +6,24 @@
   <title>{{ page.title }}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap" rel="stylesheet">
-  <!-- Base styles (global) -->
+  <!-- Base styles -->
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/base.css">
-  <!-- Header & Footer styles only -->
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/header.css">
   <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/footer.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/self-cards.css">
-
-  <script>
-    const BASEURL = "{{ site.baseurl }}"; // e.g. "/eekhue-core"
-  </script>
-  <!-- Header JS only -->
-  <script src="{{ site.baseurl }}/assets/js/header.js" defer></script>
 </head>
 
 <body>
-
   {% include header.html %}
-  
-  <div id="debug"></div>
-
 
   <main>
-    <section class="hero">
-      <h1>{{ page.hero_title }}</h1>
-      <p class="lead">{{ page.hero_subtitle }}</p>
+    <section class="disclaimer-container">
+      <h1>{{ page.title }}</h1>
+      <div class="text-container">
+        {{ content }}
+      </div>
     </section>
-    
-    {{ content }}
   </main>
 
   {% include footer.html %}
-  
-  </footer>
 </body>
 </html>

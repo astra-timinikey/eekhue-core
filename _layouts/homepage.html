@@ -1,29 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.png" type="image/png">
-  <title>{{ page.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap" rel="stylesheet">
-  <!-- Base styles (global) -->
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/base.css">
-  <!-- Header & Footer styles only -->
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/header.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/footer.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/home.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/xp.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/starfield.css">
-
-  <script>
-    const BASEURL = "{{ site.baseurl }}"; // e.g. "/eekhue-core"
-  </script>
-  <!-- Header JS only -->
-  <script src="{{ site.baseurl }}/assets/js/header.js" defer></script>
-  <!-- <script src="{{ site.baseurl }}/assets/js/home.js" defer></script> -->
-  <script src="{{ site.baseurl }}/assets/js/xp.js" defer></script>
-  <script src="{{ site.baseurl }}/assets/js/starfield.js" defer></script>
-</head>
+  {% include head.html %}
 
 <body>
 
@@ -45,6 +22,7 @@
       
       <div class="starfield-planets-container">
         {% for planet in site.data.planets %}
+        
           <div class="starfield-planet" 
                id="starfield-{{ planet.id }}" 
                data-title="{{ planet.emoji }} {{ planet.name }}"

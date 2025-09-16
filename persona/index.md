@@ -1,31 +1,19 @@
 ---
 layout: persona
 title: "Persona"
-description: "Explore all personality personas with detailed analysis."
+description: "Discover the seven Persona roles — adaptive archetypes that shape how we meet the world."
 hero_title: "🌈 Persona Roles 🛡️"
-hero_subtitle: "Click a persona below to view details."
-page_class: "self-page"
+hero_subtitle: "Equip your armor. Choose your path."
 ---
 
 # 🛡️ The Persona Layer – *Armor That Adapts*
 
-## Why Persona?
 The Persona is armor — the **adaptive shell** we wear to move through the world.  
-Carl Jung described it as a necessary interface between our inner Self and society.  
-In Shadow-Hunt, Persona is not a false front, but a **tool**: protective gear that allows you to step into different arenas without losing your core.  
+Carl Jung described it as a vital interface between our inner Self and society.  
 
-Where the Self is rooted and the Shadow is hidden, Persona is **surface-facing** and **dynamic**.  
-It's the first choice-point in the Hunt: *which armor do you equip?*
+In **Cosmos Within Theory**, Persona is not a false mask but a **tool**: flexible gear that lets you move through different arenas without losing who you are. Where the Self is rooted and the Shadow is hidden, Persona is **outward-facing** — the first layer others see, and the choices you make daily for your protection:  
 
----
-
-## Why Seven Roles?
-I outline **seven starter Personas**. This is not a peer-reviewed system, but my own working theory, aligned with Jung's ideas.  
-
-Why seven?  
-- **Symbolic resonance**: the rainbow spectrum, seven virtues/vices, seven archetypal quests.  
-- **Psychological practicality**: enough variety to explore, not so many that it splinters into endless subtypes.  
-- **Social usability**: each Persona feels distinct, yet fluid enough to shift between.
+*Which armor will you equip?*
 
 ---
 
@@ -36,37 +24,33 @@ Each Persona role is represented by a color of the rainbow.
 
 ---
 
-## 🎮 Persona as Equipment System
-Think of each Persona as a **set of gear** you can equip. Like in an RPG, Personas have mechanics:
+## 🎮 Persona as an Equipment System
+Think of each Persona as a **set of gear** you can equip. Like in an RPG, Personas follow mechanics:  
 
-- **Requirements** → What inner stats or functions you need to wear this Persona effectively.  
-- **Abilities** → What skills or advantages it grants when worn.  
-- **Stat Gains** → The boosts it gives your psyche while active.  
-- **Upgrades** → How practice, awareness, and integration strengthen the Persona.  
-- **Enchantments** → Shadow-work or anima/animus integration that permanently enhance how a Persona plays out.  
+<!-- image of card example with interactivity for below explanation -->
 
-Sometimes a single "helmet" (one aspect of Persona) can be worn, but equipping the *full set* gives maximum benefit — though it also demands higher energy or inner alignment.
+- **Requirements** → What inner stats or functions are needed to wear it well.  
+- **Abilities** → The advantages and skills it grants.  
+- **Stat Gains** → Boosts to your psyche while active.  
+- **Upgrades** → How awareness and practice strengthen the Persona.  
+- **Enchantments** → Shadow-work or anima/animus integration that permanently enhance it.  
+
+Sometimes you might wear just one piece of armor. Other times, a *full set* amplifies the effect — though it also requires more energy and alignment.
 
 ---
 
 ## ⚔️ Integration and Persona Mastery
-Equipping a Persona is easy. **Integrating it is the long game.**
+Equipping a Persona is simple. **Mastering it is the challenge.**  
 
-- **Surface use**: You can "fake it" by forcing the right moves, but it feels brittle.  
-- **Integrated use**: When shadow aspects are acknowledged and the inferior function has been befriended, the Persona flows more naturally.  
+- **Surface use** → You can “fake it” by copying the moves, but it feels brittle.  
+- **Integrated use** → When shadow aspects are faced and the inferior function is befriended, the Persona flows naturally.  
 
-Different Selves wearing the same Persona may produce very different outcomes.  
-For example, a person whose natural strengths are distant from the Persona's "required stats" may struggle at first, but through awareness and practice (shadow integration + anima/animus work), the armor can be upgraded until it feels nearly indistinguishable from someone who "naturally" wears it.  
- 
-Personas are not limited to 16 types. There's an **infinite wardrobe**. The seven here are just the starting gear — combinable, upgradable, and expandable.
+Two people may equip the same Persona but live it completely differently. A mismatch can feel awkward at first, yet with shadow integration and conscious practice, even the hardest armor can be reforged until it feels second nature.  
 
----
+Personas are not confined to 16 types. They are **infinite**, combinable, and upgradable.  
+The seven here are just the **first gear drops** in a much larger adventure.
 
-## Disclaimer
-This Persona framework is a **personal synthesis**, not an established psychological model.  
-It draws inspiration from Jung's concept of Persona but reframes it as **armor** — protective, adaptable, and chosen.  
-
-Use it playfully, reflectively, and tactically — not as a cage, but as gear for exploration.
+<!-- image of card example of a non upgraded to upgraded armor set -->
 
 ---
 
