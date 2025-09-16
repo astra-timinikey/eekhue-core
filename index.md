@@ -9,7 +9,6 @@ hero_image: "home-hero.png"
 pill: "🔬 New Theory"
 closing_note: "Choose a realm from the menu above — explore, gain XP, and unlock the secrets of your cosmos."
 css:
-  - "home.css"
   - "starfield.css"
 js:
   - "starfield.js"

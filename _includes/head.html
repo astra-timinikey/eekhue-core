@@ -53,8 +53,13 @@
     <script>
       const BASEURL = "{{ site.baseurl }}";
     </script>
-    <script src="{{ site.baseurl }}/assets/js/header.js" defer></script>
-    <script src="{{ site.baseurl }}/assets/js/xp.js" defer></script>
+    <!-- XP Messages Data -->
+    <script id="xp-messages" type="application/json">
+      {{ site.data.motivation.xp_messages | jsonify }}
+    </script>
+
+    <script src="{{ site.baseurl }}/assets/js/header.js" defer></script>  
+    <script src="{{ site.baseurl }}/assets/js/xp.js" defer></script> 
   
     <!-- Per-page additional JS -->
     {% if page.js %}
@@ -62,5 +67,6 @@
         <script src="{{ site.baseurl }}/assets/js/{{ jsfile }}" defer></script>
       {% endfor %}
     {% endif %}
+     
   </head>
   
