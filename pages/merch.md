@@ -4,7 +4,14 @@ title: "Merchandise"
 description: "Coming soon — merchandise and exclusive products."
 hero_title: "Shop 🛍️"
 hero_subtitle: "Exclusive items inspired by your personality journey."
-page_class: "self-page"
+hero_style: "dramatic" 
+hero_image: "self-hero.png"
+pill: "🔬 New Theory"
+closing_note: ""
+css:
+  - "self.css"
+js:
+  - "self.js"
 ---
 
 # Merchandise Coming Soon

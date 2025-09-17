@@ -3,7 +3,14 @@ layout: default
 title: "Thank You"
 description: "Confirmation page after submitting a form."
 permalink: /thank-you/
-page_class: "thank-you-page"
+hero_style: "minimal" 
+hero_image: "self-hero.png"
+pill: "🔬 New Theory"
+closing_note: ""
+css:
+  - "self.css"
+js:
+  - "self.js"
 ---
 
 <div class="thank-you-wrapper">

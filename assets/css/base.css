@@ -1,29 +1,31 @@
 /* ==============================
-   :root variables
-   ============================== */
-   :root {
-    --bg: #0b1020;
-    --card: #121a33;
-    --text: #e8ecf3;
-    --muted: #9fb0c7;
-    --accent: #7aa2f7;
-    --border: #24314f;
-    --shadow: 0 6px 30px rgba(0,0,0,.35);
-    --radius: 16px;
-    --maxw: 960px;
-  }
+  :root variables
+============================== */
+:root {
+  --bg: #0b1020;
+  --card: #121a33;
+  --text: #e8ecf3;
+  --muted: #9fb0c7;
+  --accent: #7aa2f7;
+  --accent-dark: #1e2a5a;
+  --accent-light: #a0c0ff;
+  --border: #24314f;
+  --shadow: 0 6px 30px rgba(0,0,0,.35);
+  --radius: 16px;
+  --maxw: 960px;
+}
   
-  @media (prefers-color-scheme: light) {
-    :root {
-      --bg: #f7f9fc;
-      --card: #ffffff;
-      --text: #0e1726;
-      --muted: #586273;
-      --accent: #2563eb;
-      --border: #e6eaf2;
-      --shadow: 0 6px 30px rgba(0,0,0,.08);
-    }
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg: #f7f9fc;
+    --card: #ffffff;
+    --text: #0e1726;
+    --muted: #586273;
+    --accent: #2563eb;
+    --border: #e6eaf2;
+    --shadow: 0 6px 30px rgba(0,0,0,.08);
   }
+}
   
   /* ==============================
      Reset & Body
@@ -92,7 +94,7 @@
 .hero--dramatic {
   padding: 96px 20px 72px;
   text-align: center;
-  background: linear-gradient(135deg, var(--card) 0%, color-mix(in hsl, var(--card) 95%, var(--accent) 5%) 100%);
+  background: linear-gradient(135deg, var(--accent-dark), var(--card));
   border-bottom: 1px solid var(--border);
 }
 
@@ -152,97 +154,170 @@ h1:not(.hero__title) {
 }
   
 
-  /* ====================================
-     Main content + buttons + outputs
-     ==================================== */
-  main {
-    margin-left: 0;
-    padding: 40px 20px;
-    display: flex;                /* ⬅️ make it flex */
-    flex-direction: column;       /* stack children vertically */
-    align-items: center;          /* horizontally center children */
-    text-align: left;             /* ⬅️ default text left-aligned */
-  }
+/* ====================================
+  Main content + buttons + outputs
+==================================== */
+main {
+  margin-left: 0;
+  padding: 40px 20px;
+  display: flex;                /* ⬅️ make it flex */
+  flex-direction: column;       /* stack children vertically */
+  align-items: center;          /* horizontally center children */
+  text-align: left;             /* ⬅️ default text left-aligned */
+}
+
+main > * {
+  max-width: var(--maxw);       /* ⬅️ limit width */
+  width: 100%;                  /* take full available space */
+}
+
+/* Default: center aligned main (for standard, dramatic, compact) */
+main[class^="main--"] {
+  margin-left: 0;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* center children */
+  text-align: center;    /* center text */
+}
+
+main[class^="main--"] > * {
+  max-width: var(--maxw);
+  width: 100%;
+}
+
+/* Left-aligned main when hero is minimal or text-heavy */
+main.main--minimal,
+main.main--text-heavy {
+  align-items: flex-start;
+  text-align: left;
+}
+
+
   
-  main > * {
-    max-width: var(--maxw);       /* ⬅️ limit width */
-    width: 100%;                  /* take full available space */
-  }
-    
-  .self-page main {
-    margin-left: 0; /* no offset needed */
-  }
+.self-page main {
+  margin-left: 0; /* no offset needed */
+}
 
-  /* ==============================
-     Markdown Elements
-     ============================== */
-  main h1, main h2, main h3, main h4, main h5, main h6,
-  main p, main ul, main ol, main pre, main blockquote {
-    max-width: var(--maxw);
-    margin-left: auto;
-    margin-right: auto;
-  }
+.text-container {
+  max-width: 700px;
+  margin: 0 auto;   /* horizontally center container */
+  text-align: center;
+}
 
-  .hero-accent { max-width: 300px; margin: 1rem auto; display: block; }
-     
-  table { border-collapse: collapse; width: 100%; margin: 16px 0; }
-  th, td { border: 1px solid var(--border); padding: 8px; text-align: left; }
-  th { background-color: var(--card); }
-  tr:nth-child(even) { background-color: color-mix(in hsl, var(--card) 90%, transparent); }
-  /* Lists */
-  ul, ol {
-    padding-left: 20px;
-    margin: 12px 0;
-    list-style-position: outside;
-    line-height: 1.6;
-    color: var(--text);
-  }
+.homepage-closing-note {
+  border-left: 4px solid var(--accent);
+  padding-left: 1rem;
+  margin: 2rem 0;
+  color: var(--text);
+  font-style: italic;
+  font-size: 1.2rem;
+  background-color: var(--accent-dark);
+  box-shadow: var(--shadow);
+}
 
-  /* Nested lists fix */
-  ul ul, ol ol {
-    margin-left: 20px;
-  }
+/* ==============================
+  Markdown Elements
+============================== */
+main h1, main h2, main h3, main h4, main h5, main h6,
+main p, main ul, main ol, main pre, main blockquote {
+  max-width: var(--maxw);
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--text);
+}
 
-  /* Code blocks */
-  pre {
-    background-color: #0a0f1e;
-    color: #e6edf3;
-    padding: 16px;
-    border-radius: 12px;
-    overflow-x: auto;
-    border: 1px solid #1d2946;
-    margin: 16px 0;
-    font-family: "Fira Code", monospace;
-    font-size: 0.95rem;
-  }
+.hero-accent {
+  max-width: 300px;
+  margin: 1rem auto;
+  display: block;
+}
 
-  /* Inline code */
-  code {
-    background-color: rgba(122, 162, 247, 0.1);
-    padding: 2px 6px;
-    border-radius: 6px;
-    font-family: "Fira Code", monospace;
-    font-size: 0.95rem;
-  }
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 16px 0;
+}
+th, td {
+  border: 1px solid var(--border);
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: var(--card);
+}
+tr:nth-child(even) {
+  background-color: color-mix(in hsl, var(--card) 90%, transparent);
+}
 
-  /* Make sure code inside pre uses the same background */
-  pre code {
-    background: none;
-    padding: 0;
-  }
-  img { max-width: 100%; border-radius: 8px; margin: 12px 0; }
-  blockquote { border-left: 3px solid var(--accent); padding-left: 12px; color: var(--muted); margin: 12px 0; }
-  .small-logo {
-    max-width: 120px;
-    height: auto;
-    margin: 0 auto;
-    display: block;
-  }
+/* Lists */
+ul, ol {
+  padding-left: 20px;
+  margin: 12px 0;
+  list-style-position: outside;
+  line-height: 1.6;
+  color: var(--text);
+}
+ul ul, ol ol {
+  margin-left: 20px; /* Nested lists */
+}
 
-  video, audio {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  
+/* Code blocks */
+pre {
+  background-color: var(--card);
+  color: var(--text);
+  padding: 16px;
+  border-radius: var(--radius);
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  margin: 16px 0;
+  font-family: "Fira Code", monospace;
+  font-size: 0.95rem;
+}
+
+/* Inline code */
+code {
+  background-color: var(--accent-light);
+  color: var(--bg);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-family: "Fira Code", monospace;
+  font-size: 0.95rem;
+}
+pre code {
+  background: none;
+  padding: 0;
+  color: inherit;
+}
+
+/* Images & media */
+img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin: 12px 0;
+}
+video, audio {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Blockquotes */
+blockquote {
+  border-left: 3px solid var(--accent);
+  padding-left: 12px;
+  color: var(--muted);
+  margin: 12px 0;
+  background: color-mix(in srgb, var(--card) 90%, transparent);
+  border-radius: 6px;
+}
+
+/* Horizontal rule (divider) */
+hr {
+  border: none;
+  height: 2px;
+  background: var(--border);
+  margin: 2rem auto;
+  max-width: var(--maxw);
+}

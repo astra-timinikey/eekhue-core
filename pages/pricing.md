@@ -4,7 +4,14 @@ title: "Pricing"
 description: "Choose your path — whether alone, together, or as a group."
 hero_title: "Pricing & Packages 💎"
 hero_subtitle: "Invest in your growth — individually, in pairs, or with your community."
-page_class: "pricing-page"
+hero_style: "text-heavy" 
+hero_image: "sale.png"
+pill: "10.10 SALE"
+closing_note: ""
+css:
+  - ""
+js:
+  - ""
 ---
 
 # 💎 Pricing & Packages

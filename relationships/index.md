@@ -4,7 +4,14 @@ title: "RE:route"
 description: "A ship of many — navigating the seas of human connection, where every relationship is an encounter and a lesson."
 hero_title: "RE:route ⛵"
 hero_subtitle: "Every bond is a voyage — encounters, conflicts, and crossings that shape us."
-page_class: "reroute-page"
+hero_style: "minimal" 
+hero_image: "self-hero.png"
+pill: "🔬 New Theory"
+closing_note: ""
+css:
+  - "self.css"
+js:
+  - "self.js"
 ---
 
 # ⛵ RE:route – The Ship of Many

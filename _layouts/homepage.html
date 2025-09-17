@@ -1,9 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   {% include head.html %}
-
 <body>
-
   {% include header.html %}
 
   {% unless page.hero_style == "none" %}
@@ -22,7 +20,7 @@
     {% endif %}
   {% endunless %}
 
-  <main>
+  <main class="main--{{ page.hero_style | default: 'standard' }}">
     <div class="text-container">
       {{ content }}
     </div>

@@ -1,35 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
- <meta charset="utf-8">
- <link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.png" type="image/png">
-  <title>{{ page.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap" rel="stylesheet">
-  <!-- Base styles (global) -->
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/base.css">
-  <!-- Header & Footer styles only -->
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/header.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/footer.css">
-
-  <script>
-    const BASEURL = "{{ site.baseurl }}"; // e.g. "/eekhue-core"
-  </script>
-  <!-- Header JS only -->
-  <script src="{{ site.baseurl }}/assets/js/header.js" defer></script>
-
-</head>
+  {% include head.html %}
 <body>
-
   {% include header.html %}
-  
-  <!-- Main content -->
-  <main>
+
+  {% unless page.hero_style == "none" %}
+    {% if page.hero_title or page.title %}
+      <section class="hero hero--{{ page.hero_style | default: 'standard' }}">
+        <div class="hero__content">
+          <h1 class="hero__title">{{ page.hero_title | default: page.title }}</h1>
+          {% if page.hero_subtitle %}
+            <p class="hero__subtitle">{{ page.hero_subtitle }}</p>
+          {% endif %}
+          {% if page.pill %}
+            <div class="pill">{{ page.pill }}</div>
+          {% endif %}
+        </div>
+      </section>
+    {% endif %}
+  {% endunless %}
+
+  <main class="main--{{ page.hero_style | default: 'standard' }}">
     {{ content }}
   </main>
 
   {% include footer.html %}
-
 
 </body>
 </html>

@@ -4,7 +4,14 @@ title: "Shadow Analysis"
 description: "A space to explore your hidden patterns, blindspots, and shadow states."
 hero_title: "Shadow Work 🌑"
 hero_subtitle: "Confront the unseen and reclaim hidden strengths."
-page_class: "self-page"
+hero_style: "dramatic" 
+hero_image: "self-hero.png"
+pill: "🔬 New Theory"
+closing_note: ""
+css:
+  - "self.css"
+js:
+  - "self.js"
 ---
 
 # 🌑 The Shadow in Everyday Life

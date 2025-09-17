@@ -1,43 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <link rel="icon" href="{{ site.baseurl }}/assets/images/favicon.png" type="image/png">
-  <title>{{ page.title }}</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap" rel="stylesheet">
-  <!-- Base styles (global) -->
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/base.css">
-  <!-- Header & Footer styles only -->
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/header.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/footer.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/self-cards.css">
-
-  <script>
-    const BASEURL = "{{ site.baseurl }}"; // e.g. "/eekhue-core"
-  </script>
-  <!-- Header JS only -->
-  <script src="{{ site.baseurl }}/assets/js/header.js" defer></script>
-</head>
-
+  {% include head.html %}
 <body>
-
   {% include header.html %}
-  
-  <div id="debug"></div>
 
+  <!-- Hero with tree image -->
+  <section class="hero hero--text-heavy self-hero">
+    <div class="hero__content hero__content--split">
+      <div class="hero__text">
+        <h1 class="hero__title">{{ page.hero_title }}</h1>
+        {% if page.hero_subtitle %}
+          <p class="hero__subtitle">{{ page.hero_subtitle }}</p>
+        {% endif %}
+        {% if page.pill %}
+          <div class="pill">{{ page.pill }}</div>
+        {% endif %}
+      </div>
+      
+      {% if page.hero_image %}
+      <div class="hero__visual">
+        <img src="{{ site.baseurl }}/assets/images/{{ page.hero_image }}" alt="{{ page.hero_title }}" class="hero-tree">
+      </div>
+      {% endif %}
+    </div>
+  </section>
 
-  <main>
-    <section class="hero">
-      <h1>{{ page.hero_title }}</h1>
-      <p class="lead">{{ page.hero_subtitle }}</p>
-    </section>
-    
+  <!-- Main content with roots -->
+  <main class="main--text-heavy">
+    {% if page.hero_image %}
+    <div class="hero-accent-container">
+      <img src="{{ site.baseurl }}/assets/images/self-hero-roots.png" alt="Roots of the Self" class="hero-accent">
+    </div>
+    {% endif %}
     {{ content }}
   </main>
 
   {% include footer.html %}
-  
-  </footer>
 </body>
 </html>

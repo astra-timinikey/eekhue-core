@@ -1,10 +1,8 @@
 ---
-layout: disclaimer
+layout: base
 title: "Disclaimer"
 description: "Important information about the nature of this project."
 ---
-
-# Disclaimer
 
 This website and its content represent a **personal synthesis** inspired by the works of Carl Jung, John Beebe, Dario Nardi, and other thinkers.  
 

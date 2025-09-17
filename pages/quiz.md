@@ -4,6 +4,16 @@ title: "Fun Quizzes"
 description: "Discover insights about your Self, Persona, and Shadow through playful quizzes."
 hero_title: "⚡Fun Quizzes Await"
 hero_subtitle: "Draw a card, take a challenge, and earn XP along the way."
+hero_style: "compact" 
+hero_image: "quiz-hero.png"
+pill: ""
+closing_note: ""
+css:
+  - "quiz.css"
+  - "quiz-gacha.css"
+js:
+  - "quiz.js"
+  - "quiz-gacha.js"
 ---
 
 ## How It Works

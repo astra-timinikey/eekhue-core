@@ -1,9 +1,7 @@
 ---
-layout: about
+layout: base
 title: "About This Project"
 description: "Learn more about the purpose and structure of this personality reports site."
-hero_title: "About This Site 🧩"
-hero_subtitle: "Organizing personality insights, reports, and interactive tests."
 ---
 
 # About This Project

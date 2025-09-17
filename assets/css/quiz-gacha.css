@@ -26,8 +26,8 @@
   max-width: 800px;
   min-height: 250px;
   border-radius: 20px;
-  background: linear-gradient(135deg, #1e293b, #334155);
-  box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+  background: linear-gradient(135deg, var(--accent-dark), var(--card));
+  box-shadow: var(--shadow);
   overflow: hidden;
   position: relative;
 }
@@ -67,8 +67,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(45deg, #667eea, #764ba2);
-  color: white;
+  background: linear-gradient(45deg, var(--accent), var(--accent-light));
+  color: var(--text);
   font-size: 1.5rem;
   border-radius: 20px;
 }
@@ -93,7 +93,7 @@
 .gacha-section-title {
   text-align: center;
   font-size: 1.4rem;
-  color: #9ca8b8;
+  color: var(--muted);
   margin: 0;
 }
 
@@ -115,7 +115,7 @@
 
 #gacha-deck h3 {
   font-size: 1.4rem;
-  color: #334155;
+  color: var(--muted);
   margin: 0;
   display: none;
 }
@@ -164,19 +164,19 @@
 
 .attempt-btn {
   padding: 12px 24px;
-  background: #3b82f6;
-  color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
   font-weight: 600;
   font-size: 1rem;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+  background: var(--accent);
+  color: var(--bg);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
 .attempt-btn:hover {
-  background: #2563eb;
+  background: var(--accent-dark);
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
 }
@@ -198,20 +198,20 @@
 .empty-space {
   width: 100%;
   height: 100%;
-  border: 3px dashed #88929e;
   border-radius: 16px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: #c4cdda;
+  border: 3px dashed var(--border);
+  color: var(--muted);
 }
 
 .empty-space h3 {
   font-size: 1.3rem;
   margin: 0 0 10px 0;
-  color: #afbbcb;
+  color: var(--muted);
 }
 
 .empty-card-placeholder {
@@ -275,7 +275,7 @@
   text-align: center;
   width: 90%;
   z-index: 3;
-  color: #fff;
+  color: var(--text);
   text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
 
@@ -340,21 +340,21 @@
   text-align: center;
   padding: 10px;
   margin-top: 10px;
-  background: #f8fafc;
   border-radius: 16px;
-  border: 1px solid #e2e8f0;
+  background: var(--card);
+  border: 1px solid var(--border);
 }
 
 #gacha-dropdown-section h3 {
   margin: 5px;
-  color: #334155;
+  color: var(--text);
   padding: 0;
 }
 
 #gacha-dropdown-section label {
   display: block;
   margin-bottom: 0px;
-  color: #64748b;
+  color: var(--muted);
   font-size: 0.95rem;
 }
 
@@ -363,15 +363,16 @@
   padding: 6px 8px;
   font-size: 1rem;
   border-radius: 8px;
-  border: 2px solid #e2e8f0;
   cursor: pointer;
-  background: white;
+  border: 2px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
   transition: border-color 0.2s ease;
 }
 
 #quiz-selector:focus {
   outline: none;
-  border-color: #3b82f6;
+  border-color: var(--accent);
 }
 
 .dropdown-toggle {
@@ -381,8 +382,8 @@
 #show-dropdown-btn {
   padding: 12px 24px;
   background: transparent;
-  color: #64748b;
-  border: 2px solid #e2e8f0;
+  color: var(--muted);
+  border: 2px solid var(--border);
   border-radius: 8px;
   cursor: pointer;
   font-weight: 500;
@@ -390,9 +391,9 @@
 }
 
 #show-dropdown-btn:hover {
-  background: #f1f5f9;
-  border-color: #cbd5e1;
-  color: #334155;
+  background: var(--accent-light);
+  border-color: var(--accent);
+  color: var(--text);
 }
 
 /* ===============================

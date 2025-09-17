@@ -1,10 +1,7 @@
 ---
-layout: default
+layout: base
 title: "Contact"
 description: "Get in touch with the site owner or provide feedback."
-hero_title: "Contact Us 📬"
-hero_subtitle: "We’d love to hear from you! Reach out for questions, feedback, or suggestions."
-page_class: "self-page"
 ---
 
 # Contact

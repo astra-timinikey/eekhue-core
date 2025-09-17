@@ -1,9 +1,16 @@
 ---
-layout: persona
+layout: default
 title: "Persona"
 description: "Discover the seven Persona roles — adaptive archetypes that shape how we meet the world."
 hero_title: "🌈 Persona Roles 🛡️"
 hero_subtitle: "Equip your armor. Choose your path."
+hero_style: "minimal" 
+hero_image: "persona-hero.png"
+closing_note: ""
+css:
+  - "rainbow.css"
+js:
+  - "rainbow.js"
 ---
 
 # 🛡️ The Persona Layer – *Armor That Adapts*

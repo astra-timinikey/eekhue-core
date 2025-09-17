@@ -4,7 +4,14 @@ title: "RE:equip"
 description: "Equip your Self through Persona, Shadow, and Anima/Animus — the wardrobe of individuation."
 hero_title: "RE:equip ⚔️"
 hero_subtitle: "Armor, weapons, summons — a psyche prepared for the journey."
-page_class: "reequip-page"
+hero_style: "text-heavy" 
+hero_image: "self-hero.png"
+pill: "🔬 New Theory"
+closing_note: ""
+css:
+  - "self.css"
+js:
+  - "self.js"
 ---
 
 # ⚔️ RE:equip – Equipping the Psyche

@@ -4,11 +4,17 @@ title: "Self Analysis"
 description: "A space to explore your own personality."
 hero_title: "Self Analysis 🪞"
 hero_subtitle: "Reflect on your personality, strengths, and fit for career path."
-page_class: "self-page"
+hero_style: "text-heavy" 
+hero_image: "self-hero-tree.png"
+# pill: ""
+closing_note: ""
+css:
+  - "self-cards.css"
+  - "self.css"
+js:
+  - ""
 ---
-# 🪞 The Self Layer – *Roots Beneath the Armor*
-
-![Symbolic Hero Accent]({{ site.baseurl }}/assets/images/self-hero.png){: .hero-accent }
+## 🪞 The Self Layer – *Roots Beneath the Armor*
 
 <br><br>
 ## Why the Self?
@@ -20,7 +26,7 @@ It’s the compass that guides Shadow work and the foundation that allows Person
 
 Understanding the Self is the starting point for maturity. Without strong roots, any armor feels unstable.
 
----
+<!-- --- -->
 
 <br><br>
 ## The Backbone of the Model
@@ -32,17 +38,9 @@ This framework emphasizes three primary voices in the study of Self:
 
 Together, they form a **tested, flexible backbone** for Self analysis — psychological depth, archetypal framing, and neuroscientific support.
 
----
+<!-- --- -->
 
-<br><br>
-## What About Other Models?
-Personality theory has spawned countless systems. While valuable, many:  
-- **Oversimplify** Jung’s insights into static stereotypes.  
-- **Overcomplicate** without clarity, creating endless labels.  
-- **Stay surface-level**, focusing on traits rather than *processes*.  
 
-This space doesn’t reject those models — but it anchors in Jung, Beebe, and Nardi as the most fertile ground for Self exploration.  
-Other systems are like side-paths: interesting to visit, but not the core map.
 
 ---
 
@@ -64,6 +62,16 @@ Each card links to deeper analysis of functions, shadow expressions, and growth 
 
 ---
 
+## What About Other Models?
+Personality theory has spawned countless systems. While valuable, many:  
+- **Oversimplify** Jung’s insights into static stereotypes.  
+- **Overcomplicate** without clarity, creating endless labels.  
+- **Stay surface-level**, focusing on traits rather than *processes*.  
+
+This space doesn’t reject those models — but it anchors in Jung, Beebe, and Nardi as the most fertile ground for Self exploration.  
+Other systems are like side-paths: interesting to visit, but not the core map.
+
+<br><br>
 ## Citations
 - Jung, C. G. (1968). *The Archetypes and the Collective Unconscious* (Collected Works, Vol. 9, Part 1). Princeton University Press.  
 - Jung, C. G. (1963). *Memories, Dreams, Reflections*. Vintage Books.  
