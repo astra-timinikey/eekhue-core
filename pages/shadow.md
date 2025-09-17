@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Shadow Analysis"
+permalink: /shadow/
 description: "A space to explore your hidden patterns, blindspots, and shadow states."
 hero_title: "Shadow Work 🌑"
 hero_subtitle: "Confront the unseen and reclaim hidden strengths."

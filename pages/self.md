@@ -1,6 +1,7 @@
 ---
 layout: self
 title: "Self Analysis"
+permalink: /self/
 description: "A space to explore your own personality."
 hero_title: "Self Analysis 🪞"
 hero_subtitle: "Reflect on your personality, strengths, and fit for career path."

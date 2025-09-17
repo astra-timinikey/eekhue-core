@@ -1,6 +1,7 @@
 ---
 layout: quiz-main
 title: "Fun Quizzes"
+permalink: /quiz/
 description: "Discover insights about your Self, Persona, and Shadow through playful quizzes."
 hero_title: "⚡Fun Quizzes Await"
 hero_subtitle: "Draw a card, take a challenge, and earn XP along the way."

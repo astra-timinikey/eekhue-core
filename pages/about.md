@@ -1,6 +1,7 @@
 ---
 layout: base
 title: "About This Project"
+permalink: /about/
 description: "Learn more about the purpose and structure of this personality reports site."
 ---
 

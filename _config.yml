@@ -1,6 +1,14 @@
-title: "EekQue"
+title: "EekHue"
 description: "Organized cognitive functions"
 theme: minima  # simple built-in theme
 markdown: kramdown
 
 baseurl: "/eekhue-core"
+
+# Make sure service worker isn't processed by Jekyll
+exclude: 
+  - sw.js
+
+# Include offline page
+include: 
+  - offline.html

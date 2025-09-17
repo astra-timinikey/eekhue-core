@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Persona"
+permalink: /persona/
 description: "Discover the seven Persona roles — adaptive archetypes that shape how we meet the world."
 hero_title: "🌈 Persona Roles 🛡️"
 hero_subtitle: "Equip your armor. Choose your path."

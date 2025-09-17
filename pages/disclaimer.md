@@ -1,6 +1,7 @@
 ---
 layout: base
 title: "Disclaimer"
+permalink: /disclaimer/
 description: "Important information about the nature of this project."
 ---
 

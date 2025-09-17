@@ -1,6 +1,7 @@
 ---
 layout: base
 title: "Contact"
+permalink: /contact/
 description: "Get in touch with the site owner or provide feedback."
 ---
 
