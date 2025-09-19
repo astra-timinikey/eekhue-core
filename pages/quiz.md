@@ -16,7 +16,7 @@ js:
   - "quiz.js"
   - "quiz-gacha.js"
 ---
-
+<br><br>
 ## How It Works
 - 🎴 Draw a random quiz card  
 - ✨ Answer questions to reveal new insights  

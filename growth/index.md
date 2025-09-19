@@ -5,13 +5,13 @@ description: "Equip your Self through Persona, Shadow, and Anima/Animus — the 
 hero_title: "RE:equip ⚔️"
 hero_subtitle: "Armor, weapons, summons — a psyche prepared for the journey."
 hero_style: "text-heavy" 
-hero_image: "self-hero.png"
-pill: "🔬 New Theory"
+hero_image: ""
+# pill: ""
 closing_note: ""
 css:
-  - "self.css"
+  - ""
 js:
-  - "self.js"
+  - ""
 ---
 
 # ⚔️ RE:equip – Equipping the Psyche

@@ -41,7 +41,7 @@
 <body>
 
   {% include header.html %}
-  <main>
+  <main class="main--{{ page.hero_style | default: 'standard' }}">
     <section class="hero">
       <h1>{{ page.hero_title }}</h1>
       <p class="lead">{{ page.hero_subtitle }}</p>

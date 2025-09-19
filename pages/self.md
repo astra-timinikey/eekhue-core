@@ -6,7 +6,7 @@ description: "A space to explore your own personality."
 hero_title: "Self Analysis 🪞"
 hero_subtitle: "Reflect on your personality, strengths, and fit for career path."
 hero_style: "text-heavy" 
-hero_image: "self-hero-tree.png"
+hero_image: "self-hero-tree.jpg"
 # pill: ""
 closing_note: ""
 css:

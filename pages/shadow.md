@@ -6,13 +6,13 @@ description: "A space to explore your hidden patterns, blindspots, and shadow st
 hero_title: "Shadow Work 🌑"
 hero_subtitle: "Confront the unseen and reclaim hidden strengths."
 hero_style: "dramatic" 
-hero_image: "self-hero.png"
-pill: "🔬 New Theory"
+hero_image: ""
+# pill: ""
 closing_note: ""
 css:
-  - "self.css"
+  - ""
 js:
-  - "self.js"
+  - ""
 ---
 
 # 🌑 The Shadow in Everyday Life
