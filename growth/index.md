@@ -14,17 +14,21 @@ js:
   - ""
 ---
 
-# ⚔️ RE:equip – Equipping the Psyche
+## What Will You Carry?
 
-Individuation is not only inner reflection —  
-it is also about **choosing what you carry** into life.  
+Every great hero faces the same questions:  
+*What mask will you wear?*  
+*What power will you wield?*  
+*Who will walk beside you?*
 
-Carl Jung described individuation as:  
+Carl Jung described individuation as three key encounters:  
 - **Integrating the Persona** → Loosening the mask, allowing authenticity.  
 - **Assimilating the Shadow** → Befriending what we once denied.  
 - **Encountering the Anima/Animus** → Reconciling the inner Other, finding balance.  
 
-In RE:equip, these appear as the **armor, weapons, and companions** you equip along your journey.  
+In RE:equip, these aren’t abstract ideas —  
+they become your **armor, weapons, and companions**.  
+The gear you choose shapes the journey you take.
 
 ---
 

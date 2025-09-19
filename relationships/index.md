@@ -81,10 +81,7 @@ By joining, you don't just explore your own relationships — you help shape a m
 
 {% include cta-box.html 
    title="🌟 Want to Board the Voyage?" 
-   content="Be among the first to explore this new approach to relationship work. Sign up below to volunteer as a pair, family, or group."
-   button_text="Apply to Volunteer"
-   button_link="#signup"
-   button_id="signup" %}
+   content="Be among the first to explore this new approach to relationship work. Sign up below to volunteer as a pair, family, or group." %}
 
 {% include volunteer-signup-form.html %}
 
