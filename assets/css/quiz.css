@@ -220,3 +220,15 @@ div[id^="quiz-container"] {
     width: 100%;
   }
 }
+
+/* Desktop / tablet */
+@media (min-width: 800px) {
+  .quiz-img {
+    width: 200px;          /* or desired width */
+    height: 150px;         /* fixed height for consistent cards */
+    object-fit: cover;     /* crop to fill the box */
+    object-position: center; /* center the important part */
+    border-radius: 8px;
+    margin-bottom: 0;
+  }
+}

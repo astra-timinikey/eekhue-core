@@ -5,8 +5,10 @@ markdown: kramdown
 
 baseurl: "/eekhue-core"
 
-# Make sure service worker isn't processed by Jekyll
-exclude: 
+# NOTE: Currently excluded from Jekyll processing for local testing.
+# TODO: Change 'sw.js' from exclude to include at launch to enable offline support with service worker.
+# Remember to update CACHE_NAME in sw.js whenever you deploy a new version
+exclude:
   - sw.js
 
 # Include offline page

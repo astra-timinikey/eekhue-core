@@ -17,12 +17,13 @@
         {% endif %}
       </div>
       
-      {% if page.hero_image %}
-      <div class="hero__visual">
-        <img src="{{ site.baseurl }}/assets/images/{{ page.hero_image }}" alt="{{ page.hero_title }}" class="hero-tree">
-      </div>
-      {% endif %}
+      
     </div>
+    {% if page.hero_image %}
+    <div class="hero-tree-container">
+      <img src="{{ site.baseurl }}/assets/images/{{ page.hero_image }}" alt="{{ page.hero_title }}" class="hero-tree">
+    </div>
+    {% endif %}
   </section>
 
   <!-- Main content with roots -->

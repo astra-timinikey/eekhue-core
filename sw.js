@@ -1,28 +1,33 @@
-// sw.js - Place in your Jekyll root directory
+// Service Worker Version
+// TODO: Update CACHE_NAME when releasing a new version
+// Recommended: Use semantic versioning (MAJOR.MINOR.PATCH) for clarity
+// Example: 'jekyll-site-v1.2.0' => MAJOR.MINOR.PATCH
+
 const CACHE_NAME = 'jekyll-site-v1';
 const STATIC_CACHE = 'static-v1';
 
 // Files to cache immediately when service worker installs
+const BASE = '/eekhue-core';
 const PRECACHE_URLS = [
-  '/',
-  '/quiz/',
-  '/persona/',
-  '/self/',
-  '/shadow/',
-  '/growth/',
-  '/relationship/',
-  '/about/',
-  '/contact/',
-  '/disclaimer/',
-  '/assets/css/base.css',
-  '/assets/css/header.css',
-  '/assets/css/starfield.css',
-  '/assets/css/quiz.css',
-  '/assets/css/footer.css',
-  '/assets/js/header.js',
-  '/assets/js/starfield.js',
-  '/assets/js/xp.js',
-  '/offline.html'
+  `${BASE}/`,
+  `${BASE}/quiz/`,
+  `${BASE}/persona/`,
+  `${BASE}/self/`,
+  `${BASE}/shadow/`,
+  `${BASE}/growth/`,
+  `${BASE}/relationship/`,
+  `${BASE}/about/`,
+  `${BASE}/contact/`,
+  `${BASE}/disclaimer/`,
+  `${BASE}/assets/css/base.css`,
+  `${BASE}/assets/css/header.css`,
+  `${BASE}/assets/css/starfield.css`,
+  `${BASE}/assets/css/quiz.css`,
+  `${BASE}/assets/css/footer.css`,
+  `${BASE}/assets/js/header.js`,
+  `${BASE}/assets/js/starfield.js`,
+  `${BASE}/assets/js/xp.js`,
+  `${BASE}/offline.html`
 ];
 
 // Install event - cache essential files
@@ -53,23 +58,21 @@ self.addEventListener('activate', event => {
 self.addEventListener('fetch', event => {
   // Skip non-GET requests
   if (event.request.method !== 'GET') return;
-  
+
   // Handle navigation requests (page loads)
   if (event.request.mode === 'navigate') {
     event.respondWith(
       fetch(event.request)
         .then(response => {
-          // If online, cache the page and return it
           const responseClone = response.clone();
           caches.open(CACHE_NAME)
             .then(cache => cache.put(event.request, responseClone));
           return response;
         })
         .catch(() => {
-          // If offline, try cache first, then offline page
           return caches.match(event.request)
             .then(cachedResponse => {
-              return cachedResponse || caches.match('/offline.html');
+              return cachedResponse || caches.match(`${BASE}/offline.html`);
             });
         })
     );
@@ -80,13 +83,10 @@ self.addEventListener('fetch', event => {
   event.respondWith(
     caches.match(event.request)
       .then(cachedResponse => {
-        if (cachedResponse) {
-          return cachedResponse;
-        }
-        
+        if (cachedResponse) return cachedResponse;
+
         return fetch(event.request)
           .then(response => {
-            // Don't cache if not a valid response
             if (!response || response.status !== 200 || response.type !== 'basic') {
               return response;
             }
